@@ -46,7 +46,17 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
+import { useState, useEffect } from "react";
+
 function Presentation() {
+  const [data, setData] = useState([{}]);
+
+  useEffect(() => {
+    fetch("/members")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
   return (
     <>
       <DefaultNavbar
@@ -83,7 +93,7 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
+              {data.members}
             </MKTypography>
             <MKTypography
               variant="body1"
