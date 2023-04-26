@@ -13,11 +13,13 @@ import logoCT from "assets/images/logo-ct-dark.png";
 const date = new Date().getFullYear();
 
 export default {
+  // 顯示的icon（logo），name是下面顯示的字
   brand: {
     name: "Material Kit 2",
     image: logoCT,
     route: "/",
   },
+  // 下面顯示的icon
   socials: [
     {
       icon: <FacebookIcon />,
@@ -36,6 +38,7 @@ export default {
       link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
     },
   ],
+  // 右邊的連結
   menus: [
     {
       name: "company",
@@ -72,9 +75,11 @@ export default {
       ],
     },
   ],
+  // 最下面那行字
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
+      All rights reserved. Copyright &copy; {date} Material Kit by {""}
+      {/* 可以讓人點的字 */}
       <MKTypography
         component="a"
         href="https://www.creative-tim.com"

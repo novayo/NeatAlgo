@@ -32,10 +32,12 @@ import ExampleCard from "pages/Presentation/components/ExampleCard";
 import data from "pages/Presentation/sections/data/designBlocksData";
 
 function DesignBlocks() {
+  // 內容定義在DesignBlocks.js
   const renderData = data.map(({ title, description, items }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
         <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
+          {/* 每個block的標題跟小標題 */}
           <MKTypography variant="h3" fontWeight="bold" mb={1}>
             {title}
           </MKTypography>
@@ -59,6 +61,7 @@ function DesignBlocks() {
   ));
 
   return (
+    // 這邊是標題跟小標題
     <MKBox component="section" my={6} py={6}>
       <Container>
         <Grid
@@ -86,6 +89,7 @@ function DesignBlocks() {
           </MKTypography>
         </Grid>
       </Container>
+      {/* 下面的Design Blocks、Navigation、Input Areas、Attention Catchers、Elements */}
       <Container sx={{ mt: 6 }}>{renderData}</Container>
     </MKBox>
   );

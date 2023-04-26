@@ -59,21 +59,26 @@ function Presentation() {
 
   return (
     <>
+      {/* 這是Navbar */}
       <DefaultNavbar
+        // 在routes.js定義button
         routes={routes}
+        // 這是最右邊的button
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          label: "free download123",
           color: "info",
         }}
         sticky
       />
+
+      {/* 這是人臉畫面的box */}
       <MKBox
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundImage: `url(${bgImage})`, // 這是人臉png
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -82,6 +87,7 @@ function Presentation() {
       >
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
+            {/* 這是大標題 */}
             <MKTypography
               variant="h1"
               color="white"
@@ -93,8 +99,9 @@ function Presentation() {
                 },
               })}
             >
-              {data.members}
+              123456 {data.members}
             </MKTypography>
+            {/* 這是小標題 */}
             <MKTypography
               variant="body1"
               color="white"
@@ -108,6 +115,7 @@ function Presentation() {
           </Grid>
         </Container>
       </MKBox>
+      {/* 人臉下面的box都是Card */}
       <Card
         sx={{
           p: 2,
@@ -119,13 +127,19 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        {/* part 1 */}
         <Counters />
+        {/* part 2 */}
         <Information />
+        {/* part 3 */}
         <DesignBlocks />
+        {/* With our coded pages 以及下面的圖片 */}
         <Pages />
+        {/* Built by developers */}
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
         </Container>
+        {/* 以及下面的三個section */}
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
@@ -170,8 +184,11 @@ function Presentation() {
             </Grid>
           </Grid>
         </Container>
+        {/* Trusted by over - 到下面的公司 apple... */}
         <Testimonials />
+        {/* Do you love this awesome UI Kit for ReactJS & MUI? 到 Available on these technologies */}
         <Download />
+        {/* Thank you for your support! 加上右邊的buttons */}
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
@@ -225,6 +242,8 @@ function Presentation() {
           </Container>
         </MKBox>
       </Card>
+
+      {/* 這是footer，在footer.routes.js定義 */}
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>
