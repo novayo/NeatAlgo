@@ -59,15 +59,12 @@ function Presentation() {
 
   return (
     <>
-      {/* 這是Navbar */}
       <DefaultNavbar
-        // 在routes.js定義button
         routes={routes}
-        // 這是最右邊的button
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download123",
+          label: "搶先體驗!",
           color: "info",
         }}
         sticky
@@ -99,7 +96,7 @@ function Presentation() {
                 },
               })}
             >
-              123456 {data.members}
+              A Short and Compelling Headline or App Title {data.members}
             </MKTypography>
             {/* 這是小標題 */}
             <MKTypography
@@ -109,8 +106,8 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              A short description of your app that includes targeted keywords, and prompts visitors
+              to click the CTA.
             </MKTypography>
           </Grid>
         </Container>
@@ -128,9 +125,9 @@ function Presentation() {
         }}
       >
         {/* part 1 */}
-        <Counters />
-        {/* part 2 */}
         <Information />
+        {/* part 2 */}
+        <Counters />
         {/* part 3 */}
         <DesignBlocks />
         {/* With our coded pages 以及下面的圖片 */}

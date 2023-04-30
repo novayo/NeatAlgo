@@ -24,7 +24,6 @@ import MKBox from "components/MKBox";
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
@@ -42,59 +41,73 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    Python入門
                     <br />
-                    Material Kit
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="新手需知道的所有 python 基本知識。"
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Python入門"
+                description="*對象(初學者) *先備知識(無) *將會學習到寫Leetcode所需python知識"
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  label: "了解更多",
                 }}
               />
             </RotatingCard>
           </Grid>
-          <Grid item xs={12} lg={7} sx={{ ml: "auto" }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
-                />
-              </Grid>
-            </Grid>
-            <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <DefaultInfoCard
-                  icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
-                />
-              </Grid>
-            </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    AL&DS: beginner
+                    <br />
+                  </>
+                }
+                description="任何人輕鬆入門的演算法和資料結構。學員將依照合理的學習路徑，一步一步熟悉並解出Easy~Medium題目。"
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="AL&DS: beginner"
+                description="*對象(X) *先備知識(X) *X"
+                action={{
+                  type: "internal",
+                  route: "/sections/page-sections/page-headers",
+                  label: "了解更多",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    AL&DS: advanced
+                    <br />
+                  </>
+                }
+                description="主題式學習不同種類的演算法和資料結構，讓你有能力解出9成Medium題目。"
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="AL&DS: advanced"
+                description="*對象(X) *先備知識(X) *X"
+                action={{
+                  type: "internal",
+                  route: "/sections/page-sections/page-headers",
+                  label: "了解更多",
+                }}
+              />
+            </RotatingCard>
           </Grid>
         </Grid>
       </Container>
