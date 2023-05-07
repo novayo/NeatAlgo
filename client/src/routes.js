@@ -50,7 +50,7 @@ const routes = [
     collapse: [
       {
         name: "Python入門",
-        description: "新手需知道的所有 python 基本知識。",
+        description: "新手需知道的刷題所有 python 基本知識。",
         href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
       },
       {

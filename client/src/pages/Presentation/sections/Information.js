@@ -45,7 +45,7 @@ function Information() {
                 description=""
               />
               <RotatingCardBack
-                title=""
+                title="線上教學平台"
                 description="易懂教學、完善題型，學習演算法資料結構、LeetCode的最佳選擇。 "
                 action={{
                   type: "internal",

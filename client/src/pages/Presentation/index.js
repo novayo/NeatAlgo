@@ -36,6 +36,7 @@ import AuthPages from "pages/presentation/sections/AuthPages";
 import Pages from "pages/presentation/sections/Pages";
 import Testimonials from "pages/presentation/sections/Testimonials";
 import Pricing from "pages/presentation/sections/Pricing";
+import Courses from "pages/presentation/sections/Courses";
 
 // Presentation page components
 import BuiltByDevelopers from "pages/presentation/components/BuiltByDevelopers";
@@ -118,6 +119,8 @@ function Presentation() {
       >
         {/* part 1 */}
         <Information />
+        {/* part 2 */}
+        <Courses />
         {/* part 2 */}
         <Counters />
         {/* part 3 */}
