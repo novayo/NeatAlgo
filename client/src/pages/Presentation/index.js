@@ -46,17 +46,7 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
-import { useState, useEffect } from "react";
-
 function Presentation() {
-  const [data, setData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/members")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-  }, []);
-
   return (
     <>
       <DefaultNavbar
@@ -83,7 +73,7 @@ function Presentation() {
         }}
       >
         <Container>
-          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
+          <Grid container item xs={12} lg={7} justifyContent="left" mx="auto">
             {/* 這是大標題 */}
             <MKTypography
               variant="h1"
@@ -96,18 +86,19 @@ function Presentation() {
                 },
               })}
             >
-              A Short and Compelling Headline or App Title {data.members}
+              簡單算法
             </MKTypography>
             {/* 這是小標題 */}
             <MKTypography
               variant="body1"
               color="white"
-              textAlign="center"
-              px={{ xs: 6, lg: 12 }}
+              textAlign="left"
+              px={{ xs: 6, lg: 8 }}
               mt={1}
             >
-              A short description of your app that includes targeted keywords, and prompts visitors
-              to click the CTA.
+              用最易懂的方式帶你跨入演算法及資料結構的世界
+              <br />
+              適合新手、跨領域、學生、刷題者
             </MKTypography>
           </Grid>
         </Container>
