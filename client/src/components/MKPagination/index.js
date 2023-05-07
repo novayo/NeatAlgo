@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -13,12 +13,12 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { forwardRef, createContext, useContext, useMemo } from "react";
+import { forwardRef, createContext, useContext } from "react";
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
 // Custom styles for MKPagination
@@ -31,7 +31,6 @@ const MKPagination = forwardRef(
   ({ item, variant, color, size, active, children, placement, ...rest }, ref) => {
     const context = item ? useContext(Context) : null;
     const paginationSize = context ? context.size : null;
-    const paginationProps = useMemo(() => ({ variant, color, size }), []);
     let placementValue = "flex-end";
 
     if (placement === "left") {
@@ -41,7 +40,7 @@ const MKPagination = forwardRef(
     }
 
     return (
-      <Context.Provider value={paginationProps}>
+      <Context.Provider value={{ variant, color, size }}>
         {item ? (
           <MKPaginationItemRoot
             {...rest}

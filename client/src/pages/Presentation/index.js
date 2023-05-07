@@ -1,9 +1,9 @@
 /*
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,26 +18,27 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKSocialButton from "components/MKSocialButton";
 
-// Material Kit 2 React examples
+// Material Kit 2 PRO React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
-import Information from "pages/Presentation/sections/Information";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "pages/Presentation/sections/Pages";
-import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+import Counters from "pages/presentation/sections/Counters";
+import Information from "pages/presentation/sections/Information";
+import DesignBlocks from "pages/presentation/sections/DesignBlocks";
+import AuthPages from "pages/presentation/sections/AuthPages";
+import Pages from "pages/presentation/sections/Pages";
+import Testimonials from "pages/presentation/sections/Testimonials";
+import Pricing from "pages/presentation/sections/Pricing";
 
 // Presentation page components
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
+import BuiltByDevelopers from "pages/presentation/components/BuiltByDevelopers";
 
 // Routes
 import routes from "routes";
@@ -122,6 +123,7 @@ function Presentation() {
         {/* part 3 */}
         <DesignBlocks />
         {/* With our coded pages 以及下面的圖片 */}
+        <AuthPages />
         <Pages />
         {/* Built by developers */}
         <Container sx={{ mt: 6 }}>
@@ -152,7 +154,7 @@ function Presentation() {
                 description="Get inspiration and have an overview about the plugins that we used to create the Material Kit."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/datepicker/",
+                  route: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
                   label: "Read more",
                 }}
               />
@@ -174,9 +176,7 @@ function Presentation() {
         </Container>
         {/* Trusted by over - 到下面的公司 apple... */}
         <Testimonials />
-        {/* Do you love this awesome UI Kit for ReactJS & MUI? 到 Available on these technologies */}
-        <Download />
-        {/* Thank you for your support! 加上右邊的buttons */}
+        <Pricing />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
@@ -198,7 +198,7 @@ function Presentation() {
               >
                 <MKSocialButton
                   component="a"
-                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23mui5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-react"
+                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-design-system-pro"
                   target="_blank"
                   color="twitter"
                   sx={{ mr: 1 }}
@@ -208,7 +208,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-design-system-pro"
                   target="_blank"
                   color="facebook"
                   sx={{ mr: 1 }}
@@ -218,7 +218,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-design-system-pro"
                   target="_blank"
                   color="pinterest"
                 >

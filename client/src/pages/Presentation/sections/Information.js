@@ -1,11 +1,15 @@
 /*
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
+
 Coded by www.creative-tim.com
+
  =========================================================
+
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
@@ -13,10 +17,10 @@ Coded by www.creative-tim.com
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
-// Material Kit 2 React examples
+// Material Kit 2 PRO React examples
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";

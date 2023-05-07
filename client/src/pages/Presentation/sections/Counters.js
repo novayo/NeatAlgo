@@ -1,9 +1,9 @@
 /*
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,10 +18,10 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
-// Material Kit 2 React examples
+// Material Kit 2 PRO React examples
 import DefaultCounterCard from "examples/Cards/CounterCards/DefaultCounterCard";
 
 function Counters() {
@@ -31,7 +31,7 @@ function Counters() {
         <Grid container item xs={12} lg={9} sx={{ mx: "auto" }}>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={70}
+              count={300}
               suffix="+"
               title="Coded Elements"
               description="From buttons, to inputs, navbars, alerts or cards, you are covered"
@@ -40,7 +40,7 @@ function Counters() {
           <Grid item xs={12} md={4} display="flex">
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, mx: 0 }} />
             <DefaultCounterCard
-              count={15}
+              count={100}
               suffix="+"
               title="Design Blocks"
               description="Mix the sections, change the colors and unleash your creativity"
@@ -49,7 +49,7 @@ function Counters() {
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={4}
+              count={41}
               title="Pages"
               description="Save 3-4 weeks of work when you use our pre-made pages for your website"
             />

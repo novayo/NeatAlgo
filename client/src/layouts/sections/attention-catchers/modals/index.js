@@ -1,9 +1,9 @@
 /*
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,9 +19,11 @@ import View from "layouts/sections/components/View";
 
 // Modals page components
 import SimpleModal from "layouts/sections/attention-catchers/modals/components/SimpleModal";
+import NotificationModal from "layouts/sections/attention-catchers/modals/components/NotificationModal";
 
 // Modals page components code
 import simpleModalCode from "layouts/sections/attention-catchers/modals/components/SimpleModal/code";
+import notificationModalCode from "layouts/sections/attention-catchers/modals/components/NotificationModal/code";
 
 function Modals() {
   return (
@@ -34,6 +36,9 @@ function Modals() {
     >
       <View title="Simple modal" code={simpleModalCode}>
         <SimpleModal />
+      </View>
+      <View title="Notification modal" code={notificationModalCode}>
+        <NotificationModal />
       </View>
     </BaseLayout>
   );

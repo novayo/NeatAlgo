@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -14,9 +14,9 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base breakpoints for the Material Kit 2 React.
+ * The base breakpoints for the Material Kit 2 PRO React.
  * You can add new breakpoints using this file.
- * You can customized the breakpoints for the entire Material Kit 2 React using thie file.
+ * You can customized the breakpoints for the entire Material Kit 2 PRO React using thie file.
  */
 
 export default {

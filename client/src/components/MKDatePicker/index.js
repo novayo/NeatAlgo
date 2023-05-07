@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -22,7 +22,7 @@ import Flatpickr from "react-flatpickr";
 // react-flatpickr styles
 import "flatpickr/dist/flatpickr.css";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKInput from "components/MKInput";
 
 function MKDatePicker({ input, ...rest }) {
@@ -43,7 +43,7 @@ MKDatePicker.defaultProps = {
 
 // Typechecking props for the MKDatePicker
 MKDatePicker.propTypes = {
-  input: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.any])),
+  input: PropTypes.objectOf(PropTypes.any),
 };
 
 export default MKDatePicker;

@@ -1,9 +1,9 @@
 /*
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -20,24 +20,22 @@ import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
 
 // Presentation page components
-import ExampleCard from "pages/Presentation/components/ExampleCard";
+import ExampleCard from "pages/presentation/components/ExampleCard";
 
 // Data
-import data from "pages/Presentation/sections/data/designBlocksData";
+import data from "pages/presentation/sections/data/designBlocksData";
 
 function DesignBlocks() {
-  // 內容定義在DesignBlocks.js
   const renderData = data.map(({ title, description, items }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
         <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
-          {/* 每個block的標題跟小標題 */}
           <MKTypography variant="h3" fontWeight="bold" mb={1}>
             {title}
           </MKTypography>
@@ -48,10 +46,10 @@ function DesignBlocks() {
       </Grid>
       <Grid item xs={12} lg={9}>
         <Grid container spacing={3}>
-          {items.map(({ image, name, count, route, pro }) => (
+          {items.map(({ image, name, count, route }) => (
             <Grid item xs={12} md={4} sx={{ mb: 2 }} key={name}>
-              <Link to={pro ? "/" : route}>
-                <ExampleCard image={image} name={name} count={count} pro={pro} />
+              <Link to={route}>
+                <ExampleCard image={image} name={name} count={count} />
               </Link>
             </Grid>
           ))}
@@ -61,7 +59,6 @@ function DesignBlocks() {
   ));
 
   return (
-    // 這邊是標題跟小標題
     <MKBox component="section" my={6} py={6}>
       <Container>
         <Grid
@@ -89,7 +86,6 @@ function DesignBlocks() {
           </MKTypography>
         </Grid>
       </Container>
-      {/* 下面的Design Blocks、Navigation、Input Areas、Attention Catchers、Elements */}
       <Container sx={{ mt: 6 }}>{renderData}</Container>
     </MKBox>
   );

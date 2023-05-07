@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 /** 
-  All of the routes for the Material Kit 2 React are added here,
+  All of the routes for the Material Kit 2 PRO React React are added here,
   You can add a new route, customize the routes and delete the routes here.
 
   Once you add a new route on this file it will be visible automatically on
@@ -40,8 +40,8 @@ Coded by www.creative-tim.com
 import Icon from "@mui/material/Icon";
 
 // Pages
-import ContactUs from "layouts/pages/landing-pages/contact-us";
-import SignIn from "layouts/pages/authentication/sign-in";
+import ContactUs from "layouts/pages/support/contact-us";
+import SignInCoverPage from "layouts/authentication/sign-in/cover";
 
 const routes = [
   {
@@ -74,7 +74,7 @@ const routes = [
   {
     name: "登入",
     route: "/pages/authentication/sign-in",
-    component: <SignIn />,
+    component: <SignInCoverPage />,
   },
 ];
 

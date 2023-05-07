@@ -1,9 +1,9 @@
 /*
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,9 +19,12 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import Stack from "@mui/material/Stack";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+
+// Coworking page component
+import AboutUsOption from "pages/LandingPages/Coworking/components/AboutUsOption";
 
 function FeaturesOne() {
   return (
@@ -65,69 +68,36 @@ function FeaturesOne() {
           </Grid>
           <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
             <Stack>
-              <MKBox display="flex" alignItems="center" p={2}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">mediation</Icon>
-                </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  It becomes harder for us to give others a hand.
-                  <br />
-                  We get our heart broken by people we love.
-                </MKTypography>
-              </MKBox>
-              <MKBox display="flex" alignItems="center" p={2}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">settings_overscan</Icon>
-                </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  As we live, our hearts turn colder.
-                  <br />
-                  Cause pain is what we go through as we become older.
-                </MKTypography>
-              </MKBox>
-              <MKBox display="flex" alignItems="center" p={2}>
-                <MKBox
-                  width="3rem"
-                  height="3rem"
-                  variant="gradient"
-                  bgColor="info"
-                  color="white"
-                  coloredShadow="info"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="xl"
-                >
-                  <Icon fontSize="small">token</Icon>
-                </MKBox>
-                <MKTypography variant="body2" color="text" pl={2}>
-                  When we lose family over time.
-                  <br />
-                  What else could rust the heart more over time? Blackgold.
-                </MKTypography>
-              </MKBox>
+              <AboutUsOption
+                icon="mediation"
+                content={
+                  <>
+                    It becomes harder for us to give others a hand.
+                    <br />
+                    We get our heart broken by people we love.
+                  </>
+                }
+              />
+              <AboutUsOption
+                icon="settings_overscan"
+                content={
+                  <>
+                    As we live, our hearts turn colder.
+                    <br />
+                    Cause pain is what we go through as we become older.
+                  </>
+                }
+              />
+              <AboutUsOption
+                icon="token"
+                content={
+                  <>
+                    When we lose family over time.
+                    <br />
+                    What else could rust the heart more over time? Blackgold.
+                  </>
+                }
+              />
             </Stack>
           </Grid>
         </Grid>

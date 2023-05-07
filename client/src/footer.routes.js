@@ -4,7 +4,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
-// Material Kit 2 React components
+// Material Kit 2 PRO React components
 import MKTypography from "components/MKTypography";
 
 // Images
@@ -15,7 +15,7 @@ const date = new Date().getFullYear();
 export default {
   // 顯示的icon（logo），name是下面顯示的字
   brand: {
-    name: "Material Kit 2",
+    name: "Material Kit 2 PRO",
     image: logoCT,
     route: "/",
   },

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.1.0
+* Material Kit 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,8 +19,6 @@ import { BrowserRouter } from "react-router-dom";
 import App from "App";
 
 const container = document.getElementById("root");
-
-// Create a root.
 const root = ReactDOMClient.createRoot(container);
 
 root.render(
