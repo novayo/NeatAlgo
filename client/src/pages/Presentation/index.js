@@ -30,10 +30,11 @@ import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
 import Counters from "pages/presentation/sections/Counters";
+import Faq from "pages/presentation/sections/Questions";
 import Information from "pages/presentation/sections/Information";
 import DesignBlocks from "pages/presentation/sections/DesignBlocks";
 import AuthPages from "pages/presentation/sections/AuthPages";
-import Pages from "pages/presentation/sections/Pages";
+import Topics from "pages/presentation/sections/Topics";
 import Testimonials from "pages/presentation/sections/Testimonials";
 import Pricing from "pages/presentation/sections/Pricing";
 import Courses from "pages/presentation/sections/Courses";
@@ -46,7 +47,6 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
 
 function Presentation() {
   return (
@@ -67,7 +67,7 @@ function Presentation() {
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${bgImage})`, // 這是人臉png
+          backgroundImage: `url(https://hackmd.io/_uploads/BJ7mz3INn.png)`, // 這是人臉png
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -117,17 +117,15 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        {/* part 1 */}
-        <Information />
-        {/* part 2 */}
-        <Courses />
-        {/* part 2 */}
         <Counters />
+        <Information />
+        <Courses />
+        <Topics />
+        <Faq />
         {/* part 3 */}
         <DesignBlocks />
         {/* With our coded pages 以及下面的圖片 */}
         <AuthPages />
-        <Pages />
         {/* Built by developers */}
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />

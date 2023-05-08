@@ -31,8 +31,9 @@ import ExampleCard from "pages/presentation/components/ExampleCard";
 // Data
 import data from "pages/presentation/sections/data/pagesData";
 
-function Pages() {
-  const renderData = data.map(({ image, name, route }) => (
+function Topics() {
+  const shuffle = [...data].sort(() => Math.random() - 0.5).slice(0, 15);
+  const renderData = shuffle.map(({ image, name, route }) => (
     <Grid item xs={12} md={4} sx={{ mb: { xs: 3, lg: 0 } }} key={name}>
       <Link to={route}>
         <ExampleCard image={image} name={name} display="grid" minHeight="auto" />
@@ -54,17 +55,16 @@ function Pages() {
         >
           <MKBadge
             variant="contained"
-            color="info"
-            badgeContent="boost creativity"
+            color="success"
+            badgeContent="☆☆☆☆☆"
             container
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            With our coded pages
+            超過50種面試主題
           </MKTypography>
           <MKTypography variant="body1" color="text">
-            The easiest way to get started is to use one of our
-            <br /> pre-built example pages.
+            如果你想要秒殺大部分程式設計面試、精通常見的資料結構和流行的問題解決方法。我們提供了超過150道實例，包含超過50個主題，可以幫助您做好準備。趕快來試試看！
           </MKTypography>
         </Grid>
       </Container>
@@ -78,11 +78,10 @@ function Pages() {
           <Grid item xs={12} lg={3}>
             <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
               <MKTypography variant="h3" fontWeight="bold" mb={1}>
-                Presentation Pages for Company, Landing Pages, Blogs and Support
+                演算法 資料結構
               </MKTypography>
               <MKTypography variant="body2" fontWeight="regular" color="secondary" mb={1} pr={2}>
-                These is just a small selection of the multiple possibitilies you have. Focus on the
-                business, not on the design.
+                依照課程提供不同的學習路徑，以合理的步調踏進軟體工程師的世界。
               </MKTypography>
             </MKBox>
           </Grid>
@@ -92,4 +91,4 @@ function Pages() {
   );
 }
 
-export default Pages;
+export default Topics;

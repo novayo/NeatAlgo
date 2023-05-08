@@ -31,27 +31,28 @@ function Counters() {
         <Grid container item xs={12} lg={9} sx={{ mx: "auto" }}>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={300}
+              count={30}
               suffix="+"
-              title="Coded Elements"
-              description="From buttons, to inputs, navbars, alerts or cards, you are covered"
+              title="模板"
+              description="整理各式演算法及資料結構的模板與注意事項，讓你不再迷茫"
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, mx: 0 }} />
             <DefaultCounterCard
-              count={100}
+              count={50}
               suffix="+"
-              title="Design Blocks"
-              description="Mix the sections, change the colors and unleash your creativity"
+              title="主題影片"
+              description="提供優質且新手向影片，內容涵蓋recursion, dp, dijkstra, trie...等50多種主題，依照合理的學習路徑來熟悉各個演算法及資料結構"
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={41}
-              title="Pages"
-              description="Save 3-4 weeks of work when you use our pre-made pages for your website"
+              count={150}
+              suffix="+"
+              title="Leetcode實例講解"
+              description="帶你實際應用、強化知識點，學習googler的思維"
             />
           </Grid>
         </Grid>
