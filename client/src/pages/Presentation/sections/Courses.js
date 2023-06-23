@@ -2,6 +2,8 @@ import Container from "@mui/material/Container";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import Grid from "@mui/material/Grid";
 
+import { courseConfig } from "config";
+
 function Courses() {
   return (
     <>
@@ -10,40 +12,40 @@ function Courses() {
           {/* Grid size: 12 */}
           <Grid item xs={12} sm={6} lg={4}>
             <CenteredBlogCard
-              image="https://hackmd.io/_uploads/Bks1FerEh.png"
-              title="Python 入門"
-              description="新手需知道的刷題所有 python 基本知識。"
+              image={courseConfig.python.image}
+              title={courseConfig.python.name}
+              description={courseConfig.python.description}
               action={{
-                type: "internal",
-                route: "/somewhere",
-                color: "info",
-                label: "了解更多",
+                type: courseConfig.courses_button.type,
+                route: courseConfig.python.url,
+                color: courseConfig.courses_button.color,
+                label: courseConfig.courses_button.label,
               }}
             />
           </Grid>
           <Grid item xs={12} sm={6} lg={4}>
             <CenteredBlogCard
-              image="https://hackmd.io/_uploads/Hyp1ClSV2.png"
-              title="AL&DS: beginner"
-              description="任何人輕鬆入門的演算法和資料結構。學員將依照合理的學習路徑，一步一步熟悉並解出Easy~Medium題目。"
+              image={courseConfig.algo_beginner.image}
+              title={courseConfig.algo_beginner.name}
+              description={courseConfig.algo_beginner.description}
               action={{
-                type: "internal",
-                route: "/somewhere",
-                color: "info",
-                label: "了解更多",
+                type: courseConfig.courses_button.type,
+                route: courseConfig.algo_beginner.url,
+                color: courseConfig.courses_button.color,
+                label: courseConfig.courses_button.label,
               }}
             />
           </Grid>
           <Grid item xs={12} sm={6} lg={4}>
             <CenteredBlogCard
-              image="https://hackmd.io/_uploads/S13E0xB42.png"
-              title="AL&DS: advanced"
-              description="主題式學習不同種類的演算法和資料結構，讓你有能力解出9成Medium題目。"
+              image={courseConfig.algo_advanced.image}
+              title={courseConfig.algo_advanced.name}
+              description={courseConfig.algo_advanced.description}
               action={{
-                type: "internal",
-                route: "/somewhere",
-                color: "info",
-                label: "了解更多",
+                type: courseConfig.courses_button.type,
+                route: courseConfig.algo_advanced.url,
+                color: courseConfig.courses_button.color,
+                label: courseConfig.courses_button.label,
               }}
             />
           </Grid>

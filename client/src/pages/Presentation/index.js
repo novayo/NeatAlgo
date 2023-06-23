@@ -38,28 +38,30 @@ import Courses from "pages/Presentation/sections/Courses";
 import routes from "routes";
 import footerRoutes from "footer.routes";
 
-// Images
+// Config
+import { mainConfig, routesConfig } from "config";
 
 function Presentation() {
   return (
     <>
+      {/* Navbar */}
       <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "搶先體驗!",
-          color: "info",
+          route: routesConfig.button_buy.route,
+          label: routesConfig.button_buy.name,
+          color: routesConfig.button_buy.color,
         }}
         sticky
       />
 
-      {/* 這是人臉畫面的box */}
+      {/* 首頁圖片 */}
       <MKBox
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(https://hackmd.io/_uploads/BJ7mz3INn.png)`, // 這是人臉png
+          backgroundImage: `url(https://hackmd.io/_uploads/BJ7mz3INn.png)`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -68,7 +70,7 @@ function Presentation() {
       >
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="left" mx="auto">
-            {/* 這是大標題 */}
+            {/* 大標題 */}
             <MKTypography
               variant="h1"
               color="white"
@@ -80,9 +82,9 @@ function Presentation() {
                 },
               })}
             >
-              白話算法
+              {mainConfig.app_name}
             </MKTypography>
-            {/* 這是小標題 */}
+            {/* 小標題 */}
             <MKTypography
               variant="body1"
               color="white"
@@ -90,14 +92,12 @@ function Presentation() {
               px={{ xs: 6, lg: 8 }}
               mt={1}
             >
-              用最易懂的方式帶你跨入演算法及資料結構的世界
-              <br />
-              適合新手、跨領域、學生、刷題者
+              {mainConfig.subtitle}
             </MKTypography>
           </Grid>
         </Container>
       </MKBox>
-      {/* 人臉下面的box都是Card */}
+      {/* 主要內容 */}
       <Card
         sx={{
           p: 2,
@@ -117,7 +117,7 @@ function Presentation() {
         <Testimonials />
       </Card>
 
-      {/* 這是footer，在footer.routes.js定義 */}
+      {/* Footer */}
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>

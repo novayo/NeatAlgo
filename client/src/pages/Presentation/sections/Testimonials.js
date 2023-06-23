@@ -24,7 +24,26 @@ import MKTypography from "components/MKTypography";
 // Material Kit 2 PRO React examples
 import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
+import { feedbackConfig } from "config";
+import { feedbacks } from "pages/Presentation/sections/data/pagesData";
+
 function Information() {
+  const shuffle = [...feedbacks].sort(() => Math.random() - 0.5).slice(0, 6);
+  const renderData = shuffle.map(({ name, date, review, rating }, idx) => (
+    <Grid item xs={12} md={6} lg={4} key={idx}>
+      {idx === 1 ? (
+        <DefaultReviewCard name={name} color="info" date={date} review={review} rating={rating} />
+      ) : (
+        <DefaultReviewCard
+          name={name}
+          color="transparent"
+          date={date}
+          review={review}
+          rating={rating}
+        />
+      )}
+    </Grid>
+  ));
   return (
     <MKBox component="section" py={12}>
       <Container>
@@ -36,35 +55,10 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">使用者回饋</MKTypography>
+          <MKTypography variant="h2">{feedbackConfig.name}</MKTypography>
         </Grid>
         <Grid container spacing={3} sx={{ mt: 8 }}>
-          {/* TODO: 日期、 */}
-          <Grid item xs={12} md={6} lg={4}>
-            <DefaultReviewCard
-              name="黃婷琪"
-              date="1 week ago"
-              review="非常滿意這個平台！清晰易懂的教學內容和個人化學習路徑讓我輕鬆掌握演算法知識。強烈推薦！"
-              rating={5}
-            />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <DefaultReviewCard
-              color="info"
-              name="鄭琮寶"
-              date="1 week ago"
-              review="這個平台提供了清晰易懂的教學內容，幫助我順利掌握演算法和資料結構的知識。我尤其喜歡他們提供的學習路徑，讓我能夠按照合理的步調進行學習，逐漸踏入軟體工程師的世界。無論是新手還是有一定基礎的學習者，這個平台都能夠滿足他們的需求。我也很喜歡他們不限次數觀看影片和課程的訂閱方式，讓我可以根據自己的進度自由學習。總體而言，這個平台給我帶來了很大的幫助，我強烈推薦給所有想學習演算法和資料結構的人。"
-              rating={5}
-            />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <DefaultReviewCard
-              name="NiNi"
-              date="3 weeks ago"
-              review="這個平台真是太棒了！他們的教學內容深入淺出，幫助我從零基礎起步，掌握了演算法和資料結構的核心概念。訂閱一年更是物超所值，我強烈推薦給所有想學習的人！"
-              rating={5}
-            />
-          </Grid>
+          {renderData}
         </Grid>
       </Container>
     </MKBox>

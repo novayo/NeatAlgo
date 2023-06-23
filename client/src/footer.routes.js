@@ -1,6 +1,8 @@
 import Container from "@mui/material/Container";
 // Material Kit 2 PRO React components
 import MKTypography from "components/MKTypography";
+import { copyrightConfig } from "config";
+import { Link } from "react-router-dom";
 
 const date = new Date().getFullYear();
 
@@ -10,23 +12,24 @@ export default {
     <Container>
       <MKTypography variant="button" fontWeight="regular">
         &copy; {date} by {""}
-        <MKTypography
-          color="info"
-          component="a"
-          href="https://www.creative-tim.com"
-          target="_blank"
-          rel="noreferrer"
-          variant="button"
-          fontWeight="regular"
-          textAlign="left"
-        >
-          白話算法 NeatAlgo
-        </MKTypography>
+        <Link to={"/"}>
+          <MKTypography
+            color="info"
+            href="/"
+            target="_blank"
+            rel="noreferrer"
+            variant="button"
+            fontWeight="regular"
+            textAlign="left"
+          >
+            {copyrightConfig.formal_name}
+          </MKTypography>
+        </Link>
       </MKTypography>
       <br />
       <MKTypography
         component="a"
-        href="https://www.creative-tim.com"
+        href={copyrightConfig.terms_url}
         target="_blank"
         rel="noreferrer"
         variant="body2"
@@ -37,7 +40,7 @@ export default {
       &nbsp;&nbsp;
       <MKTypography
         component="a"
-        href="https://www.creative-tim.com"
+        href={copyrightConfig.privacy_url}
         target="_blank"
         rel="noreferrer"
         variant="body2"

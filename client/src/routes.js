@@ -38,42 +38,42 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Icon from "@mui/material/Icon";
-
-// Pages
 import ContactUs from "layouts/pages/support/contact-us";
 import SignInCoverPage from "layouts/authentication/sign-in/cover";
 
+// config
+import { courseConfig, routesConfig } from "config";
+
 const routes = [
   {
-    name: "所有課程",
+    name: routesConfig.button_courses.name,
     icon: <Icon>article</Icon>,
     collapse: [
       {
-        name: "Python入門",
-        description: "新手需知道的刷題所有 python 基本知識。",
-        href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+        name: courseConfig.python.name,
+        description: courseConfig.python.description,
+        href: courseConfig.python.name.url,
       },
       {
-        name: "AL&DS: beginner",
-        description:
-          "任何人輕鬆入門的演算法和資料結構。學員將依照合理的學習路徑，一步一步熟悉並解出Easy~Medium題目。",
-        href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
+        name: courseConfig.algo_beginner.name,
+        description: courseConfig.algo_beginner.description,
+        href: courseConfig.algo_beginner.name.url,
       },
       {
-        name: "AL&DS: advanced",
-        description: "主題式學習不同種類的演算法和資料結構，讓你有能力解出9成Medium題目。",
-        href: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
+        name: courseConfig.algo_advanced.name,
+        description: courseConfig.algo_advanced.description,
+        href: courseConfig.algo_advanced.name.url,
       },
     ],
   },
   {
-    name: "聯絡我們",
-    route: "/pages/landing-pages/contact-us",
+    name: routesConfig.button_contact_us.name,
+    route: routesConfig.button_contact_us.route,
     component: <ContactUs />,
   },
   {
-    name: "登入",
-    route: "/pages/authentication/sign-in",
+    name: routesConfig.button_login.name,
+    route: routesConfig.button_login.route,
     component: <SignInCoverPage />,
   },
 ];

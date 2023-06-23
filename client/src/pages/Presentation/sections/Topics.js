@@ -29,10 +29,12 @@ import MKTypography from "components/MKTypography";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 
 // Data
-import data from "pages/Presentation/sections/data/pagesData";
+import { all_alds } from "pages/Presentation/sections/data/pagesData";
+
+import { topicConfig } from "config";
 
 function Topics() {
-  const shuffle = [...data].sort(() => Math.random() - 0.5).slice(0, 15);
+  const shuffle = [...all_alds].sort(() => Math.random() - 0.5).slice(0, 15);
   const renderData = shuffle.map(({ image, name, route }) => (
     <Grid item xs={12} md={4} sx={{ mb: { xs: 3, lg: 0 } }} key={name}>
       <Link to={route}>
@@ -61,10 +63,10 @@ function Topics() {
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            超過50種面試主題
+            {topicConfig.title1}
           </MKTypography>
           <MKTypography variant="body1" color="text">
-            如果你想要秒殺大部分程式設計面試、精通常見的資料結構和流行的問題解決方法。我們提供了超過150道實例，包含超過50個主題，可以幫助您做好準備。趕快來試試看！
+            {topicConfig.subtitle1}
           </MKTypography>
         </Grid>
       </Container>
@@ -78,10 +80,10 @@ function Topics() {
           <Grid item xs={12} lg={3}>
             <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
               <MKTypography variant="h3" fontWeight="bold" mb={1}>
-                演算法 資料結構
+                {topicConfig.title2}
               </MKTypography>
               <MKTypography variant="body2" fontWeight="regular" color="secondary" mb={1} pr={2}>
-                依照課程提供不同的學習路徑，以合理的步調踏進軟體工程師的世界。
+                {topicConfig.subtitle2}
               </MKTypography>
             </MKBox>
           </Grid>

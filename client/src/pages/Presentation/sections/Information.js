@@ -26,6 +26,8 @@ import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
+import { informationConfig } from "config";
+
 function Information() {
   return (
     <MKBox component="section" py={6} my={6}>
@@ -37,20 +39,20 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    什麼是
+                    {informationConfig.card.title1}
                     <br />
-                    白話算法
+                    {informationConfig.card.title2}
                   </>
                 }
-                description=""
+                description={informationConfig.card.description}
               />
               <RotatingCardBack
-                title="線上教學平台"
-                description="易懂教學、完善題型，學習演算法資料結構、LeetCode的最佳選擇。 "
+                title={informationConfig.rotate_card.title}
+                description={informationConfig.rotate_card.description}
                 action={{
                   type: "internal",
                   route: "/",
-                  label: "立即訂閱",
+                  label: informationConfig.rotate_card.button_name,
                 }}
               />
             </RotatingCard>
@@ -59,32 +61,32 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="學習路徑"
-                  description="通過學習路徑，學習者可以有計劃、有序地進行學習，從而快速掌握演算法和資料結構的知識，提升自己的競爭力。包括各個面向的演算法及資料結構（共50多個篇章）"
+                  icon={informationConfig.pros_1.icon}
+                  title={informationConfig.pros_1.name}
+                  description={informationConfig.pros_1.description}
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="新手面向的影片內容"
-                  description="以簡潔易懂的方式呈現演算法和資料結構的基礎概念和常見題型。影片中除了講解理論知識外，還包含豐富的範例和實戰演練，讓學習者可以深入理解並熟練應用所學的知識。"
+                  icon={informationConfig.pros_2.icon}
+                  title={informationConfig.pros_2.name}
+                  description={informationConfig.pros_2.description}
                 />
               </Grid>
             </Grid>
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="code"
-                  title="模板及題型"
-                  description="透過模板，學習者可以更有效地理解解題思路和技巧。講解Leetcode題目，學習者可以更深入了解實際應用場景，並學習如何有效地解決Leetcode題目，提升面試及工作上的能力。"
+                  icon={informationConfig.pros_3.icon}
+                  title={informationConfig.pros_3.name}
+                  description={informationConfig.pros_3.description}
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="local_atm"
-                  title="訂閱制"
-                  description="訂閱計劃為期一年，學習者可以不限次數觀看所有影片和課程。透過這個訂閱計劃，學習者可以依自己的學習進度和需求，自由地使用平台上的所有學習資源。"
+                  icon={informationConfig.pros_4.icon}
+                  title={informationConfig.pros_4.name}
+                  description={informationConfig.pros_4.description}
                 />
               </Grid>
             </Grid>

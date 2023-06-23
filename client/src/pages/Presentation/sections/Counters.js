@@ -24,6 +24,8 @@ import MKBox from "components/MKBox";
 // Material Kit 2 PRO React examples
 import DefaultCounterCard from "examples/Cards/CounterCards/DefaultCounterCard";
 
+import { counterConfig } from "config";
+
 function Counters() {
   return (
     <MKBox component="section" py={3}>
@@ -31,28 +33,28 @@ function Counters() {
         <Grid container item xs={12} lg={9} sx={{ mx: "auto" }}>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={30}
-              suffix="+"
-              title="模板"
-              description="整理各式演算法及資料結構的模板與注意事項，讓你不再迷茫"
+              count={counterConfig.counter1.count}
+              suffix={counterConfig.counter1.suffix}
+              title={counterConfig.counter1.name}
+              description={counterConfig.counter1.description}
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, mx: 0 }} />
             <DefaultCounterCard
-              count={50}
-              suffix="+"
-              title="主題影片"
-              description="提供優質且新手向影片，內容涵蓋recursion, dp, dijkstra, trie...等50多種主題，依照合理的學習路徑來熟悉各個演算法及資料結構"
+              count={counterConfig.counter2.count}
+              suffix={counterConfig.counter2.suffix}
+              title={counterConfig.counter2.name}
+              description={counterConfig.counter2.description}
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={150}
-              suffix="+"
-              title="Leetcode實例講解"
-              description="帶你實際應用、強化知識點，學習googler的思維"
+              count={counterConfig.counter3.count}
+              suffix={counterConfig.counter3.suffix}
+              title={counterConfig.counter3.name}
+              description={counterConfig.counter3.description}
             />
           </Grid>
         </Grid>
