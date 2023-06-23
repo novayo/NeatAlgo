@@ -31,7 +31,7 @@ function Faq() {
             </Grid>
             <Grid item xs={12} md={10}>
               <FaqCollapse
-                title="什麼是簡單算法？"
+                title="什麼是白話算法？"
                 open={collapse === 1}
                 onClick={() => (collapse === 1 ? setCollapse(false) : setCollapse(1))}
               >

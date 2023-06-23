@@ -39,7 +39,7 @@ function Information() {
                   <>
                     什麼是
                     <br />
-                    簡單算法
+                    白話算法
                   </>
                 }
                 description=""

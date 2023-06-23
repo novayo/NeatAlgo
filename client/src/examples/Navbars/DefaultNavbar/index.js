@@ -551,7 +551,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "簡單算法",
+  brand: "白話算法",
   transparent: false,
   light: false,
   action: false,

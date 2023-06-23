@@ -16,7 +16,6 @@ Coded by www.creative-tim.com
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
 
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
@@ -24,13 +23,6 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
 import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
-
-// Images
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import nasaLogo from "assets/images/logos/gray-logos/logo-nasa.svg";
-import vodafoneLogo from "assets/images/logos/gray-logos/logo-vodafone.svg";
-import digitalOceanLogo from "assets/images/logos/gray-logos/logo-digitalocean.svg";
 
 function Information() {
   return (
@@ -44,63 +36,33 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">Trusted by over</MKTypography>
-          <MKTypography variant="h2" color="info" textGradient mb={2}>
-            1,679,477+ web developers
-          </MKTypography>
-          <MKTypography variant="body1" color="text" mb={2}>
-            Many Fortune 500 companies, startups, universities and governmental institutions love
-            Creative Tim&apos;s products.
-          </MKTypography>
+          <MKTypography variant="h2">使用者回饋</MKTypography>
         </Grid>
         <Grid container spacing={3} sx={{ mt: 8 }}>
+          {/* TODO: 日期、 */}
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Nick Willever"
-              date="1 day ago"
-              review="This is an excellent product, the documentation is excellent and helped me get things done more efficiently."
+              name="黃婷琪"
+              date="1 week ago"
+              review="非常滿意這個平台！清晰易懂的教學內容和個人化學習路徑讓我輕鬆掌握演算法知識。強烈推薦！"
               rating={5}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
               color="info"
-              name="Shailesh Kushwaha"
+              name="鄭琮寶"
               date="1 week ago"
-              review="I found solution to all my design needs from Creative Tim. I use them as a freelancer in my hobby projects for fun! And its really affordable, very humble guys !!!"
+              review="這個平台提供了清晰易懂的教學內容，幫助我順利掌握演算法和資料結構的知識。我尤其喜歡他們提供的學習路徑，讓我能夠按照合理的步調進行學習，逐漸踏入軟體工程師的世界。無論是新手還是有一定基礎的學習者，這個平台都能夠滿足他們的需求。我也很喜歡他們不限次數觀看影片和課程的訂閱方式，讓我可以根據自己的進度自由學習。總體而言，這個平台給我帶來了很大的幫助，我強烈推薦給所有想學習演算法和資料結構的人。"
               rating={5}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Samuel Kamuli"
+              name="NiNi"
               date="3 weeks ago"
-              review="Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend for developers who want to spend more time on the backend!."
+              review="這個平台真是太棒了！他們的教學內容深入淺出，幫助我從零基礎起步，掌握了演算法和資料結構的核心概念。訂閱一年更是物超所值，我強烈推薦給所有想學習的人！"
               rating={5}
-            />
-          </Grid>
-        </Grid>
-        <Divider sx={{ my: 6 }} />
-        <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={appleLogo} alt="Apple" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={facebookLogo} alt="Facebook" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={nasaLogo} alt="Nasa" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={vodafoneLogo} alt="Vodafone" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox
-              component="img"
-              src={digitalOceanLogo}
-              alt="DigitalOcean"
-              width="100%"
-              opacity={0.6}
             />
           </Grid>
         </Grid>
