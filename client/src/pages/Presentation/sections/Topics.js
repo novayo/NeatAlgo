@@ -26,10 +26,10 @@ import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
 
 // Presentation page components
-import ExampleCard from "pages/presentation/components/ExampleCard";
+import ExampleCard from "pages/Presentation/components/ExampleCard";
 
 // Data
-import data from "pages/presentation/sections/data/pagesData";
+import data from "pages/Presentation/sections/data/pagesData";
 
 function Topics() {
   const shuffle = [...data].sort(() => Math.random() - 0.5).slice(0, 15);

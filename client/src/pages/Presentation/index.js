@@ -27,12 +27,12 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Presentation page sections
-import Counters from "pages/presentation/sections/Counters";
-import Faq from "pages/presentation/sections/Questions";
-import Information from "pages/presentation/sections/Information";
-import Topics from "pages/presentation/sections/Topics";
-import Testimonials from "pages/presentation/sections/Testimonials";
-import Courses from "pages/presentation/sections/Courses";
+import Counters from "pages/Presentation/sections/Counters";
+import Faq from "pages/Presentation/sections/Questions";
+import Information from "pages/Presentation/sections/Information";
+import Topics from "pages/Presentation/sections/Topics";
+import Testimonials from "pages/Presentation/sections/Testimonials";
+import Courses from "pages/Presentation/sections/Courses";
 
 // Routes
 import routes from "routes";
