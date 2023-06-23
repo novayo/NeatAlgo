@@ -38,8 +38,8 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Icon from "@mui/material/Icon";
-import ContactUs from "layouts/pages/support/contact-us";
-import SignInCoverPage from "layouts/authentication/sign-in/cover";
+import ContactUs from "pages/Support/ContactUs";
+import SignInCoverPage from "pages/Authentication/SignIn/Basic";
 
 // config
 import { courseConfig, routesConfig } from "config";

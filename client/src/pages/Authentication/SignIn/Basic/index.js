@@ -41,6 +41,8 @@ import BasicLayout from "pages/Authentication/components/BasicLayout";
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 
+import { signInConfig } from "config";
+
 function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
 
@@ -61,7 +63,7 @@ function SignInBasic() {
           textAlign="center"
         >
           <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-            Sign in
+            {signInConfig.title}
           </MKTypography>
           <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
             <Grid item xs={2}>
@@ -84,10 +86,10 @@ function SignInBasic() {
         <MKBox pt={4} pb={3} px={3}>
           <MKBox component="form" role="form">
             <MKBox mb={2}>
-              <MKInput type="email" label="Email" fullWidth />
+              <MKInput type="email" label={signInConfig.email} fullWidth />
             </MKBox>
             <MKBox mb={2}>
-              <MKInput type="password" label="Password" fullWidth />
+              <MKInput type="password" label={signInConfig.password} fullWidth />
             </MKBox>
             <MKBox display="flex" alignItems="center" ml={-1}>
               <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -98,17 +100,17 @@ function SignInBasic() {
                 onClick={handleSetRememberMe}
                 sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
               >
-                &nbsp;&nbsp;Remember me
+                &nbsp;&nbsp;{signInConfig.remeber_me_button}
               </MKTypography>
             </MKBox>
             <MKBox mt={4} mb={1}>
               <MKButton variant="gradient" color="info" fullWidth>
-                sign in
+                {signInConfig.submit_button}
               </MKButton>
             </MKBox>
             <MKBox mt={3} mb={1} textAlign="center">
               <MKTypography variant="button" color="text">
-                Don&apos;t have an account?{" "}
+                {signInConfig.register_text}{" "}
                 <MKTypography
                   component={Link}
                   to="/authentication/sign-up/cover"
@@ -117,7 +119,7 @@ function SignInBasic() {
                   fontWeight="medium"
                   textGradient
                 >
-                  Sign up
+                  {signInConfig.register_button}
                 </MKTypography>
               </MKTypography>
             </MKBox>

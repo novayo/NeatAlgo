@@ -1,6 +1,7 @@
 const mainConfig = {
   app_name: "白話算法",
   app_name_eng: "NeatAlgo",
+  main_page_img: "https://hackmd.io/_uploads/BJ7mz3INn.png",
   subtitle: (
     <>
       用最易懂的方式帶你跨入演算法及資料結構的世界
@@ -43,11 +44,11 @@ const routesConfig = {
   },
   button_contact_us: {
     name: "聯絡我們",
-    route: "/pages/landing-pages/contact-us",
+    route: "/contact-us",
   },
   button_login: {
     name: "登入",
-    route: "/pages/authentication/sign-in",
+    route: "/sign-in",
   },
   button_buy: {
     name: "搶先體驗!",
@@ -156,10 +157,33 @@ const feedbackConfig = {
   name: "使用者回饋",
 };
 
+// Footer
 const copyrightConfig = {
   formal_name: `${mainConfig.app_name} ${mainConfig.app_name_eng}`,
   terms_url: "/",
   privacy_url: "/",
+};
+
+const contactUsConfig = {
+  title: "聯絡我們",
+  subtitle:
+    "有任何問題或疑慮？我們樂意回答你的問題並提供協助。請填寫下方表格，我們會儘快與你聯絡。期待與你的交流！",
+  username: "名稱",
+  email: "電子郵件",
+  content_name: "請告訴我們您的問題或需求，我們樂意協助您。",
+  default_text: "請描述您的問題。",
+  submit_button: "送出",
+};
+
+const signInConfig = {
+  title: "登入",
+  subtitle: "請輸入您的電子郵件和密碼以進行登入。",
+  email: "電子郵件",
+  password: "密碼",
+  remeber_me_button: "記住我",
+  submit_button: "登入",
+  register_text: "還沒有帳號嗎？",
+  register_button: "註冊",
 };
 
 // TODO: 改Line Sweep圖片
@@ -457,4 +481,6 @@ export {
   aldsConfig,
   feedbackConfig,
   copyrightConfig,
+  contactUsConfig,
+  signInConfig,
 };

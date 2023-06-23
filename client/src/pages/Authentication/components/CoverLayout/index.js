@@ -24,26 +24,14 @@ import MKBox from "components/MKBox";
 // import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import NeatNavbar from "pages/Navbars";
 import SimpleFooter from "examples/Footers/SimpleFooter";
-
-// Material kit 2 PRO React page layout routes
-import routes from "routes";
 
 function CoverLayout({ coverHeight, image, children }) {
   return (
     <MKBox height="calc(100vh - 1rem)">
       <MKBox width="100%" position="absolute" top="0.25rem">
-        <DefaultNavbar
-          routes={routes}
-          action={{
-            type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-pro-react",
-            label: "buy now",
-          }}
-          transparent
-          light
-        />
+        <NeatNavbar />
       </MKBox>
       <MKBox
         width="calc(100% - 2rem)"

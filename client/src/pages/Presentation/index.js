@@ -23,8 +23,8 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
+import NeatNavbar from "pages/Navbars";
+import NeatFooter from "pages/Footers";
 
 // Presentation page sections
 import Counters from "pages/Presentation/sections/Counters";
@@ -34,34 +34,21 @@ import Topics from "pages/Presentation/sections/Topics";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 import Courses from "pages/Presentation/sections/Courses";
 
-// Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
-
 // Config
-import { mainConfig, routesConfig } from "config";
+import { mainConfig } from "config";
 
 function Presentation() {
   return (
     <>
       {/* Navbar */}
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route: routesConfig.button_buy.route,
-          label: routesConfig.button_buy.name,
-          color: routesConfig.button_buy.color,
-        }}
-        sticky
-      />
+      <NeatNavbar />
 
       {/* 首頁圖片 */}
       <MKBox
         minHeight="75vh"
         width="100%"
         sx={{
-          backgroundImage: `url(https://hackmd.io/_uploads/BJ7mz3INn.png)`,
+          backgroundImage: `url(${mainConfig.main_page_img})`,
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
@@ -118,9 +105,7 @@ function Presentation() {
       </Card>
 
       {/* Footer */}
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
+      <NeatFooter />
     </>
   );
 }

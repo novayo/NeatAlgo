@@ -23,30 +23,18 @@ import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
-
-// Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
+import NeatNavbar from "pages/Navbars";
+import NeatFooter from "pages/Footers";
 
 // Image
 import bgImage from "assets/images/illustrations/illustration-reset.jpg";
 
+import { contactUsConfig } from "config";
+
 function ContactUs() {
   return (
     <>
-      <MKBox position="fixed" top="0.5rem" width="100%">
-        <DefaultNavbar
-          routes={routes}
-          action={{
-            type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-pro-react",
-            label: "buy now",
-            color: "info",
-          }}
-        />
-      </MKBox>
+      <NeatNavbar />
       <Grid container spacing={3} alignItems="center">
         <Grid item xs={12} lg={6}>
           <MKBox
@@ -90,20 +78,19 @@ function ContactUs() {
               mt={-3}
             >
               <MKTypography variant="h3" color="white">
-                Contact us
+                {contactUsConfig.title}
               </MKTypography>
             </MKBox>
             <MKBox p={3}>
               <MKTypography variant="body2" color="text" mb={3}>
-                For further questions, including partnership opportunities, please email
-                hello@creative-tim.com or contact using our contact form.
+                {contactUsConfig.subtitle}
               </MKTypography>
               <MKBox width="100%" component="form" method="post" autoComplete="off">
                 <Grid container spacing={3}>
                   <Grid item xs={12} md={6}>
                     <MKInput
                       variant="standard"
-                      label="Full Name"
+                      label={contactUsConfig.username}
                       InputLabelProps={{ shrink: true }}
                       fullWidth
                     />
@@ -112,7 +99,7 @@ function ContactUs() {
                     <MKInput
                       type="email"
                       variant="standard"
-                      label="Email"
+                      label={contactUsConfig.email}
                       InputLabelProps={{ shrink: true }}
                       fullWidth
                     />
@@ -120,8 +107,8 @@ function ContactUs() {
                   <Grid item xs={12}>
                     <MKInput
                       variant="standard"
-                      label="What can we help you?"
-                      placeholder="Describe your problem in at least 250 characters"
+                      label={contactUsConfig.content_name}
+                      placeholder={contactUsConfig.default_text}
                       InputLabelProps={{ shrink: true }}
                       multiline
                       fullWidth
@@ -131,7 +118,7 @@ function ContactUs() {
                 </Grid>
                 <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
                   <MKButton type="submit" variant="gradient" color="info">
-                    Send Message
+                    {contactUsConfig.submit_button}
                   </MKButton>
                 </Grid>
               </MKBox>
@@ -139,9 +126,7 @@ function ContactUs() {
           </MKBox>
         </Grid>
       </Grid>
-      <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
-      </MKBox>
+      <NeatFooter />
     </>
   );
 }

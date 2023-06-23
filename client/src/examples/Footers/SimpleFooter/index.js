@@ -19,7 +19,6 @@ import PropTypes from "prop-types";
 // @mui material components
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
-import Icon from "@mui/material/Icon";
 
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
@@ -28,8 +27,9 @@ import MKTypography from "components/MKTypography";
 // Material Kit 2 PRO React base styles
 import typography from "assets/theme/base/typography";
 
-function SimpleFooter({ company, links, light }) {
-  const { href, name } = company;
+import { copyrightConfig, contactUsConfig } from "config";
+
+function SimpleFooter({ links, light }) {
   const { size } = typography;
 
   const renderLinks = () =>
@@ -41,8 +41,13 @@ function SimpleFooter({ company, links, light }) {
         pr={key === links.length - 1 ? 0 : 2}
         lineHeight={1}
       >
-        <Link href={link.href} target="_blank">
-          <MKTypography variant="button" fontWeight="regular" color={light ? "white" : "text"}>
+        <Link href={link.href}>
+          <MKTypography
+            to={link.href}
+            variant="button"
+            fontWeight="regular"
+            color={light ? "white" : "text"}
+          >
             {link.name}
           </MKTypography>
         </Link>
@@ -66,19 +71,17 @@ function SimpleFooter({ company, links, light }) {
           color={light ? "white" : "text"}
           fontSize={size.sm}
         >
-          &copy; {new Date().getFullYear()}, made with
-          <MKBox fontSize={size.md} color={light ? "white" : "text"} mb={-0.5} mx={0.25}>
-            <Icon color="inherit" fontSize="inherit">
-              favorite
-            </Icon>
-          </MKBox>
-          by
-          <Link href={href} target="_blank">
-            <MKTypography variant="button" fontWeight="medium" color={light ? "white" : "dark"}>
-              &nbsp;{name}&nbsp;
+          &copy; {new Date().getFullYear()}, made by
+          <Link href="/">
+            <MKTypography
+              to="/"
+              variant="button"
+              fontWeight="medium"
+              color={light ? "white" : "dark"}
+            >
+              &nbsp;{copyrightConfig.formal_name}&nbsp;
             </MKTypography>
           </Link>
-          for a better web.
         </MKBox>
         <MKBox
           component="ul"
@@ -106,12 +109,10 @@ function SimpleFooter({ company, links, light }) {
 
 // Setting default values for the props of SimpleFooter
 SimpleFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "/contact-us", name: contactUsConfig.title },
+    { href: copyrightConfig.terms_url, name: "Terms" },
+    { href: copyrightConfig.privacy_url, name: "Privacy" },
   ],
   light: false,
 };
