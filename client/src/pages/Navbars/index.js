@@ -3,11 +3,18 @@ import routes from "routes";
 import { routesConfig } from "config";
 
 function NeatNavbar() {
+  let navitems = [];
+  routes.forEach((dict) => {
+    if ("isNavbar" in dict && dict["isNavbar"]) {
+      navitems.push(dict);
+    }
+  });
+
   return (
     <>
       {/* Navbar */}
       <DefaultNavbar
-        routes={routes}
+        routes={navitems}
         action={{
           type: "internal",
           route: routesConfig.button_buy.route,

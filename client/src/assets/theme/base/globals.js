@@ -1,4 +1,3 @@
-
 import colors from "assets/theme/base/colors";
 
 const { info, dark } = colors;

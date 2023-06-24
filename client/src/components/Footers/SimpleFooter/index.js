@@ -1,4 +1,3 @@
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -94,7 +93,7 @@ function SimpleFooter({ links, light }) {
 // Setting default values for the props of SimpleFooter
 SimpleFooter.defaultProps = {
   links: [
-    { href: "/contact-us", name: contactUsConfig.title },
+    { href: contactUsConfig.url, name: contactUsConfig.title },
     { href: copyrightConfig.terms_url, name: "Terms" },
     { href: copyrightConfig.privacy_url, name: "Privacy" },
   ],

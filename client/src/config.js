@@ -158,10 +158,11 @@ const feedbackConfig = {
 };
 
 // Footer
+// pdf: src/routes.js
 const copyrightConfig = {
   formal_name: `${mainConfig.app_name} ${mainConfig.app_name_eng}`,
-  terms_url: "/",
-  privacy_url: "/",
+  terms_url: "/terms",
+  privacy_url: "/privacy",
 };
 
 const contactUsConfig = {
@@ -173,6 +174,7 @@ const contactUsConfig = {
   content_name: "請告訴我們您的問題或需求，我們樂意協助您。",
   default_text: "請描述您的問題。",
   submit_button: "送出",
+  url: "/contact-us",
 };
 
 const signInConfig = {

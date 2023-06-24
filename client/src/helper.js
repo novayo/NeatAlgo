@@ -2,8 +2,6 @@ const now = new Date();
 
 function getDateString(ts) {
   const date = new Date(ts);
-  console.log(now.toString());
-  console.log(date.toString());
   const diff = Math.floor((now.getTime() - date.getTime()) / 1000);
 
   let ret = "";
