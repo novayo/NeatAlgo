@@ -1,4 +1,3 @@
-
 // react-router-dom components
 import { Link } from "react-router-dom";
 
@@ -107,7 +106,8 @@ function SimplePricingCard({ variant, color, title, description, price, specific
                 color={buttonColor}
                 fullWidth
               >
-                {action.label}
+                {action.label}&nbsp;
+                <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
               </MKButton>
             </MKBox>
           ) : (
@@ -122,7 +122,8 @@ function SimplePricingCard({ variant, color, title, description, price, specific
                 color={buttonColor}
                 fullWidth
               >
-                {action.label}
+                {action.label}&nbsp;
+                <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
               </MKButton>
             </MKBox>
           )}

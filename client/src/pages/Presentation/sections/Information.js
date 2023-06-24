@@ -34,7 +34,7 @@ function Information() {
                 description={informationConfig.rotate_card.description}
                 action={{
                   type: "internal",
-                  route: "/",
+                  route: informationConfig.rotate_card.url,
                   label: informationConfig.rotate_card.button_name,
                 }}
               />

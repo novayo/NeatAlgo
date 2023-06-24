@@ -3,11 +3,12 @@ import Icon from "@mui/material/Icon";
 import ContactUs from "pages/Support/ContactUs";
 import SignInCoverPage from "pages/Authentication/SignIn/Basic";
 import OnePagePDF from "pages/OnePagePDF";
+import NeatPrice from "pages/Pricing";
 import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
 import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
 
 // config
-import { courseConfig, routesConfig, copyrightConfig } from "config";
+import { courseConfig, routesConfig, copyrightConfig, pricingConfig } from "config";
 
 const routes = [
   {
@@ -50,9 +51,25 @@ const routes = [
     component: <OnePagePDF title="Terms Of Use" pdf_file={terms_pdf} default_page={1} />,
   },
   {
+    name: "Terms Of Use - Refund",
+    route: copyrightConfig.terms_refund_url,
+    component: (
+      <OnePagePDF
+        title="Terms Of Use"
+        pdf_file={terms_pdf}
+        default_page={copyrightConfig.terms_refund_page}
+      />
+    ),
+  },
+  {
     name: "Privacy Policy",
     route: copyrightConfig.privacy_url,
     component: <OnePagePDF title="Privacy Policy" pdf_file={privacy_pdf} default_page={1} />,
+  },
+  {
+    name: "Pricing",
+    route: pricingConfig.url,
+    component: <NeatPrice />,
   },
 ];
 

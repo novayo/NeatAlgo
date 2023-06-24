@@ -52,7 +52,7 @@ const routesConfig = {
   },
   button_buy: {
     name: "搶先體驗!",
-    route: "/",
+    route: "/purchase",
     color: "info",
   },
 };
@@ -89,6 +89,7 @@ const informationConfig = {
     title: "線上教學平台",
     description: "易懂教學、完善題型，學習演算法資料結構、LeetCode的最佳選擇。",
     button_name: "立即訂閱",
+    url: "/purchase",
   },
   pros_1: {
     name: "學習路徑",
@@ -159,11 +160,19 @@ const feedbackConfig = {
   name: "使用者回饋",
 };
 
+// TODO: 重構url
+const pricingConfig = {
+  url: "/purchase",
+  pay_url: "/",
+};
+
 // Footer
 // pdf: src/routes.js
 const copyrightConfig = {
   formal_name: `${mainConfig.app_name} ${mainConfig.app_name_eng}`,
   terms_url: "/terms",
+  terms_refund_url: "/terms/10",
+  terms_refund_page: 10,
   privacy_url: "/privacy",
 };
 
@@ -487,4 +496,5 @@ export {
   copyrightConfig,
   contactUsConfig,
   signInConfig,
+  pricingConfig,
 };
