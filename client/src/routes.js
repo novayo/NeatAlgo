@@ -4,7 +4,7 @@ import ContactUs from "pages/Support/ContactUs";
 import SignInCoverPage from "pages/Authentication/SignIn/Basic";
 import OnePagePDF from "pages/OnePagePDF";
 import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
-import privacy_pdf from "assets/pdf/TERMS_OF_USE.pdf";
+import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
 
 // config
 import { courseConfig, routesConfig, copyrightConfig } from "config";
@@ -45,14 +45,14 @@ const routes = [
     isNavbar: true,
   },
   {
-    name: "Terms",
+    name: "Terms Of Use",
     route: copyrightConfig.terms_url,
-    component: <OnePagePDF pdf_file={terms_pdf} default_page={1} />,
+    component: <OnePagePDF title="Terms Of Use" pdf_file={terms_pdf} default_page={1} />,
   },
   {
-    name: "Privacy",
+    name: "Privacy Policy",
     route: copyrightConfig.privacy_url,
-    component: <OnePagePDF pdf_file={privacy_pdf} default_page={1} />,
+    component: <OnePagePDF title="Privacy Policy" pdf_file={privacy_pdf} default_page={1} />,
   },
 ];
 

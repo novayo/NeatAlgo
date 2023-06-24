@@ -15,7 +15,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css"; // Disable text area
 // 需要加這個才能使用
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function OnePagePDF({ pdf_file, default_page }) {
+function OnePagePDF({ title, pdf_file, default_page }) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(default_page);
 
@@ -54,7 +54,7 @@ function OnePagePDF({ pdf_file, default_page }) {
               boxShadow: ({ boxShadows: { xxl } }) => xxl,
             }}
           >
-            <MKTypography variant="h3"> Terms Of Use </MKTypography>
+            <MKTypography variant="h3"> {title} </MKTypography>
             <MKTypography>
               Page {pageNumber} of {numPages}
             </MKTypography>
