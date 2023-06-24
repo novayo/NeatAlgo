@@ -25,7 +25,7 @@ import MKBox from "components/MKBox";
 
 // Material Kit 2 PRO React example components
 import NeatNavbar from "pages/Navbars";
-import SimpleFooter from "examples/Footers/SimpleFooter";
+import SimpleFooter from "components/Footers/SimpleFooter";
 
 function CoverLayout({ coverHeight, image, children }) {
   return (

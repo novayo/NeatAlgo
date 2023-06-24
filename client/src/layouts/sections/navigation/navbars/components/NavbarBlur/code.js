@@ -1,5 +1,5 @@
 const navbarBlurCode = `// Material Kit 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // Routes
 import routes from "routes";

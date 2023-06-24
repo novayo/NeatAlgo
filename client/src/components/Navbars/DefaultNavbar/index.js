@@ -37,8 +37,8 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
 // Material Kit 2 PRO React examples
-import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
-import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
+import DefaultNavbarDropdown from "components/Navbars/DefaultNavbar/DefaultNavbarDropdown";
+import DefaultNavbarMobile from "components/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
 // Material Kit 2 PRO React base styles
 import breakpoints from "assets/theme/base/breakpoints";
@@ -146,7 +146,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                         component={item.route ? Link : MuiLink}
                         to={item.route ? item.route : ""}
                         href={item.href ? item.href : (e) => e.preventDefault()}
-                        target={item.href ? "_blank" : ""}
                         rel={item.href ? "noreferrer" : "noreferrer"}
                         minWidth="11.25rem"
                         display="block"
@@ -197,7 +196,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
         const linkComponent = {
           component: MuiLink,
           href: item.href,
-          target: "_blank",
           rel: "noreferrer",
         };
 
@@ -341,7 +339,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 const linkComponent = {
                   component: MuiLink,
                   href: item.href,
-                  target: "_blank",
                   rel: "noreferrer",
                 };
 
@@ -508,7 +505,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 <MKButton
                   component="a"
                   href={action.route}
-                  target="_blank"
                   rel="noreferrer"
                   variant={
                     action.color === "white" || action.color === "default"

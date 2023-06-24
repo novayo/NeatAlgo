@@ -15,20 +15,20 @@ const courseConfig = {
   python: {
     name: "Python入門",
     description: "新手需知道的刷題所有 python 基本知識。",
-    url: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+    url: "/",
     image: "https://hackmd.io/_uploads/Bks1FerEh.png",
   },
   algo_beginner: {
     name: "AL&DS: beginner",
     description:
       "任何人輕鬆入門的演算法和資料結構。學員將依照合理的學習路徑，一步一步熟悉並解出Easy~Medium題目。",
-    url: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
+    url: "/",
     image: "https://hackmd.io/_uploads/Hyp1ClSV2.png",
   },
   algo_advanced: {
     name: "AL&DS: advanced",
     description: "主題式學習不同種類的演算法和資料結構，讓你有能力解出9成Medium題目。",
-    url: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
+    url: "/",
     image: "https://hackmd.io/_uploads/S13E0xB42.png",
   },
   courses_button: {
@@ -52,7 +52,7 @@ const routesConfig = {
   },
   button_buy: {
     name: "搶先體驗!",
-    route: "https://www.creative-tim.com/product/material-kit-react",
+    route: "/",
     color: "info",
   },
 };

@@ -1,4 +1,4 @@
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import routes from "routes";
 import { routesConfig } from "config";
 
@@ -9,7 +9,7 @@ function NeatNavbar() {
       <DefaultNavbar
         routes={routes}
         action={{
-          type: "external",
+          type: "internal",
           route: routesConfig.button_buy.route,
           label: routesConfig.button_buy.name,
           color: routesConfig.button_buy.color,

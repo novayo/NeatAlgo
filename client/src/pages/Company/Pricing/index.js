@@ -20,8 +20,8 @@ Coded by www.creative-tim.com
 import MKBox from "components/MKBox";
 
 // Material Kit 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
+import DefaultFooter from "components/Footers/DefaultFooter";
 
 // Pricing page sections
 import Header from "pages/Company/Pricing/sections/Header";

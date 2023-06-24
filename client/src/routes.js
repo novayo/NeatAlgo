@@ -52,17 +52,17 @@ const routes = [
       {
         name: courseConfig.python.name,
         description: courseConfig.python.description,
-        href: courseConfig.python.name.url,
+        href: courseConfig.python.url,
       },
       {
         name: courseConfig.algo_beginner.name,
         description: courseConfig.algo_beginner.description,
-        href: courseConfig.algo_beginner.name.url,
+        href: courseConfig.algo_beginner.url,
       },
       {
         name: courseConfig.algo_advanced.name,
         description: courseConfig.algo_advanced.description,
-        href: courseConfig.algo_advanced.name.url,
+        href: courseConfig.algo_advanced.url,
       },
     ],
   },

@@ -9,14 +9,14 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
-import DefaultBackgroundCard from "examples/Cards/BackgroundCards/DefaultBackgroundCard";
+import DefaultBackgroundCard from "components/Cards/BackgroundCards/DefaultBackgroundCard";
 
 // HelpCenter page components
 import ListItem from "pages/Support/HelpCenter/components/ListItem";
 
 // Images
-import bgImage1 from "assets/images/examples/color1.jpg";
-import bgImage2 from "assets/images/examples/color3.jpg";
+import bgImage1 from "assets/images/components/color1.jpg";
+import bgImage2 from "assets/images/components/color3.jpg";
 
 function ApplicationTwo() {
   return (

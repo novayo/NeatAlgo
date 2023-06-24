@@ -25,9 +25,9 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import SimpleFooter from "examples/Footers/SimpleFooter";
-import SimpleInfoCard from "examples/Cards/InfoCards/SimpleInfoCard";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
+import SimpleFooter from "components/Footers/SimpleFooter";
+import SimpleInfoCard from "components/Cards/InfoCards/SimpleInfoCard";
 
 // HelpCenter page components
 import FaqCollapse from "pages/Support/Faq/components/FaqCollapse";

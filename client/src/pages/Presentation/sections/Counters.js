@@ -22,7 +22,7 @@ import Divider from "@mui/material/Divider";
 import MKBox from "components/MKBox";
 
 // Material Kit 2 PRO React examples
-import DefaultCounterCard from "examples/Cards/CounterCards/DefaultCounterCard";
+import DefaultCounterCard from "components/Cards/CounterCards/DefaultCounterCard";
 
 import { counterConfig } from "config";
 

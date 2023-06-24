@@ -22,7 +22,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 PRO React examples
-import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
+import DefaultReviewCard from "components/Cards/ReviewCards/DefaultReviewCard";
 
 import { feedbackConfig } from "config";
 import { feedbacks } from "pages/Presentation/sections/data/pagesData";

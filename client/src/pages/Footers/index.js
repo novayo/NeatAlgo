@@ -1,4 +1,4 @@
-import SimpleFooter from "examples/Footers/SimpleFooter";
+import SimpleFooter from "components/Footers/SimpleFooter";
 import MKBox from "components/MKBox";
 
 function NeatFooter() {

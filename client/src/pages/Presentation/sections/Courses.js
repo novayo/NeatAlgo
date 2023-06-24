@@ -1,5 +1,5 @@
 import Container from "@mui/material/Container";
-import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import CenteredBlogCard from "components/Cards/BlogCards/CenteredBlogCard";
 import Grid from "@mui/material/Grid";
 
 import { courseConfig } from "config";
