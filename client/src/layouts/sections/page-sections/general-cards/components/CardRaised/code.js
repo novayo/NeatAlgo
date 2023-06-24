@@ -1,10 +1,8 @@
 const cardRaisedCode = `// @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
-// Material Kit 2 PRO React examples
 import RaisedBlogCard from "components/Cards/BlogCards/RaisedBlogCard";
 
 function CardRaised() {
@@ -16,7 +14,7 @@ function CardRaised() {
       <Grid container item xs={12} lg={6} sx={{ mx: "auto", px: { xs: 0, lg: 6 } }}>
         <RaisedBlogCard
           image={image}
-          title="Material Kit"
+          title="NeatAlgo"
           description="One of the most beautiful and complex UI Kits built by the team behind Creative Tim. That's pretty impressive."
           action={{
             type: "internal",

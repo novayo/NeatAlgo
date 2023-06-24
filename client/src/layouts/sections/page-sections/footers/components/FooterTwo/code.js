@@ -1,4 +1,3 @@
-const footerTwoCode = `// Material Kit 2 PRO React examples
 import DefaultFooter from "components/Footers/DefaultFooter";
 
 // routes

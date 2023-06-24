@@ -1,7 +1,5 @@
-// Material Kit 2 PRO React base styles
 import colors from "assets/theme/base/colors";
 
-// Material Kit 2 PRO React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { white } = colors;

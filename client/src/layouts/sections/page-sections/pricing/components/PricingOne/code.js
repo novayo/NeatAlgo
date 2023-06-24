@@ -7,11 +7,9 @@ import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 PRO React examples
 import DefaultPricingCard from "components/Cards/PricingCards/DefaultPricingCard";
 
 function PricingOne() {

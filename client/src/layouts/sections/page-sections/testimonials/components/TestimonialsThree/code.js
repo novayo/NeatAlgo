@@ -2,12 +2,10 @@ const testimonialsThreeCode = `// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKBadge from "components/MKBadge";
 
-// Material Kit 2 PRO React components
 import SimpleReviewCard from "components/Cards/ReviewCards/SimpleReviewCard";
 
 // Images

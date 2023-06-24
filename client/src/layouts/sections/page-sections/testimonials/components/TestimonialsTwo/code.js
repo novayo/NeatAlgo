@@ -14,11 +14,9 @@ import "swiper/modules/navigation/navigation.min.css";
 import Container from "@mui/material/Container";
 import Icon from "@mui/material/Icon";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 PRO React examples
 import ComplexReviewCard from "components/Cards/ReviewCards/ComplexReviewCard";
 
 // Images

@@ -3,7 +3,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKAlert from "components/MKAlert";
 import MKTypography from "components/MKTypography";

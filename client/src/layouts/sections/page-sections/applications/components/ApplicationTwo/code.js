@@ -4,11 +4,9 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import Divider from "@mui/material/Divider";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 PRO React examples
 import DefaultBackgroundCard from "components/Cards/BackgroundCards/DefaultBackgroundCard";
 
 // HelpCenter page components

@@ -3,11 +3,9 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 PRO React components
 import ColoredBackgroundCard from "components/Cards/BackgroundCards/ColoredBackgroundCard";
 import InfoBackgroundCard from "components/Cards/BackgroundCards/InfoBackgroundCard";
 

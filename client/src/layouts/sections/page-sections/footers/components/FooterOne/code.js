@@ -1,7 +1,5 @@
-const footerOneCode = `// Material Kit 2 PRO React components
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 PRO React examples
 import DetailedFooter from "components/Footers/DetailedFooter";
 
 function FooterOne() {

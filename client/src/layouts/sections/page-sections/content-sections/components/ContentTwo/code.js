@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
 import MKButton from "components/MKButton";

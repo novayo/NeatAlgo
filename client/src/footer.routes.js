@@ -1,5 +1,4 @@
 import Container from "@mui/material/Container";
-// Material Kit 2 PRO React components
 import MKTypography from "components/MKTypography";
 import { copyrightConfig } from "config";
 import { Link } from "react-router-dom";

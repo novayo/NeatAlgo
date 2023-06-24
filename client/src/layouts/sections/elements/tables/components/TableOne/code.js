@@ -5,13 +5,11 @@ import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
 import MKAvatar from "components/MKAvatar";
 import MKTypography from "components/MKTypography";
 
-// Material Kit 2 PRO React examples
 import Table from "components/Tables/Table";
 
 // Images

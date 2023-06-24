@@ -4,7 +4,6 @@ const toastBasicCode = `import { useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKSnackbar from "components/MKSnackbar";

@@ -1,10 +1,8 @@
 const cardPricingCode = `// @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
-// Material Kit 2 PRO React examples
 import SimplePricingCard from "components/Cards/PricingCards/SimplePricingCard";
 
 function CardPricing() {

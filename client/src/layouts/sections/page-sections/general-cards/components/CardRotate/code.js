@@ -1,10 +1,8 @@
 const cardRotateCode = `// @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
-// Material Kit 2 PRO React examples
 import RotatingCard from "components/Cards/RotatingCard";
 import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "components/Cards/RotatingCard/RotatingCardBack";
@@ -25,7 +23,7 @@ function CardRotate() {
               <>
                 Feel the
                 <br />
-                Material Kit
+                NeatAlgo
               </>
             }
             description="All the MUI components that you need in a development have been re-design with the new look."

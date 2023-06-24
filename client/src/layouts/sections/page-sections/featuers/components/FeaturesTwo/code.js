@@ -2,10 +2,8 @@ const featuresTwoCode = `// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 
-// Material Kit 2 PRO React examples
 import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "components/Cards/BlogCards/CenteredBlogCard";
 

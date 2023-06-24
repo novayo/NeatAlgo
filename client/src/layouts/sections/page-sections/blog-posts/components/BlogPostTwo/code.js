@@ -3,11 +3,9 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKPagination from "components/MKPagination";
 
-// Material Kit 2 PRO React components
 import SimpleBookingCard from "components/Cards/BookingCards/SimpleBookingCard";
 
 // Images

@@ -1,23 +1,8 @@
-/*
-=========================================================
-* Material Kit 2 PRO React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
@@ -36,7 +21,7 @@ function Typography() {
           </Grid>
 
           <Grid item xs={12} sm={9}>
-            <MKTypography variant="h1">H1 Material Kit</MKTypography>
+            <MKTypography variant="h1">H1 NeatAlgo</MKTypography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" py={2}>
@@ -47,7 +32,7 @@ function Typography() {
           </Grid>
 
           <Grid item xs={12} sm={9}>
-            <MKTypography variant="h2">H2 Material Kit</MKTypography>
+            <MKTypography variant="h2">H2 NeatAlgo</MKTypography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" py={2}>
@@ -58,7 +43,7 @@ function Typography() {
           </Grid>
 
           <Grid item xs={12} sm={9}>
-            <MKTypography variant="h3">H3 Material Kit</MKTypography>
+            <MKTypography variant="h3">H3 NeatAlgo</MKTypography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" py={2}>
@@ -69,7 +54,7 @@ function Typography() {
           </Grid>
 
           <Grid item xs={12} sm={9}>
-            <MKTypography variant="h4">H4 Material Kit</MKTypography>
+            <MKTypography variant="h4">H4 NeatAlgo</MKTypography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" py={2}>
@@ -80,7 +65,7 @@ function Typography() {
           </Grid>
 
           <Grid item xs={12} sm={9}>
-            <MKTypography variant="h5">H5 Material Kit</MKTypography>
+            <MKTypography variant="h5">H5 NeatAlgo</MKTypography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" py={2}>
@@ -91,7 +76,7 @@ function Typography() {
           </Grid>
 
           <Grid item xs={12} sm={9}>
-            <MKTypography variant="h6">H6 Material Kit</MKTypography>
+            <MKTypography variant="h6">H6 NeatAlgo</MKTypography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" py={2}>

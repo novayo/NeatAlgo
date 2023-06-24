@@ -3,7 +3,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Autocomplete from "@mui/material/Autocomplete";
 
-// Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKInput from "components/MKInput";
 
