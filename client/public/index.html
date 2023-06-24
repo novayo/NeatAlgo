@@ -27,7 +27,20 @@
     />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-
+    
+    <!-- Disable right click and F12 -->
+    <script type="text/javascript">
+      document.oncontextmenu = function () {
+        return false
+      }
+      document.onkeydown = function () {
+        if (window.event && window.event.keyCode === 123) {
+          event.keyCode = 0
+          event.returnValue = false
+          return false
+        }
+      }
+    </script>
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
