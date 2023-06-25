@@ -45,23 +45,23 @@ function NeatPrice() {
             {/* 標題 */}
             <MKTypography variant="h3"> 選擇適合您的方案 </MKTypography>
             <Divider sx={{ md: 3 }} light={false} />
-            <MKTypography variant="button">
+            <MKTypography variant="subtitle2">
               <DoneAllIcon />
               &nbsp; 不自動續訂
             </MKTypography>
-            <MKTypography variant="button">
+            <MKTypography variant="subtitle2">
               <DoneAllIcon />
               &nbsp; 不限次數
             </MKTypography>
-            <MKTypography variant="button">
+            <MKTypography variant="subtitle2">
               <DoneAllIcon />
               &nbsp; 不限時間
             </MKTypography>
-            <MKTypography variant="button">
+            <MKTypography variant="subtitle2">
               <DoneAllIcon />
               &nbsp; 盡情觀賞所有課程，無廣告干擾
             </MKTypography>
-            <MKTypography variant="button">
+            <MKTypography variant="button" fontWeight="bold" sx={{ mt: "1vh" }}>
               <ErrorOutlineOutlinedIcon />
               &nbsp; 享有7天內百分之百全額退費保障，逾期恕不接受退款申請。如需申請退款，請點選
               <Link to={copyrightConfig.terms_refund_url}>「這裡」</Link>
