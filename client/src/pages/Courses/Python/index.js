@@ -16,6 +16,8 @@ import Icon from "@mui/material/Icon";
 // Config
 import { courseConfig } from "config";
 import PythonTimeline from "pages/Courses/Python/PythonTimeline";
+import Divider from "@mui/material/Divider";
+import ProgressBar from "pages/Courses/Common/ProgressBar";
 
 function CoursePython() {
   return (
@@ -108,14 +110,16 @@ function CoursePython() {
                   overflowY: "scroll",
                 }}
               >
+                <ProgressBar progress={100} />
+                <Divider sx={{ my: 3, bgcolor: "secondary.light" }} />
                 <PythonTimeline />
               </MKBox>
             </Grid>
             {/* Right Box */}
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={9}>
               <MKBox
                 minHeight="85vh"
-                color="white"
+                color="info"
                 bgColor="white"
                 variant="gradient"
                 shadow="lg"

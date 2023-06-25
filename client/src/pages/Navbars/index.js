@@ -21,7 +21,7 @@ function NeatNavbar({ sticky }) {
           label: routesConfig.button_buy.name,
           color: routesConfig.button_buy.color,
         }}
-        sticky={sticky}
+        sticky={sticky === undefined ? true : sticky}
       />
     </>
   );

@@ -8,7 +8,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { getFixedLengthString } from "helper";
 
 function UnfinishedDot({ isEnd, selected, locked, title }) {
-  title = getFixedLengthString(selected ? 22 : 23, title);
+  title = getFixedLengthString(selected ? 20 : 21, title);
 
   return (
     <>

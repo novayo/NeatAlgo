@@ -8,7 +8,7 @@ import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import { getFixedLengthString } from "helper";
 
 function FinishedDot({ isEnd, selected, title }) {
-  title = getFixedLengthString(selected ? 22 : 23, title);
+  title = getFixedLengthString(selected ? 20 : 21, title);
 
   return (
     <>
