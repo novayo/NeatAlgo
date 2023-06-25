@@ -24,4 +24,12 @@ function getDateString(ts) {
   return ret;
 }
 
-export { getDateString };
+function getFixedLengthString(total_len, string) {
+  if (string.length <= total_len) {
+    return string;
+  } else {
+    return string.substring(0, total_len - 3) + "...";
+  }
+}
+
+export { getDateString, getFixedLengthString };

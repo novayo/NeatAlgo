@@ -4,6 +4,7 @@ import ContactUs from "pages/Support/ContactUs";
 import SignInCoverPage from "pages/Authentication/SignIn/Basic";
 import OnePagePDF from "pages/OnePagePDF";
 import NeatPrice from "pages/Pricing";
+import CoursePython from "pages/Courses/Python";
 import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
 import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
 
@@ -70,6 +71,11 @@ const routes = [
     name: "Pricing",
     route: pricingConfig.url,
     component: <NeatPrice />,
+  },
+  {
+    name: "CoursePython",
+    route: courseConfig.python.url,
+    component: <CoursePython />,
   },
 ];
 

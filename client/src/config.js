@@ -15,7 +15,7 @@ const courseConfig = {
   python: {
     name: "Python入門",
     description: "新手需知道的刷題所有 python 基本知識。",
-    url: "/",
+    url: "/course/python",
     image: "https://hackmd.io/_uploads/Bks1FerEh.png",
   },
   algo_beginner: {

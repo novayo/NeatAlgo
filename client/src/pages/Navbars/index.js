@@ -2,7 +2,7 @@ import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import routes from "routes";
 import { routesConfig } from "config";
 
-function NeatNavbar() {
+function NeatNavbar({ sticky }) {
   let navitems = [];
   routes.forEach((dict) => {
     if ("isNavbar" in dict && dict["isNavbar"]) {
@@ -21,7 +21,7 @@ function NeatNavbar() {
           label: routesConfig.button_buy.name,
           color: routesConfig.button_buy.color,
         }}
-        sticky
+        sticky={sticky}
       />
     </>
   );
