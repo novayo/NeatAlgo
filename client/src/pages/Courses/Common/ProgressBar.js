@@ -51,7 +51,7 @@ export default function ProgressBar({ progress }) {
             justifyContent: "center",
           }}
         >
-          <MKTypography variant="caption" component="div" color="text.secondary" fontSize="200%">
+          <MKTypography color="rgb(69, 64, 64)" fontSize="200%" fontWeight="bold">
             {`${Math.round(progress)}%`}
           </MKTypography>
         </MKBox>

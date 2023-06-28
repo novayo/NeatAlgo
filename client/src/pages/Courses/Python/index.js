@@ -18,6 +18,7 @@ import { courseConfig } from "config";
 import PythonTimeline from "pages/Courses/Python/PythonTimeline";
 import Divider from "@mui/material/Divider";
 import ProgressBar from "pages/Courses/Common/ProgressBar";
+import VideoPlayer from "pages/Courses/VideoPlayer";
 
 function CoursePython() {
   return (
@@ -130,7 +131,7 @@ function CoursePython() {
                 overflow="hidden"
                 overflowY="scroll"
               >
-                Box
+                <VideoPlayer />
               </MKBox>
             </Grid>
           </Grid>
