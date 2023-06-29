@@ -59,7 +59,7 @@ function OnePagePDF({ title, pdf_file, default_page }) {
               Page {pageNumber} of {numPages}
             </MKTypography>
             <Document file={pdf_file} onLoadSuccess={onDocumentLoadSuccess}>
-              <Page scale="1.2" pageNumber={pageNumber} renderTextLayer={false} />
+              <Page pageNumber={pageNumber} renderTextLayer={false} />
             </Document>
             <Grid container spacing={1} align="center" direction="row">
               <Grid item xs={6}>

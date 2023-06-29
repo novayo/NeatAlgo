@@ -107,8 +107,7 @@ function CoursePython() {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  overflow: "hidden",
-                  overflowY: "scroll",
+                  overflow: "scroll",
                 }}
               >
                 <ProgressBar progress={100} />
@@ -128,10 +127,9 @@ function CoursePython() {
                 p={2}
                 display="flex"
                 flexDirection="column"
-                overflow="hidden"
-                overflowY="scroll"
+                overflow="scroll"
               >
-                <VideoPlayer />
+                <VideoPlayer url="https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59" />
               </MKBox>
             </Grid>
           </Grid>

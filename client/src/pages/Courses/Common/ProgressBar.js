@@ -8,11 +8,12 @@ export default function ProgressBar({ progress }) {
       <MKTypography variant="h4">進度</MKTypography>
       <MKBox
         color="white"
-        bgColor="white "
+        bgColor="white"
         variant="gradient"
         sx={{
           position: "relative",
           display: "inline-flex",
+          alignItems: "center",
         }}
       >
         <CircularProgress
@@ -24,7 +25,6 @@ export default function ProgressBar({ progress }) {
             mt: "2vh",
             ml: "1vh",
             color: "rgb(173, 173, 201)",
-            position: "relative",
           }}
         />
         <CircularProgress
@@ -41,17 +41,22 @@ export default function ProgressBar({ progress }) {
         />
         <MKBox
           sx={{
-            top: 0,
-            left: 0,
-            bottom: 0,
-            right: 0,
+            width: "6rem",
             position: "absolute",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            mt: "calc(16% - 2rem)",
+            ml: "calc(50% - 3rem)",
           }}
         >
-          <MKTypography color="rgb(69, 64, 64)" fontSize="200%" fontWeight="bold">
+          <MKTypography
+            color="dark"
+            fontSize="2rem"
+            fontWeight="bold"
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
             {`${Math.round(progress)}%`}
           </MKTypography>
         </MKBox>

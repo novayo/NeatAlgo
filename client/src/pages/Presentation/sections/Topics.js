@@ -19,8 +19,8 @@ import { topicConfig } from "config";
 
 function Topics() {
   const shuffle = [...all_alds].sort(() => Math.random() - 0.5).slice(0, 15);
-  const renderData = shuffle.map(({ image, name, route }) => (
-    <Grid item xs={12} md={4} sx={{ mb: { xs: 3, lg: 0 } }} key={name}>
+  const renderData = shuffle.map(({ image, name, route }, idx) => (
+    <Grid item xs={12} md={4} sx={{ mb: { xs: 3, lg: 0 } }} key={idx}>
       <Link to={route}>
         <ExampleCard image={image} name={name} display="grid" minHeight="auto" />
       </Link>

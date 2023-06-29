@@ -86,7 +86,7 @@ RotatingCard.propTypes = {
     "dark",
     "light",
   ]),
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   title: PropTypes.node.isRequired,
   description: PropTypes.node.isRequired,
   action: PropTypes.oneOfType([
