@@ -4,7 +4,7 @@ import ContactUs from "pages/Support/ContactUs";
 import SignInCoverPage from "pages/Authentication/SignIn/Basic";
 import OnePagePDF from "pages/OnePagePDF";
 import NeatPrice from "pages/Pricing";
-import CoursePython from "pages/Courses/Python";
+import Courses from "pages/Courses";
 import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
 import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
 
@@ -20,7 +20,7 @@ const routes = [
       {
         name: courseConfig.python.name,
         description: courseConfig.python.description,
-        href: courseConfig.python.url,
+        href: courseConfig.python.courses[0].url,
       },
       {
         name: courseConfig.algo_beginner.name,
@@ -72,11 +72,31 @@ const routes = [
     route: pricingConfig.url,
     component: <NeatPrice />,
   },
-  {
-    name: "CoursePython",
-    route: courseConfig.python.url,
-    component: <CoursePython />,
-  },
 ];
+
+// Process Cources
+Object.keys(courseConfig).map((key) => {
+  if (!("courses" in courseConfig[key])) {
+    return;
+  }
+  let backgroundImage = courseConfig[key]["backgroundImage"];
+  courseConfig[key]["courses"].forEach((course) => {
+    let newItem = {
+      name: key + course["name"],
+      route: course["url"],
+      component: (
+        <Courses
+          type={key}
+          id={course["id"]}
+          backgroundImage={backgroundImage}
+          title={course.title}
+          description={course.description}
+          url={course.videoUrl}
+        />
+      ),
+    };
+    routes.push(newItem);
+  });
+});
 
 export default routes;

@@ -32,4 +32,8 @@ function getFixedLengthString(total_len, string) {
   }
 }
 
-export { getDateString, getFixedLengthString };
+function raise(message) {
+  throw new Error(`[NeatAlgo] ${message}`);
+}
+
+export { getDateString, getFixedLengthString, raise };

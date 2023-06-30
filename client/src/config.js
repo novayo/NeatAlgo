@@ -1,3 +1,5 @@
+import coursePythonBackground from "assets/images/office-dark.jpg";
+
 const mainConfig = {
   app_name: "白話算法",
   app_name_eng: "NeatAlgo",
@@ -15,8 +17,43 @@ const courseConfig = {
   python: {
     name: "Python入門",
     description: "新手需知道的刷題所有 python 基本知識。",
-    url: "/course/python",
     image: "https://hackmd.io/_uploads/Bks1FerEh.png",
+    backgroundImage: coursePythonBackground,
+    courses: [
+      // course_info_dict
+      {
+        id: 1,
+        title: "python入門 1",
+        description: "Default",
+        url: "/course/python/python1",
+        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
+        locked: false,
+      },
+      {
+        id: 2,
+        title: "python入門 2",
+        description: "Default",
+        url: "/course/python/python2",
+        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
+        locked: true,
+      },
+      {
+        id: 3,
+        title: "python入門 3",
+        description: "Default",
+        url: "/course/python/python3",
+        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
+        locked: true,
+      },
+      {
+        id: 4,
+        title: "python入門 4",
+        description: "Default",
+        url: "/course/python/python4",
+        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
+        locked: true,
+      },
+    ],
   },
   algo_beginner: {
     name: "AL&DS: beginner",
@@ -31,6 +68,9 @@ const courseConfig = {
     url: "/",
     image: "https://hackmd.io/_uploads/S13E0xB42.png",
   },
+};
+
+const navConfig = {
   courses_button: {
     type: "internal",
     color: "info",
@@ -497,4 +537,5 @@ export {
   contactUsConfig,
   signInConfig,
   pricingConfig,
+  navConfig,
 };

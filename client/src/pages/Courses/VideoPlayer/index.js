@@ -9,6 +9,9 @@ export default function VideoPlayer({ url }) {
 
   useEffect(() => {
     const myInterval = setInterval(() => {
+      if (!videoPlayerRef.current || !videoPlayerRef.current.player) {
+        return;
+      }
       if (!videoPlayerRef.current.player.isPlaying) {
         return;
       }

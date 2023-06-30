@@ -2,7 +2,7 @@ import Container from "@mui/material/Container";
 import CenteredBlogCard from "components/Cards/BlogCards/CenteredBlogCard";
 import Grid from "@mui/material/Grid";
 
-import { courseConfig } from "config";
+import { courseConfig, navConfig } from "config";
 
 function Courses() {
   return (
@@ -16,10 +16,10 @@ function Courses() {
               title={courseConfig.python.name}
               description={courseConfig.python.description}
               action={{
-                type: courseConfig.courses_button.type,
-                route: courseConfig.python.url,
-                color: courseConfig.courses_button.color,
-                label: courseConfig.courses_button.label,
+                type: navConfig.courses_button.type,
+                route: courseConfig.python.courses[0].url,
+                color: navConfig.courses_button.color,
+                label: navConfig.courses_button.label,
               }}
             />
           </Grid>
@@ -29,10 +29,10 @@ function Courses() {
               title={courseConfig.algo_beginner.name}
               description={courseConfig.algo_beginner.description}
               action={{
-                type: courseConfig.courses_button.type,
+                type: navConfig.courses_button.type,
                 route: courseConfig.algo_beginner.url,
-                color: courseConfig.courses_button.color,
-                label: courseConfig.courses_button.label,
+                color: navConfig.courses_button.color,
+                label: navConfig.courses_button.label,
               }}
             />
           </Grid>
@@ -42,10 +42,10 @@ function Courses() {
               title={courseConfig.algo_advanced.name}
               description={courseConfig.algo_advanced.description}
               action={{
-                type: courseConfig.courses_button.type,
+                type: navConfig.courses_button.type,
                 route: courseConfig.algo_advanced.url,
-                color: courseConfig.courses_button.color,
-                label: courseConfig.courses_button.label,
+                color: navConfig.courses_button.color,
+                label: navConfig.courses_button.label,
               }}
             />
           </Grid>
