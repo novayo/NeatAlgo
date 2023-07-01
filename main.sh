@@ -1,6 +1,7 @@
 #!/bin/bash
 
-USING_MAC=1
+ON_MAC=0
+ON_WIN=1
 
 BASEDIR=$PWD
 LOGS="$BASEDIR/logs"
@@ -11,24 +12,46 @@ ENV_CLIENT_FOLDER="./client/src/env"
 ENV_SERVER_FOLDER="./server/src/env"
 
 # Mac
-MISSED_PYTHON_PACKAGE="/Users/shiheric/Library/Python/3.9/lib/python/site-packages"
+if [ "$ON_MAC" -eq "1" ]; then
+  PYTHON_LIB="python3"
+  MISSED_PYTHON_PACKAGE="-m /Users/shiheric/Library/Python/3.9/lib/python/site-packages"
+  SUDO="sudo"
+fi
+
+# Win
+if [ "$ON_WIN" -eq "1" ]; then
+  PYTHON_LIB="python"
+  MISSED_PYTHON_PACKAGE=""
+  SUDO=""
+fi
+
 
 # Create logs folder
 mkdir -p $LOGS
 
 function check_client_pid() {
-  local pid=$(sudo lsof -i:$CLIENT_PORT | grep node | cut -d' ' -f2- | sed -e 's/^[[:space:]]*//' | cut -d' ' -f1)
+  if [ "$ON_WIN" -eq "1" ]; then
+    return
+  fi
+  local pid=$($SUDO lsof -i:$CLIENT_PORT | grep node | cut -d' ' -f2- | sed -e 's/^[[:space:]]*//' | cut -d' ' -f1)
   pid=$(echo $pid | tr ' ' '\n' | sort -u | xargs ) # May have multiple result...
   echo $pid
 }
 
 function check_server_pid() {
-  local pid=$(sudo lsof -i:$SERVER_PORT | grep Python | cut -d' ' -f2- | sed -e 's/^[[:space:]]*//' | cut -d' ' -f1)
+  if [ "$ON_WIN" -eq "1" ]; then
+    return
+  fi
+  local pid=$($SUDO lsof -i:$SERVER_PORT | grep Python | cut -d' ' -f2- | sed -e 's/^[[:space:]]*//' | cut -d' ' -f1)
   pid=$(echo $pid | tr ' ' '\n' | sort -u | xargs ) # May have multiple result...
   echo $pid
 }
 
 function check_client_alive() {
+  if [ "$ON_WIN" -eq "1" ]; then
+    echo 1
+    return
+  fi
   local pid=$(check_client_pid)
   if [ -z "$pid" ]
   then
@@ -39,6 +62,10 @@ function check_client_alive() {
 }
 
 function check_server_alive() {
+  if [ "$ON_WIN" -eq "1" ]; then
+    echo 1
+    return
+  fi
   local pid=$(check_server_pid)
   if [ -z "$pid" ]
   then
@@ -51,13 +78,13 @@ function check_server_alive() {
 function start_client() {
   # 啟動frontend
   cd client
-  sudo nohup sh -c "PORT=$CLIENT_PORT npm start" >$LOGS/client.txt 2>&1 &
+  $SUDO nohup sh -c "PORT=$CLIENT_PORT npm start" >$LOGS/client.txt 2>&1 &
 
   # Wait for client start
   while [ "$(check_client_alive)" -eq "0" ]; do sleep 1; done
   echo "Client starts instance: $(check_client_pid)." 
 
-  cd .. 
+  cd $BASEDIR 
 }
 
 function stop_client() {
@@ -76,15 +103,13 @@ function stop_client() {
 
 function start_server() {
   cd server/src
-  if [ "$USING_MAC" -eq "1" ]; then
-    sudo nohup sh -c "whereis python3 && python3 main.py -p $SERVER_PORT -m /Users/shiheric/Library/Python/3.9/lib/python/site-packages" >"$LOGS/server.txt" 2>&1 &
-  fi
+  $SUDO nohup sh -c "$PYTHON_LIB main.py -p $SERVER_PORT $MISSED_PYTHON_PACKAGE" >"$LOGS/server.txt" 2>&1 &
 
   # Wait for server start
   while [ "$(check_server_alive)" -eq "0" ]; do sleep 1; done
   echo "Server starts instance: $(check_server_pid)."
 
-  cd ../..
+  cd $BASEDIR
 }
 
 function stop_server() {
@@ -118,6 +143,14 @@ function removeEnvFile() {
   echo "Remove env files to client and server".
 }
 
+function install_server() {
+  cd server
+
+  pip install -r requirements.txt
+
+  cd $BASEDIR
+}
+
 # usage function
 function usage()
 {
@@ -125,38 +158,44 @@ function usage()
 Usage: main.sh [-s] [-e]
 
 optional arguments:
-  -s                   Start client and server.
   -e                   Stop client and server.
-  -sync-env            Sync env files to client and server.
+  -i, --install        Install python and react libraries
   -remove-env          Remove env files to client and server.
+  -s                   Start client and server.
+  -sync-env            Sync env files to client and server.
 HEREDOC
 }
 
 while [[ $# -gt 0 ]]; do
   case $1 in
-    -s)
-      syncEnvFile
-      start_client
-      start_server
-      shift
-      ;;
     -e)
       stop_client
       stop_server
       removeEnvFile
       shift
       ;;
-    -sync-env)
-      syncEnvFile
+    -h|--help)
+      usage
+      exit 0
+      shift
+      ;;
+    -i|--isntall)
+      install_server
+      exit 0
       shift
       ;;
     -remove-env)
       removeEnvFile
       shift
       ;;
-    -h|--help)
-      usage
-      exit 0
+    -s)
+      syncEnvFile
+      start_client
+      start_server
+      shift
+      ;;
+    -sync-env)
+      syncEnvFile
       shift
       ;;
     *)
