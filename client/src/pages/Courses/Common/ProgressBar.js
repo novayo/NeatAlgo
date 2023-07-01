@@ -40,11 +40,17 @@ export default function ProgressBar({ progress }) {
           }}
         />
         <MKBox
+          border={1}
           sx={{
             width: "6rem",
             position: "absolute",
-            mt: "calc(16% - 2rem)",
-            ml: "calc(50% - 3rem)",
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            mx: "auto",
+            mt: "7.8vh",
+            mb: "5.5vh",
           }}
         >
           <MKTypography
