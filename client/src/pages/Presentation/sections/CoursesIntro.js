@@ -3,8 +3,9 @@ import Grid from "@mui/material/Grid";
 import CenteredBlogCard from "components/Cards/BlogCards/CenteredBlogCard";
 
 import { courseConfig, navConfig } from "config";
+import { ENV } from "helper";
 
-function Courses() {
+function CoursesIntro() {
   return (
     <>
       <Container>
@@ -17,7 +18,7 @@ function Courses() {
               description={courseConfig.python.description}
               action={{
                 type: navConfig.courses_button.type,
-                route: courseConfig.python.courses[0].url,
+                route: ENV()["course_settings"]["python"][0]["url"],
                 color: navConfig.courses_button.color,
                 label: navConfig.courses_button.label,
               }}
@@ -55,4 +56,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+export default CoursesIntro;

@@ -7,6 +7,7 @@ import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import MKTypography from "components/MKTypography";
 import { getFixedLengthString } from "helper";
+import { pricingConfig } from "config";
 
 function NeatTimeLineItem({ finished, isEnd, selected, locked, title, url }) {
   title = getFixedLengthString(selected ? 20 : 21, title);
@@ -41,7 +42,7 @@ function NeatTimeLineItem({ finished, isEnd, selected, locked, title, url }) {
           <MKTypography
             variant="subtitle2"
             component="a"
-            href={url}
+            href={!locked ? url : pricingConfig.url}
             sx={({ palette: { info } }) => ({
               display: "flex",
               fontWeight: selected ? 900 : "normal",

@@ -1,50 +1,74 @@
 // @mui material components
-import Card from "@mui/material/Card";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-
-import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-
-import NeatFooter from "pages/Footers";
-import NeatNavbar from "pages/Navbars";
-
-import Icon from "@mui/material/Icon";
-import MKButton from "components/MKButton";
-import { useEffect, useState } from "react";
-
-// Config
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
+import Card from "@mui/material/Card";
+import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
+import MKBox from "components/MKBox";
+import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 import { courseConfig, pricingConfig } from "config";
-import { GET, LOG_DEBUG, POST } from "helper";
+import { ENV, GET } from "helper";
 import NeatTimeLine from "pages/Courses/Common/NeatTimeLine";
 import ProgressBar from "pages/Courses/Common/ProgressBar";
 import VideoPlayer from "pages/Courses/VideoPlayer";
+import NeatFooter from "pages/Footers";
+import NeatNavbar from "pages/Navbars";
+import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 
-function Courses({ type, id, title, description, url, backgroundImage }) {
+function Courses({ type, id, locked, title, description, url, backgroundImage }) {
+  const [courseLength, setCourseLength] = useState(0);
+  const [progress, setProgressNumber] = useState(0);
   const [finished, setFinished] = useState(false);
   const [pre_finish_time, setPreFinishTime] = useState(Date.now());
-  const [data, setData] = useState(null);
+
+  // user info
+  const [vip, setVIP] = useState(null);
+  const [finish_course, setFinishCourse] = useState([]);
 
   useEffect(() => {
-    // 需要自己寫一個function來await
+    const course_len = ENV()["course_settings"]["python"].length;
+    setCourseLength(course_len);
+
     (async () => {
-      const data = await GET("/test/members");
-      setData(data);
+      // Query user_info.
+      // TODO: if not login, should not query
+      // TODO: add jwt
+      let user_info = await GET(`/course/user`, { username: "Eric" });
+
+      // Update vip
+      setVIP(user_info["vip"] || false);
+
+      // Update finish_course
+      let finish_course = user_info["finish_course"] || [];
+      for (let i = finish_course.length; i < course_len; i++) {
+        finish_course.push(false);
+      }
+      setFinishCourse(finish_course);
+
+      // Update checkbox
+      setFinished(finish_course[id - 1]);
     })();
-    POST("/test/post", { name: ["111", "345"] });
   }, []);
 
+  // Handle user_info change
   useEffect(() => {
-    if (data) {
-      LOG_DEBUG(`backend data: ${data}`);
+    if (finish_course) {
+      // Update progress number
+      setProgressNumber(Math.round((finish_course.filter(Boolean).length / courseLength) * 100));
     }
-  }, [data]);
+  }, [vip, finish_course]);
 
+  // Handle finish course. To Backend.
   useEffect(() => {
-    LOG_DEBUG(`checkbox: ${finished}`);
+    let newArr = [...finish_course];
+    newArr[id - 1] = finished;
+    setFinishCourse(newArr);
+
+    // TODO: update backend
   }, [finished]);
 
   // Update the checkbox status at least 500ms
@@ -55,6 +79,16 @@ function Courses({ type, id, title, description, url, backgroundImage }) {
       setPreFinishTime(Date.now());
     }
   };
+
+  // Avoid not getting needed variables
+  if (vip === undefined) {
+    return null;
+  }
+
+  // Need to be vip if course locked
+  if (locked && vip === false) {
+    return <Navigate to={pricingConfig.url} />;
+  }
 
   return (
     <>
@@ -152,9 +186,9 @@ function Courses({ type, id, title, description, url, backgroundImage }) {
                   overflow: "scroll",
                 }}
               >
-                <ProgressBar progress={100} />
+                <ProgressBar progress={progress} />
                 <Divider sx={{ my: 3, bgcolor: "secondary.light" }} />
-                <NeatTimeLine type={type} id={id} />
+                <NeatTimeLine type={type} id={id} finish_course={finish_course} vip={vip} />
               </MKBox>
             </Grid>
             {/* Right Box */}

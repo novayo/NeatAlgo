@@ -14,7 +14,7 @@ function LOG_ERROR(message) {
 }
 
 //========== Common ==========//
-function getEnv() {
+function ENV() {
   const course_settings = require("env/courses.json");
   return {
     course_settings: course_settings,
@@ -54,9 +54,13 @@ function getFixedLengthString(total_len, string) {
 }
 
 //========== Apis ==========//
-async function GET(route) {
+async function GET(route, headers = {}) {
   let ret = {};
-  await fetch(route)
+  const requestOptions = {
+    method: "GET",
+    headers: headers,
+  };
+  await fetch(route, requestOptions)
     .then((response) => {
       if (!response.ok) {
         LOG_ERROR(`[GET] Failed to get ok. ret: ${response.statusText}`);
@@ -100,4 +104,4 @@ function POST(route, dict_data) {
     });
 }
 
-export { getDateString, getFixedLengthString, raise, getEnv, LOG_DEBUG, GET, LOG_ERROR, POST };
+export { getDateString, getFixedLengthString, raise, ENV, LOG_DEBUG, GET, LOG_ERROR, POST };

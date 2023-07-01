@@ -15,7 +15,7 @@ import Faq from "pages/Presentation/sections/Questions";
 import Information from "pages/Presentation/sections/Information";
 import Topics from "pages/Presentation/sections/Topics";
 import Testimonials from "pages/Presentation/sections/Testimonials";
-import Courses from "pages/Presentation/sections/Courses";
+import CoursesIntro from "pages/Presentation/sections/CoursesIntro";
 
 // Config
 import { mainConfig } from "config";
@@ -81,7 +81,7 @@ function Presentation() {
       >
         <Counters />
         <Information />
-        <Courses />
+        <CoursesIntro />
         <Topics />
         <Faq />
         <Testimonials />

@@ -1,15 +1,9 @@
-import { useEffect } from "react";
-
-// react-router components
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-
-// @mui material components
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
-
 import theme from "assets/theme";
 import Presentation from "pages/Presentation";
-
+import { useEffect } from "react";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import routes from "routes";
 
 export default function App() {

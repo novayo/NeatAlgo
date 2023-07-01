@@ -7,8 +7,7 @@ import Courses from "pages/Courses";
 import OnePagePDF from "pages/OnePagePDF";
 import NeatPrice from "pages/Pricing";
 import ContactUs from "pages/Support/ContactUs";
-
-// config
+import { ENV } from "helper";
 import { copyrightConfig, courseConfig, pricingConfig, routesConfig } from "config";
 
 const routes = [
@@ -20,7 +19,7 @@ const routes = [
       {
         name: courseConfig.python.name,
         description: courseConfig.python.description,
-        href: courseConfig.python.courses[0].url,
+        href: ENV()["course_settings"]["python"][0]["url"],
       },
       {
         name: courseConfig.algo_beginner.name,
@@ -74,20 +73,19 @@ const routes = [
   },
 ];
 
-// Process Cources
-Object.keys(courseConfig).map((key) => {
-  if (!("courses" in courseConfig[key])) {
-    return;
-  }
+// Pair Cources url and page
+Object.keys(ENV()["course_settings"]).map((key) => {
   let backgroundImage = courseConfig[key]["backgroundImage"];
-  courseConfig[key]["courses"].forEach((course) => {
+  ENV()["course_settings"][key].forEach((course) => {
     let newItem = {
       name: key + course["name"],
       route: course["url"],
+      locked: course["locked"],
       component: (
         <Courses
           type={key}
           id={course["id"]}
+          locked={course["locked"]}
           backgroundImage={backgroundImage}
           title={course.title}
           description={course.description}
