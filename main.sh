@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DEBUG=1
+
 ON_MAC=0
 ON_WIN=1
 
@@ -79,9 +81,9 @@ function start_client() {
   # 啟動frontend
   cd client
   if [ "$1" -eq "1" ]; then
-    $SUDO sh -c "PORT=$CLIENT_PORT npm start"
+    $SUDO sh -c "PORT=$CLIENT_PORT REACT_APP_DEBUG=$DEBUG npm start"
   else
-    $SUDO nohup sh -c "PORT=$CLIENT_PORT npm start" >$LOGS/client.txt 2>&1 &
+    $SUDO nohup sh -c "PORT=$CLIENT_PORT REACT_APP_DEBUG=$DEBUG npm start" >$LOGS/client.txt 2>&1 &
   fi
 
   # Wait for client start
@@ -169,11 +171,11 @@ Usage: main.sh [-s] [-e]
 optional arguments:
   -e                   Stop client and server.
   -i, --install        Install python and react libraries
-  -remove-env          Remove env files to client and server.
+  -c, --clean          Remove env files.
   -s                   Start client and server.
   -sc                  Start client only.
   -ss                  Start server only.
-  -sync-env            Sync env files to client and server.
+  --sync-env            Sync env files to client and server.
 HEREDOC
 }
 
@@ -195,7 +197,7 @@ while [[ $# -gt 0 ]]; do
       exit 0
       shift
       ;;
-    -remove-env)
+    -c|--clean)
       removeEnvFile
       shift
       ;;
@@ -215,7 +217,7 @@ while [[ $# -gt 0 ]]; do
       start_server 1
       shift
       ;;
-    -sync-env)
+    --sync-env)
       syncEnvFile
       shift
       ;;

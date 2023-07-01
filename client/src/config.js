@@ -493,6 +493,18 @@ const aldsConfig = {
 };
 
 export {
-  aldsConfig, contactUsConfig, copyrightConfig, counterConfig, courseConfig, faqConfig, feedbackConfig, informationConfig, mainConfig, navConfig, pricingConfig, routesConfig, signInConfig, topicConfig
+  aldsConfig,
+  contactUsConfig,
+  copyrightConfig,
+  counterConfig,
+  courseConfig,
+  faqConfig,
+  feedbackConfig,
+  informationConfig,
+  mainConfig,
+  navConfig,
+  pricingConfig,
+  routesConfig,
+  signInConfig,
+  topicConfig,
 };
-
