@@ -14,7 +14,7 @@ if (args.missed_python_module):
     sys.path.append(args.missed_python_module)
 
 import json
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 app = Flask(__name__)
@@ -46,6 +46,9 @@ def test_post():
     print(json_data)
     return json.dumps({"success": True}), 200, {"content-type": "application/json"}
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect("/", code=404)
 
 if __name__ == "__main__":
     app.run(host="localhost", port=args.port, debug=True)

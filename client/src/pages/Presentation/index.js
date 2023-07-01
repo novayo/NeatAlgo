@@ -1,21 +1,21 @@
 // @mui material components
-import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import NeatFooter from "pages/Footers";
 import NeatNavbar from "pages/Navbars";
+import NeatFooter from "pages/Footers";
 
 // Presentation page sections
 import Counters from "pages/Presentation/sections/Counters";
-import Courses from "pages/Presentation/sections/Courses";
-import Information from "pages/Presentation/sections/Information";
 import Faq from "pages/Presentation/sections/Questions";
-import Testimonials from "pages/Presentation/sections/Testimonials";
+import Information from "pages/Presentation/sections/Information";
 import Topics from "pages/Presentation/sections/Topics";
+import Testimonials from "pages/Presentation/sections/Testimonials";
+import Courses from "pages/Presentation/sections/Courses";
 
 // Config
 import { mainConfig } from "config";

@@ -8,6 +8,8 @@ import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 import RotatingCard from "components/Cards/RotatingCard";
 import RotatingCardBack from "components/Cards/RotatingCard/RotatingCardBack";
 import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
+import RotatingCardFrontBg from "assets/images/rotating-card-bg-front.jpeg";
+import RotatingCardBackBg from "assets/images/rotating-card-bg-back.jpeg";
 
 import { informationConfig } from "config";
 
@@ -20,6 +22,7 @@ function Information() {
             <RotatingCard>
               <RotatingCardFront
                 icon="touch_app"
+                description={informationConfig.card.description}
                 title={
                   <>
                     {informationConfig.card.title1}
@@ -27,7 +30,7 @@ function Information() {
                     {informationConfig.card.title2}
                   </>
                 }
-                description={informationConfig.card.description}
+                image={RotatingCardFrontBg}
               />
               <RotatingCardBack
                 title={informationConfig.rotate_card.title}
@@ -37,6 +40,7 @@ function Information() {
                   route: informationConfig.rotate_card.url,
                   label: informationConfig.rotate_card.button_name,
                 }}
+                image={RotatingCardBackBg}
               />
             </RotatingCard>
           </Grid>
