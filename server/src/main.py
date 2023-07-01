@@ -1,4 +1,3 @@
-
 import argparse
 parser = argparse.ArgumentParser(
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -8,43 +7,22 @@ parser.add_argument("-m", dest="missed_python_module", type=str,
                     required=False, help="Include python module if needed")
 args = parser.parse_args()
 
+from os.path import realpath
 import sys
+sys.path.append(realpath(__file__))
 # In mac, run python by script will miss python module
 if (args.missed_python_module):
     sys.path.append(args.missed_python_module)
 
-import json
-from flask import Flask, request, jsonify, redirect
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
+from flask import Flask, redirect
+from common.rate_limiting import limiter
+from api.course import app_course
+from api.test import app_test
+
 app = Flask(__name__)
-limiter = Limiter(
-    get_remote_address,
-    app=app,
-    default_limits=["60 per minute"]
-)
-
-
-@app.route("/members", methods=["GET"])
-def members():
-    return {"data": ["Member0", "Member2", "Member3"]}
-
-
-@app.route("/test/get", methods=["GET"])
-def test_get():
-    return {"data": ["gets1", "gets2", "gets3"]}
-
-
-@app.route("/test/post", methods=["POST"])
-@limiter.limit("60 per minute")
-def test_post():
-    json_data = request.json
-
-    if ("data" not in json_data):
-        return json.dumps({"success": False}), 1000, {"content-type": "application/json"}
-    json_data = json_data["data"]
-    print(json_data)
-    return json.dumps({"success": True}), 200, {"content-type": "application/json"}
+app.register_blueprint(app_course, url_prefix="/course")
+app.register_blueprint(app_test, url_prefix="/test")
+limiter.init_app(app)
 
 @app.errorhandler(404)
 def page_not_found(e):

@@ -25,31 +25,35 @@ import VideoPlayer from "pages/Courses/VideoPlayer";
 
 function Courses({ type, id, title, description, url, backgroundImage }) {
   const [finished, setFinished] = useState(false);
-
-  const [data, setData] = useState([{}]);
+  const [pre_finish_time, setPreFinishTime] = useState(Date.now());
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     // 需要自己寫一個function來await
     (async () => {
-      const data = await GET("/members");
+      const data = await GET("/test/members");
       setData(data);
     })();
-    POST("/test/post", { name: ["123", "345"] });
+    POST("/test/post", { name: ["111", "345"] });
   }, []);
 
   useEffect(() => {
-    if (data && data.data) {
-      LOG_DEBUG(`backend data: ${data.data}`);
+    if (data) {
+      LOG_DEBUG(`backend data: ${data}`);
     }
   }, [data]);
 
-  // TODO: checkbox的狀態要每秒檢查更新到db，不能一按就直接更新，會被玩壞
   useEffect(() => {
     LOG_DEBUG(`checkbox: ${finished}`);
   }, [finished]);
 
+  // Update the checkbox status at least 500ms
   const handleChecked = () => {
-    setFinished((finished) => !finished);
+    const timeElapsed = Date.now() - pre_finish_time;
+    if (timeElapsed > 500) {
+      setFinished((finished) => !finished);
+      setPreFinishTime(Date.now());
+    }
   };
 
   return (
