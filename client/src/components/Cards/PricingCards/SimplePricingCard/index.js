@@ -6,12 +6,12 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
 import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
 function SimplePricingCard({ variant, color, title, description, price, specifications, action }) {
   let titleColor = "white";

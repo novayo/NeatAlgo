@@ -1,17 +1,17 @@
-import SimplePricingCard from "components/Cards/PricingCards/SimplePricingCard";
-import DefaultPricingCard from "components/Cards/PricingCards/DefaultPricingCard";
-import MKTypography from "components/MKTypography";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
-import { Link } from "react-router-dom";
-import { copyrightConfig, courseConfig, pricingConfig } from "config";
-import NeatNavbar from "pages/Navbars";
-import NeatFooter from "pages/Footers";
-import Grid from "@mui/material/Grid";
-import MKBox from "components/MKBox";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import DefaultPricingCard from "components/Cards/PricingCards/DefaultPricingCard";
+import SimplePricingCard from "components/Cards/PricingCards/SimplePricingCard";
+import MKBox from "components/MKBox";
+import MKTypography from "components/MKTypography";
+import { copyrightConfig, courseConfig, pricingConfig } from "config";
+import NeatFooter from "pages/Footers";
+import NeatNavbar from "pages/Navbars";
+import { Link } from "react-router-dom";
 
 function NeatPrice() {
   return (

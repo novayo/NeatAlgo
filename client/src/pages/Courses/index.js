@@ -1,28 +1,27 @@
-// TODO: Reorder all the imports
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import NeatNavbar from "pages/Navbars";
 import NeatFooter from "pages/Footers";
+import NeatNavbar from "pages/Navbars";
 
-import MKButton from "components/MKButton";
 import Icon from "@mui/material/Icon";
-import { useState, useEffect } from "react";
+import MKButton from "components/MKButton";
+import { useEffect, useState } from "react";
 
 // Config
-import { courseConfig, pricingConfig } from "config";
-import NeatTimeLine from "pages/Courses/Common/NeatTimeLine";
-import Divider from "@mui/material/Divider";
-import ProgressBar from "pages/Courses/Common/ProgressBar";
-import VideoPlayer from "pages/Courses/VideoPlayer";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
-import { LOG_DEBUG, GET, POST } from "helper";
+import Divider from "@mui/material/Divider";
+import { courseConfig, pricingConfig } from "config";
+import { GET, LOG_DEBUG, POST } from "helper";
+import NeatTimeLine from "pages/Courses/Common/NeatTimeLine";
+import ProgressBar from "pages/Courses/Common/ProgressBar";
+import VideoPlayer from "pages/Courses/VideoPlayer";
 
 function Courses({ type, id, title, description, url, backgroundImage }) {
   const [finished, setFinished] = useState(false);

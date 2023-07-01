@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import MKInput from "components/MKInput";
+import MKTypography from "components/MKTypography";
 
 // Authentication layout components
 import IllustrationLayout from "pages/Authentication/components/IllustrationLayout";

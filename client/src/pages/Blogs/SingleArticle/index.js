@@ -5,27 +5,27 @@ import { useEffect, useRef } from "react";
 import Rellax from "rellax";
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // About Us page sections
-import Information from "pages/Blogs/SingleArticle/sections/Information";
-import Steps from "pages/Blogs/SingleArticle/sections/Steps";
-import OurEfforts from "pages/Blogs/SingleArticle/sections/OurEfforts";
 import Features from "pages/Blogs/SingleArticle/sections/Features";
+import Information from "pages/Blogs/SingleArticle/sections/Information";
+import OurEfforts from "pages/Blogs/SingleArticle/sections/OurEfforts";
 import Posts from "pages/Blogs/SingleArticle/sections/Posts";
+import Steps from "pages/Blogs/SingleArticle/sections/Steps";
 import Support from "pages/Blogs/SingleArticle/sections/Support";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg5.jpg";

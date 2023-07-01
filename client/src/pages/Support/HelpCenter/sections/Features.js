@@ -1,9 +1,9 @@
 
 // @mui material components
 import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
-import Divider from "@mui/material/Divider";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";

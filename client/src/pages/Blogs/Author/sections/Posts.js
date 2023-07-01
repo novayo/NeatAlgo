@@ -6,14 +6,14 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import TransparentBlogCard from "components/Cards/BlogCards/TransparentBlogCard";
 import BackgroundBlogCard from "components/Cards/BlogCards/BackgroundBlogCard";
+import TransparentBlogCard from "components/Cards/BlogCards/TransparentBlogCard";
 
 // Images
-import post1 from "assets/images/examples/testimonial-6-2.jpg";
-import post2 from "assets/images/examples/testimonial-6-3.jpg";
 import post3 from "assets/images/examples/blog-9-4.jpg";
 import post4 from "assets/images/examples/blog2.jpg";
+import post1 from "assets/images/examples/testimonial-6-2.jpg";
+import post2 from "assets/images/examples/testimonial-6-3.jpg";
 
 function Places() {
   return (

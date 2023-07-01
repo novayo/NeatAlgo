@@ -1,11 +1,11 @@
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import MKTypography from "components/MKTypography";
-import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { getFixedLengthString } from "helper";
 
 function NeatTimeLineItem({ finished, isEnd, selected, locked, title, url }) {

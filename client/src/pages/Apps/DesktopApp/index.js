@@ -7,19 +7,19 @@
 import MKBox from "components/MKBox";
 // import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // DesktopApp page sections
 import Banner from "pages/Apps/DesktopApp/sections/Banner";
-import Information from "pages/Apps/DesktopApp/sections/Information";
 import Features from "pages/Apps/DesktopApp/sections/Features";
-import Testimonials from "pages/Apps/DesktopApp/sections/Testimonials";
+import Information from "pages/Apps/DesktopApp/sections/Information";
 import Pricing from "pages/Apps/DesktopApp/sections/Pricing";
+import Testimonials from "pages/Apps/DesktopApp/sections/Testimonials";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 function DesktopApp() {
   return (

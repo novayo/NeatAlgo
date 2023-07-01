@@ -4,12 +4,12 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Forms page components
-import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
 import FormContext from "layouts/sections/input-areas/forms/components/FormContext";
+import FormSimple from "layouts/sections/input-areas/forms/components/FormSimple";
 
 // Forms page components code
-import formSimpleCode from "layouts/sections/input-areas/forms/components/FormSimple/code";
 import formContextCode from "layouts/sections/input-areas/forms/components/FormContext/code";
+import formSimpleCode from "layouts/sections/input-areas/forms/components/FormSimple/code";
 
 function Forms() {
   return (

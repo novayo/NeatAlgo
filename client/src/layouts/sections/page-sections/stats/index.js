@@ -5,13 +5,13 @@ import View from "layouts/sections/components/View";
 
 // Stats page components
 import StatsOne from "layouts/sections/page-sections/stats/components/StatsOne";
-import StatsTwo from "layouts/sections/page-sections/stats/components/StatsTwo";
 import StatsThree from "layouts/sections/page-sections/stats/components/StatsThree";
+import StatsTwo from "layouts/sections/page-sections/stats/components/StatsTwo";
 
 // Stats page components code
 import statsOneCode from "layouts/sections/page-sections/stats/components/StatsOne/code";
-import statsTwoCode from "layouts/sections/page-sections/stats/components/StatsTwo/code";
 import statsThreeCode from "layouts/sections/page-sections/stats/components/StatsThree/code";
+import statsTwoCode from "layouts/sections/page-sections/stats/components/StatsTwo/code";
 
 function Stats() {
   return (

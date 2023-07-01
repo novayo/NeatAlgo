@@ -1,5 +1,5 @@
+import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
-import { useState, useRef, useEffect } from "react";
 
 export default function VideoPlayer({ url }) {
   const videoPlayerRef = useRef(null);

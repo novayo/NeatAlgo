@@ -10,11 +10,11 @@ import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "components/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
-import bgImage from "assets/images/examples/city.jpg";
-import team1 from "assets/images/team-5.jpg";
 import team2 from "assets/images/bruce-mars.jpg";
-import team3 from "assets/images/ivana-squares.jpg";
+import bgImage from "assets/images/examples/city.jpg";
 import team4 from "assets/images/ivana-square.jpg";
+import team3 from "assets/images/ivana-squares.jpg";
+import team1 from "assets/images/team-5.jpg";
 
 function TeamTwo() {
   return (

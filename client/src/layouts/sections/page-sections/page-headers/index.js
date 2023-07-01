@@ -5,13 +5,13 @@ import View from "layouts/sections/components/View";
 
 // PageHeaders page components
 import HeaderOne from "layouts/sections/page-sections/page-headers/components/HeaderOne";
-import HeaderTwo from "layouts/sections/page-sections/page-headers/components/HeaderTwo";
 import HeaderThree from "layouts/sections/page-sections/page-headers/components/HeaderThree";
+import HeaderTwo from "layouts/sections/page-sections/page-headers/components/HeaderTwo";
 
 // PageHeaders page components code
 import headerOneCode from "layouts/sections/page-sections/page-headers/components/HeaderOne/code";
-import headerTwoCode from "layouts/sections/page-sections/page-headers/components/HeaderTwo/code";
 import headerThreeCode from "layouts/sections/page-sections/page-headers/components/HeaderThree/code";
+import headerTwoCode from "layouts/sections/page-sections/page-headers/components/HeaderTwo/code";
 
 function PageHeaders() {
   return (

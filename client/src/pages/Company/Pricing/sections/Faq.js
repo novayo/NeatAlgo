@@ -2,9 +2,9 @@
 import { useState } from "react";
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";

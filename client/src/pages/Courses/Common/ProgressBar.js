@@ -1,6 +1,6 @@
+import CircularProgress from "@mui/material/CircularProgress";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import CircularProgress from "@mui/material/CircularProgress";
 
 export default function ProgressBar({ progress }) {
   return (

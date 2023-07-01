@@ -8,8 +8,8 @@ import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Images
-import bgPattern from "assets/images/shapes/pattern-lines.svg";
 import laptop from "assets/images/macbook-2.png";
+import bgPattern from "assets/images/shapes/pattern-lines.svg";
 
 function Banner() {
   return (

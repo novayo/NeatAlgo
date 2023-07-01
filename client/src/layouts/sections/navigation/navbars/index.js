@@ -6,16 +6,16 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Stats page components
+import NavbarBlur from "layouts/sections/navigation/navbars/components/NavbarBlur";
 import NavbarDark from "layouts/sections/navigation/navbars/components/NavbarDark";
 import NavbarLight from "layouts/sections/navigation/navbars/components/NavbarLight";
 import NavbarTransparent from "layouts/sections/navigation/navbars/components/NavbarTransparent";
-import NavbarBlur from "layouts/sections/navigation/navbars/components/NavbarBlur";
 
 // Stats page components code
+import navbarBlurCode from "layouts/sections/navigation/navbars/components/NavbarBlur/code";
 import navbarDarkCode from "layouts/sections/navigation/navbars/components/NavbarDark/code";
 import navbarLightCode from "layouts/sections/navigation/navbars/components/NavbarLight/code";
 import navbarTransparentCode from "layouts/sections/navigation/navbars/components/NavbarTransparent/code";
-import navbarBlurCode from "layouts/sections/navigation/navbars/components/NavbarBlur/code";
 
 function Navbars() {
   return (

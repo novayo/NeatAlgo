@@ -6,8 +6,8 @@ import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 
-import NeatNavbar from "pages/Navbars";
 import SimpleFooter from "components/Footers/SimpleFooter";
+import NeatNavbar from "pages/Navbars";
 
 function BasicLayout({ image, children }) {
   return (

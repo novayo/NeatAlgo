@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
+import CenteredFooter from "components/Footers/CenteredFooter";
 import MKBox from "components/MKBox";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
-import CenteredFooter from "components/Footers/CenteredFooter";
+import PropTypes from "prop-types";
 import routes from "routes";
 
 function SimpleLayout({ children }) {

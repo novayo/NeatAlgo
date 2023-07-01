@@ -5,8 +5,8 @@ import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
 function MediaPlayer() {
   const bgImage =

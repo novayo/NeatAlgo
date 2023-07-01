@@ -1,9 +1,9 @@
 import Timeline from "@mui/lab/Timeline";
-import NeatTimeLineItem from "pages/Courses/Common/NeatTimeLineItem";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import MKTypography from "components/MKTypography";
 import { courseConfig } from "config";
 import { raise } from "helper";
+import NeatTimeLineItem from "pages/Courses/Common/NeatTimeLineItem";
 
 function NeatTimeLine({ type, id }) {
   if (!(type in courseConfig)) {

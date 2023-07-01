@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function ComplexReviewCard({ image, color, title, review, author }) {

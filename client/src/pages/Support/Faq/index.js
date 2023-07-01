@@ -2,16 +2,16 @@
 import { useState } from "react";
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
-import SimpleFooter from "components/Footers/SimpleFooter";
 import SimpleInfoCard from "components/Cards/InfoCards/SimpleInfoCard";
+import SimpleFooter from "components/Footers/SimpleFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // HelpCenter page components
 import FaqCollapse from "pages/Support/Faq/components/FaqCollapse";

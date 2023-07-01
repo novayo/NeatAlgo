@@ -1,18 +1,18 @@
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 function Privacy() {
   return (

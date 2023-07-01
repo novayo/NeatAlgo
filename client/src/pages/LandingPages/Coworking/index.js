@@ -1,26 +1,26 @@
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // Coworking page sections
-import Information from "pages/LandingPages/Coworking/sections/Information";
-import Testimonials from "pages/LandingPages/Coworking/sections/Testimonials";
 import AboutUs from "pages/LandingPages/Coworking/sections/AboutUs";
+import Information from "pages/LandingPages/Coworking/sections/Information";
 import Places from "pages/LandingPages/Coworking/sections/Places";
+import Testimonials from "pages/LandingPages/Coworking/sections/Testimonials";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-coworking.jpeg";

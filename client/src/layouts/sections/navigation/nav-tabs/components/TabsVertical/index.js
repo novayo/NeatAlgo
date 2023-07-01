@@ -2,11 +2,11 @@
 import { useState } from "react";
 
 // @mui material components
+import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 
 function TabsVertical() {
   const [activeTab, setActiveTab] = useState(0);

@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 
+import MKAvatar from "components/MKAvatar";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import MKAvatar from "components/MKAvatar";
 
 function SimpleReviewCard({ image, name, username, review }) {
   return (

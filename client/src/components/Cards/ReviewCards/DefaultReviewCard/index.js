@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function DefaultReviewCard({ color, image, name, date, review, rating }) {

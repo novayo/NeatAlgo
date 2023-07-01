@@ -8,26 +8,26 @@ import Rellax from "rellax";
 import Typed from "typed.js";
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // About Us page sections
-import Information from "pages/Company/AboutUs/sections/Information";
-import Team from "pages/Company/AboutUs/sections/Team";
 import Featuring from "pages/Company/AboutUs/sections/Featuring";
+import Information from "pages/Company/AboutUs/sections/Information";
 import Newsletter from "pages/Company/AboutUs/sections/Newsletter";
+import Team from "pages/Company/AboutUs/sections/Team";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-about-us.jpg";

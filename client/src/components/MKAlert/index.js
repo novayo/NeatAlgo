@@ -10,8 +10,8 @@ import Fade from "@mui/material/Fade";
 import MKBox from "components/MKBox";
 
 // Custom styles for the MKAlert
-import MKAlertRoot from "components/MKAlert/MKAlertRoot";
 import MKAlertCloseIcon from "components/MKAlert/MKAlertCloseIcon";
+import MKAlertRoot from "components/MKAlert/MKAlertRoot";
 
 function MKAlert({ color, dismissible, children, ...rest }) {
   const [alertStatus, setAlertStatus] = useState("mount");

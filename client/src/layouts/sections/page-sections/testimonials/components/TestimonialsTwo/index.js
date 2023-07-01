@@ -8,8 +8,8 @@ import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // SwiperJS styles
-import "swiper/swiper.min.css";
 import "swiper/css/navigation";
+import "swiper/swiper.min.css";
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -23,8 +23,8 @@ import ComplexReviewCard from "components/Cards/ReviewCards/ComplexReviewCard";
 // Images
 import review1 from "assets/images/examples/clem-onojegaw.jpg";
 import review2 from "assets/images/examples/studio-3.jpg";
-import logoSpotify from "assets/images/logos/small-logos/logo-spotify.svg";
 import logoSlack from "assets/images/logos/small-logos/logo-slack.svg";
+import logoSpotify from "assets/images/logos/small-logos/logo-spotify.svg";
 
 function TestimonialsTwo() {
   // install SwiperJS modules

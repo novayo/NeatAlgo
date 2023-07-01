@@ -4,22 +4,22 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Inputs page components
-import InputDynamic from "layouts/sections/input-areas/inputs/components/InputDynamic";
-import InputStatic from "layouts/sections/input-areas/inputs/components/InputStatic";
-import InputOutlined from "layouts/sections/input-areas/inputs/components/InputOutlined";
-import InputIcon from "layouts/sections/input-areas/inputs/components/InputIcon";
-import InputSuccess from "layouts/sections/input-areas/inputs/components/InputSuccess";
-import InputError from "layouts/sections/input-areas/inputs/components/InputError";
 import InputDisabled from "layouts/sections/input-areas/inputs/components/InputDisabled";
+import InputDynamic from "layouts/sections/input-areas/inputs/components/InputDynamic";
+import InputError from "layouts/sections/input-areas/inputs/components/InputError";
+import InputIcon from "layouts/sections/input-areas/inputs/components/InputIcon";
+import InputOutlined from "layouts/sections/input-areas/inputs/components/InputOutlined";
+import InputStatic from "layouts/sections/input-areas/inputs/components/InputStatic";
+import InputSuccess from "layouts/sections/input-areas/inputs/components/InputSuccess";
 
 // Inputs page components code
-import inputDynamicCode from "layouts/sections/input-areas/inputs/components/InputDynamic/code";
-import inputStaticCode from "layouts/sections/input-areas/inputs/components/InputStatic/code";
-import inputOutlinedCode from "layouts/sections/input-areas/inputs/components/InputOutlined/code";
-import inputIconCode from "layouts/sections/input-areas/inputs/components/InputIcon/code";
-import inputSuccessCode from "layouts/sections/input-areas/inputs/components/InputSuccess/code";
-import inputErrorCode from "layouts/sections/input-areas/inputs/components/InputError/code";
 import inputDisabledCode from "layouts/sections/input-areas/inputs/components/InputDisabled/code";
+import inputDynamicCode from "layouts/sections/input-areas/inputs/components/InputDynamic/code";
+import inputErrorCode from "layouts/sections/input-areas/inputs/components/InputError/code";
+import inputIconCode from "layouts/sections/input-areas/inputs/components/InputIcon/code";
+import inputOutlinedCode from "layouts/sections/input-areas/inputs/components/InputOutlined/code";
+import inputStaticCode from "layouts/sections/input-areas/inputs/components/InputStatic/code";
+import inputSuccessCode from "layouts/sections/input-areas/inputs/components/InputSuccess/code";
 
 function Inputs() {
   return (

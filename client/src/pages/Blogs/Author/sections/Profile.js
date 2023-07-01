@@ -4,8 +4,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
-import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
+import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 

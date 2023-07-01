@@ -4,10 +4,10 @@ import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 
-import RotatingCard from "components/Cards/RotatingCard";
-import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
-import RotatingCardBack from "components/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
+import RotatingCard from "components/Cards/RotatingCard";
+import RotatingCardBack from "components/Cards/RotatingCard/RotatingCardBack";
+import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
 
 import { informationConfig } from "config";
 

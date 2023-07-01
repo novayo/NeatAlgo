@@ -7,13 +7,13 @@ import View from "layouts/sections/components/View";
 
 // Stats page components
 import FooterOne from "layouts/sections/page-sections/footers/components/FooterOne";
-import FooterTwo from "layouts/sections/page-sections/footers/components/FooterTwo";
 import FooterThree from "layouts/sections/page-sections/footers/components/FooterThree";
+import FooterTwo from "layouts/sections/page-sections/footers/components/FooterTwo";
 
 // Stats page components code
 import footerOneCode from "layouts/sections/page-sections/footers/components/FooterOne/code";
-import footerTwoCode from "layouts/sections/page-sections/footers/components/FooterTwo/code";
 import footerThreeCode from "layouts/sections/page-sections/footers/components/FooterThree/code";
+import footerTwoCode from "layouts/sections/page-sections/footers/components/FooterTwo/code";
 
 function Footers() {
   return (

@@ -10,10 +10,10 @@ import MKTypography from "components/MKTypography";
 import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 
 // Images
-import atlassian from "assets/images/logos/small-logos/logo-atlassian.svg";
 import asana from "assets/images/logos/small-logos/logo-asana.svg";
-import shopify from "assets/images/logos/small-logos/logo-shopify.svg";
+import atlassian from "assets/images/logos/small-logos/logo-atlassian.svg";
 import invision from "assets/images/logos/small-logos/logo-invision.svg";
+import shopify from "assets/images/logos/small-logos/logo-shopify.svg";
 import slack from "assets/images/logos/small-logos/logo-slack.svg";
 import webdev from "assets/images/logos/small-logos/logo-webdev.svg";
 

@@ -3,9 +3,9 @@
 import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
 
+import MKAvatar from "components/MKAvatar";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import MKAvatar from "components/MKAvatar";
 
 // Images
 import team1 from "assets/images/team-1.jpg";

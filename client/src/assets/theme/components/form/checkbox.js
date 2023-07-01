@@ -1,8 +1,8 @@
 import borders from "assets/theme/base/borders";
 import colors from "assets/theme/base/colors";
 
-import pxToRem from "assets/theme/functions/pxToRem";
 import linearGradient from "assets/theme/functions/linearGradient";
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderWidth, borderColor } = borders;
 const { transparent, info } = colors;

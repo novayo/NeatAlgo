@@ -1,16 +1,16 @@
 
 // @mui material components
 import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import Divider from "@mui/material/Divider";
 
-import MKBox from "components/MKBox";
-import MKBadge from "components/MKBadge";
-import MKButton from "components/MKButton";
 import MKAvatar from "components/MKAvatar";
-import MKTypography from "components/MKTypography";
+import MKBadge from "components/MKBadge";
+import MKBox from "components/MKBox";
+import MKButton from "components/MKButton";
 import MKSocialButton from "components/MKSocialButton";
+import MKTypography from "components/MKTypography";
 
 // Images
 import profilePicture from "assets/images/team-2.jpg";

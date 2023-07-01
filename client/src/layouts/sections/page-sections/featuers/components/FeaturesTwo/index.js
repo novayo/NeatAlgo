@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 
-import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "components/Cards/BlogCards/CenteredBlogCard";
+import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 
 function FeaturesTwo() {
   return (

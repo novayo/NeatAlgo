@@ -1,15 +1,15 @@
 // @mui material components
 import Icon from "@mui/material/Icon";
-import ContactUs from "pages/Support/ContactUs";
+import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
+import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
 import SignInCoverPage from "pages/Authentication/SignIn/Basic";
+import Courses from "pages/Courses";
 import OnePagePDF from "pages/OnePagePDF";
 import NeatPrice from "pages/Pricing";
-import Courses from "pages/Courses";
-import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
-import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
+import ContactUs from "pages/Support/ContactUs";
 
 // config
-import { courseConfig, routesConfig, copyrightConfig, pricingConfig } from "config";
+import { copyrightConfig, courseConfig, pricingConfig, routesConfig } from "config";
 
 const routes = [
   {

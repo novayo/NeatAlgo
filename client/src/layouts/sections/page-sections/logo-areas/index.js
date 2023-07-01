@@ -5,13 +5,13 @@ import View from "layouts/sections/components/View";
 
 // Stats page components
 import LogoAreaOne from "layouts/sections/page-sections/logo-areas/components/LogoAreaOne";
-import LogoAreaTwo from "layouts/sections/page-sections/logo-areas/components/LogoAreaTwo";
 import LogoAreaThree from "layouts/sections/page-sections/logo-areas/components/LogoAreaThree";
+import LogoAreaTwo from "layouts/sections/page-sections/logo-areas/components/LogoAreaTwo";
 
 // Stats page components code
 import logoAreaOneCode from "layouts/sections/page-sections/logo-areas/components/LogoAreaOne/code";
-import logoAreaTwoCode from "layouts/sections/page-sections/logo-areas/components/LogoAreaTwo/code";
 import logoAreaThreeCode from "layouts/sections/page-sections/logo-areas/components/LogoAreaThree/code";
+import logoAreaTwoCode from "layouts/sections/page-sections/logo-areas/components/LogoAreaTwo/code";
 
 function LogoAreas() {
   return (

@@ -6,15 +6,15 @@ import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // SwiperJS styles
-import "swiper/swiper.min.css";
 import "swiper/css/navigation";
+import "swiper/swiper.min.css";
 
 // Pricing page components
 import SliderHeader from "pages/Company/Pricing/components/Header";
 
 // Images
-import bg1 from "assets/images/bg2.jpg";
 import bg2 from "assets/images/bg.jpg";
+import bg1 from "assets/images/bg2.jpg";
 import bg3 from "assets/images/dg1.jpg";
 
 function Header() {

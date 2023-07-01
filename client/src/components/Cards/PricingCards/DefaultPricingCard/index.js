@@ -9,8 +9,8 @@ import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
 function DefaultPricingCard({ color, badge, price, specifications, action, shadow }) {
   const renderSpecifications = specifications.map(({ label, includes }) => (

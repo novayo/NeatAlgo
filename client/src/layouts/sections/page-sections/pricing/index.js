@@ -7,13 +7,13 @@ import View from "layouts/sections/components/View";
 
 // Pricing page components
 import PricingOne from "layouts/sections/page-sections/pricing/components/PricingOne";
-import PricingTwo from "layouts/sections/page-sections/pricing/components/PricingTwo";
 import PricingThree from "layouts/sections/page-sections/pricing/components/PricingThree";
+import PricingTwo from "layouts/sections/page-sections/pricing/components/PricingTwo";
 
 // Pricing page components code
 import pricingOneCode from "layouts/sections/page-sections/pricing/components/PricingOne/code";
-import pricingTwoCode from "layouts/sections/page-sections/pricing/components/PricingTwo/code";
 import pricingThreeCode from "layouts/sections/page-sections/pricing/components/PricingThree/code";
+import pricingTwoCode from "layouts/sections/page-sections/pricing/components/PricingTwo/code";
 
 function Pricing() {
   return (

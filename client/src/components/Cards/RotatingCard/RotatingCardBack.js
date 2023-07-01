@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 import MuiLink from "@mui/material/Link";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
 function RotatingCard({ color, image, title, description, action }) {
   return (

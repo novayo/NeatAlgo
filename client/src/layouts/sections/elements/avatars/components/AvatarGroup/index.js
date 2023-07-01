@@ -1,11 +1,11 @@
 
 // @mui material components
+import MuiAvatarGroup from "@mui/material/AvatarGroup";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import MuiAvatarGroup from "@mui/material/AvatarGroup";
 
-import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
+import MKBox from "components/MKBox";
 
 // Images
 import team1 from "assets/images/team-1.jpg";

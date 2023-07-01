@@ -4,18 +4,18 @@ import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // GeneralCards page components
-import CardRaised from "layouts/sections/page-sections/general-cards/components/CardRaised";
 import CardImageInside from "layouts/sections/page-sections/general-cards/components/CardImageInside";
-import CardWithColoredShadow from "layouts/sections/page-sections/general-cards/components/CardWithColoredShadow";
-import CardRotate from "layouts/sections/page-sections/general-cards/components/CardRotate";
 import CardPricing from "layouts/sections/page-sections/general-cards/components/CardPricing";
+import CardRaised from "layouts/sections/page-sections/general-cards/components/CardRaised";
+import CardRotate from "layouts/sections/page-sections/general-cards/components/CardRotate";
+import CardWithColoredShadow from "layouts/sections/page-sections/general-cards/components/CardWithColoredShadow";
 
 // GeneralCards page components code
-import cardRaisedCode from "layouts/sections/page-sections/general-cards/components/CardRaised/code";
 import cardImageInsideCode from "layouts/sections/page-sections/general-cards/components/CardImageInside/code";
-import cardWithColoredShadowCode from "layouts/sections/page-sections/general-cards/components/CardWithColoredShadow/code";
-import cardRotateCode from "layouts/sections/page-sections/general-cards/components/CardRotate/code";
 import cardPricingCode from "layouts/sections/page-sections/general-cards/components/CardPricing/code";
+import cardRaisedCode from "layouts/sections/page-sections/general-cards/components/CardRaised/code";
+import cardRotateCode from "layouts/sections/page-sections/general-cards/components/CardRotate/code";
+import cardWithColoredShadowCode from "layouts/sections/page-sections/general-cards/components/CardWithColoredShadow/code";
 
 function GeneralCards() {
   return (

@@ -13,8 +13,8 @@ import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 
-import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function Table({ columns, rows }) {

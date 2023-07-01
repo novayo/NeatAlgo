@@ -8,8 +8,8 @@ import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // SwiperJS styles
-import "swiper/swiper.min.css";
 import "swiper/css/navigation";
+import "swiper/swiper.min.css";
 
 // @mui material components
 import Container from "@mui/material/Container";

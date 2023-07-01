@@ -8,9 +8,9 @@ import MKBox from "components/MKBox";
 import DefaultBlogCard from "components/Cards/BlogCards/DefaultBlogCard";
 
 // Images
-import author1 from "assets/images/team-2.jpg";
 import author2 from "assets/images/ivana-squares.jpg";
 import author3 from "assets/images/marie.jpg";
+import author1 from "assets/images/team-2.jpg";
 
 function BlogPostThree() {
   const post1 =

@@ -1,25 +1,25 @@
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // HelpCenter page sections
-import SocialAnalytics from "pages/Support/HelpCenter/sections/SocialAnalytics";
+import Contact from "pages/Support/HelpCenter/sections/Contact";
 import Faq from "pages/Support/HelpCenter/sections/Faq";
 import Features from "pages/Support/HelpCenter/sections/Features";
-import Contact from "pages/Support/HelpCenter/sections/Contact";
+import SocialAnalytics from "pages/Support/HelpCenter/sections/SocialAnalytics";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg3.jpg";

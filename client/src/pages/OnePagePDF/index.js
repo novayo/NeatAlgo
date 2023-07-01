@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-import NeatNavbar from "pages/Navbars";
-import NeatFooter from "pages/Footers";
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
+import NeatFooter from "pages/Footers";
+import NeatNavbar from "pages/Navbars";
 
 // react-pdf
 import { Document, Page, pdfjs } from "react-pdf";

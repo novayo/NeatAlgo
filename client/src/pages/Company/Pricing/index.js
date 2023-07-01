@@ -4,21 +4,21 @@
 
 import MKBox from "components/MKBox";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // Pricing page sections
-import Header from "pages/Company/Pricing/sections/Header";
 import AboutUs from "pages/Company/Pricing/sections/AboutUs";
-import PricingSection from "pages/Company/Pricing/sections/Pricing";
+import Faq from "pages/Company/Pricing/sections/Faq";
+import Header from "pages/Company/Pricing/sections/Header";
 import LifetimeMembership from "pages/Company/Pricing/sections/LifetimeMembership";
+import PricingSection from "pages/Company/Pricing/sections/Pricing";
 import Testimonials from "pages/Company/Pricing/sections/Testimonials";
 import Trust from "pages/Company/Pricing/sections/Trust";
-import Faq from "pages/Company/Pricing/sections/Faq";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 function Pricing() {
   return (

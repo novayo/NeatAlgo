@@ -10,7 +10,7 @@ import MKTypography from "components/MKTypography";
 
 import typography from "assets/theme/base/typography";
 
-import { copyrightConfig, contactUsConfig } from "config";
+import { contactUsConfig, copyrightConfig } from "config";
 
 function SimpleFooter({ links, light }) {
   const { size } = typography;

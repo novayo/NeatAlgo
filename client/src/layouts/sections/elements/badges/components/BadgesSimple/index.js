@@ -4,8 +4,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 
-import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
+import MKBox from "components/MKBox";
 
 function BadgesSimple() {
   return (

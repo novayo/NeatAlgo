@@ -1,6 +1,6 @@
-import colors from "assets/theme/base/colors";
-import boxShadows from "assets/theme/base/boxShadows";
 import borders from "assets/theme/base/borders";
+import boxShadows from "assets/theme/base/boxShadows";
+import colors from "assets/theme/base/colors";
 
 const { transparent } = colors;
 const { lg } = boxShadows;

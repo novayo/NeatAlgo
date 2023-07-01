@@ -2,8 +2,8 @@
 import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from "@mui/material/Icon";
 import Collapse from "@mui/material/Collapse";
+import Icon from "@mui/material/Icon";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";

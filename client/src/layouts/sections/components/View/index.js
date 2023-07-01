@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // prop-types is a library for type checking of props
 import PropTypes from "prop-types";
@@ -12,14 +12,14 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Grid from "@mui/material/Grid";
 import Slide from "@mui/material/Slide";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 
-import MKBox from "components/MKBox";
 import MKAlert from "components/MKAlert";
+import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 

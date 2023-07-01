@@ -1,25 +1,25 @@
 
 // @mui material components
+import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
+import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // Rental page sections
-import Search from "pages/LandingPages/Rental/sections/Search";
-import Places from "pages/LandingPages/Rental/sections/Places";
-import Testimonials from "pages/LandingPages/Rental/sections/Testimonials";
-import Faq from "pages/LandingPages/Rental/sections/Faq";
 import Contact from "pages/LandingPages/Rental/sections/Contact";
+import Faq from "pages/LandingPages/Rental/sections/Faq";
+import Places from "pages/LandingPages/Rental/sections/Places";
+import Search from "pages/LandingPages/Rental/sections/Search";
+import Testimonials from "pages/LandingPages/Rental/sections/Testimonials";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
+import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-rental.jpeg";

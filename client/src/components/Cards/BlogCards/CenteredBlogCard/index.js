@@ -9,8 +9,8 @@ import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
 function CenteredBlogCard({ image, title, description, action }) {
   return (

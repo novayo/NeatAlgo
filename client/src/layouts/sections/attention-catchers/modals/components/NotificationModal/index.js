@@ -3,11 +3,11 @@ import { useState } from "react";
 
 // @mui material components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Modal from "@mui/material/Modal";
 import Divider from "@mui/material/Divider";
-import Slide from "@mui/material/Slide";
+import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
+import Modal from "@mui/material/Modal";
+import Slide from "@mui/material/Slide";
 
 // @mui icons
 import CloseIcon from "@mui/icons-material/Close";

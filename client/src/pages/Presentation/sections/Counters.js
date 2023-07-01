@@ -1,7 +1,7 @@
 // @mui material components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 

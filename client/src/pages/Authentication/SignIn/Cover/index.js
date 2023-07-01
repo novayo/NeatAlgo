@@ -9,9 +9,9 @@ import Card from "@mui/material/Card";
 import Switch from "@mui/material/Switch";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import MKInput from "components/MKInput";
+import MKTypography from "components/MKTypography";
 
 // Authentication layout components
 import CoverLayout from "pages/Authentication/components/CoverLayout";

@@ -5,12 +5,12 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 
 import RotatingCard from "components/Cards/RotatingCard";
-import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "components/Cards/RotatingCard/RotatingCardBack";
+import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 
 function CardRotate() {
   return (

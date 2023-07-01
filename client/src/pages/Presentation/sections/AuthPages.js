@@ -7,8 +7,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
+import MKTypography from "components/MKTypography";
 
 // Presentation page components
 import ExampleCard from "pages/presentation/components/ExampleCard";

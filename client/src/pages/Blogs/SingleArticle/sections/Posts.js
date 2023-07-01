@@ -9,12 +9,12 @@ import MKTypography from "components/MKTypography";
 import DefaultBlogCard from "components/Cards/BlogCards/DefaultBlogCard";
 
 // Images
+import post3 from "assets/images/examples/color1.jpg";
 import post1 from "assets/images/examples/color2.jpg";
 import post2 from "assets/images/examples/color3.jpg";
-import post3 from "assets/images/examples/color1.jpg";
-import author1 from "assets/images/team-2.jpg";
 import author2 from "assets/images/ivana-squares.jpg";
 import author3 from "assets/images/marie.jpg";
+import author1 from "assets/images/team-2.jpg";
 
 function Posts() {
   return (

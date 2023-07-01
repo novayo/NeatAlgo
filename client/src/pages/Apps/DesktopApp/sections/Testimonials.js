@@ -1,8 +1,8 @@
 
 // @mui material components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -10,15 +10,15 @@ import MKTypography from "components/MKTypography";
 import MiniReviewCard from "components/Cards/ReviewCards/MiniReviewCard";
 
 // Images
-import review1 from "assets/images/team-3.jpg";
+import apple from "assets/images/logos/gray-logos/logo-apple.svg";
+import behance from "assets/images/logos/gray-logos/logo-behance.svg";
+import coinbase from "assets/images/logos/gray-logos/logo-coinbase.svg";
+import facebook from "assets/images/logos/gray-logos/logo-facebook.svg";
+import pinterest from "assets/images/logos/gray-logos/logo-pinterest.svg";
+import spotify from "assets/images/logos/gray-logos/logo-spotify.svg";
 import review2 from "assets/images/marie.jpg";
 import review3 from "assets/images/team-2.jpg";
-import apple from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebook from "assets/images/logos/gray-logos/logo-facebook.svg";
-import behance from "assets/images/logos/gray-logos/logo-behance.svg";
-import spotify from "assets/images/logos/gray-logos/logo-spotify.svg";
-import coinbase from "assets/images/logos/gray-logos/logo-coinbase.svg";
-import pinterest from "assets/images/logos/gray-logos/logo-pinterest.svg";
+import review1 from "assets/images/team-3.jpg";
 
 function Testimonials() {
   return (

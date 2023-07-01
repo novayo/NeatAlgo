@@ -1,7 +1,7 @@
-import boxShadows from "assets/theme/base/boxShadows";
-import typography from "assets/theme/base/typography";
-import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
+import boxShadows from "assets/theme/base/boxShadows";
+import colors from "assets/theme/base/colors";
+import typography from "assets/theme/base/typography";
 
 import pxToRem from "assets/theme/functions/pxToRem";
 

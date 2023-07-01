@@ -1,8 +1,8 @@
 
 // @mui material components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -10,15 +10,15 @@ import MKTypography from "components/MKTypography";
 import DefaultReviewCard from "components/Cards/ReviewCards/DefaultReviewCard";
 
 // Images
-import team1 from "assets/images/team-3.jpg";
+import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
+import behanceLogo from "assets/images/logos/gray-logos/logo-behance.svg";
+import coinbaseLogo from "assets/images/logos/gray-logos/logo-coinbase.svg";
+import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
+import pinterestLogo from "assets/images/logos/gray-logos/logo-pinterest.svg";
+import spotifyLogo from "assets/images/logos/gray-logos/logo-spotify.svg";
 import team2 from "assets/images/marie.jpg";
 import team3 from "assets/images/team-2.jpg";
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import behanceLogo from "assets/images/logos/gray-logos/logo-behance.svg";
-import spotifyLogo from "assets/images/logos/gray-logos/logo-spotify.svg";
-import coinbaseLogo from "assets/images/logos/gray-logos/logo-coinbase.svg";
-import pinterestLogo from "assets/images/logos/gray-logos/logo-pinterest.svg";
+import team1 from "assets/images/team-3.jpg";
 
 function TestimonialsOne() {
   return (

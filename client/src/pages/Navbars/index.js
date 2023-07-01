@@ -1,6 +1,6 @@
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
-import routes from "routes";
 import { routesConfig } from "config";
+import routes from "routes";
 
 function NeatNavbar({ sticky }) {
   let navitems = [];

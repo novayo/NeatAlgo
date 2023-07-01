@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
 import Grid from "@mui/material/Grid";
 import MuiLink from "@mui/material/Link";
+import Switch from "@mui/material/Switch";
 
 // @mui icons
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -15,9 +15,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import MKInput from "components/MKInput";
+import MKTypography from "components/MKTypography";
 
 // Authentication pages components
 import BasicLayout from "pages/Authentication/components/BasicLayout";

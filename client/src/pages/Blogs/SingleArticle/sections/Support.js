@@ -5,8 +5,8 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKSocialButton from "components/MKSocialButton";
+import MKTypography from "components/MKTypography";
 
 function Support() {
   return (

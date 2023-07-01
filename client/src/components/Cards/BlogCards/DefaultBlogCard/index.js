@@ -9,9 +9,9 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
 
+import MKAvatar from "components/MKAvatar";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import MKAvatar from "components/MKAvatar";
 
 function DefaultBlogCard({ image, category, title, description, author, raised, action }) {
   const imageTemplate = (

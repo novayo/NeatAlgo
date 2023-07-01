@@ -1,6 +1,6 @@
 
-import MKButton from "components/MKButton";
 import MKBox from "components/MKBox";
+import MKButton from "components/MKButton";
 
 function Socials() {
   return (

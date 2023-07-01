@@ -7,13 +7,13 @@ import View from "layouts/sections/components/View";
 
 // Pricing page components
 import TestimonialsOne from "layouts/sections/page-sections/testimonials/components/TestimonialsOne";
-import TestimonialsTwo from "layouts/sections/page-sections/testimonials/components/TestimonialsTwo";
 import TestimonialsThree from "layouts/sections/page-sections/testimonials/components/TestimonialsThree";
+import TestimonialsTwo from "layouts/sections/page-sections/testimonials/components/TestimonialsTwo";
 
 // Pricing page components code
 import testimonialOneCode from "layouts/sections/page-sections/testimonials/components/TestimonialsOne/code";
-import testimonialTwoCode from "layouts/sections/page-sections/testimonials/components/TestimonialsTwo/code";
 import testimonialThreeCode from "layouts/sections/page-sections/testimonials/components/TestimonialsThree/code";
+import testimonialTwoCode from "layouts/sections/page-sections/testimonials/components/TestimonialsTwo/code";
 
 function Testimonials() {
   return (

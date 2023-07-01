@@ -4,8 +4,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
-import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 import SimplePricingCard from "components/Cards/PricingCards/SimplePricingCard";

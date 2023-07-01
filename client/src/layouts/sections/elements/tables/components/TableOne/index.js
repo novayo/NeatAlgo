@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-import MKBox from "components/MKBox";
-import MKBadge from "components/MKBadge";
 import MKAvatar from "components/MKAvatar";
+import MKBadge from "components/MKBadge";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 import Table from "components/Tables/Table";

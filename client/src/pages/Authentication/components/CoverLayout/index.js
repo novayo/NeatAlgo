@@ -8,8 +8,8 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import MKTypography from "components/MKTypography";
 
-import NeatNavbar from "pages/Navbars";
 import SimpleFooter from "components/Footers/SimpleFooter";
+import NeatNavbar from "pages/Navbars";
 
 function CoverLayout({ coverHeight, image, children }) {
   return (

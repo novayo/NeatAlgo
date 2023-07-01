@@ -7,10 +7,10 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
 
 // Author page sections
-import Profile from "pages/Blogs/Author/sections/Profile";
-import Posts from "pages/Blogs/Author/sections/Posts";
 import Contact from "pages/Blogs/Author/sections/Contact";
 import Footer from "pages/Blogs/Author/sections/Footer";
+import Posts from "pages/Blogs/Author/sections/Posts";
+import Profile from "pages/Blogs/Author/sections/Profile";
 
 // Routes
 import routes from "routes";

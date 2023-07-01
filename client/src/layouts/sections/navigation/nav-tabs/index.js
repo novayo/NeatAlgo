@@ -7,13 +7,13 @@ import View from "layouts/sections/components/View";
 
 // Stats page components
 import TabsSimple from "layouts/sections/navigation/nav-tabs/components/TabsSimple";
-import TabsWithIcons from "layouts/sections/navigation/nav-tabs/components/TabsWithIcons";
 import TabsVertical from "layouts/sections/navigation/nav-tabs/components/TabsVertical";
+import TabsWithIcons from "layouts/sections/navigation/nav-tabs/components/TabsWithIcons";
 
 // Stats page components code
 import tabsSimpleCode from "layouts/sections/navigation/nav-tabs/components/TabsSimple/code";
-import tabsWithIconsCode from "layouts/sections/navigation/nav-tabs/components/TabsWithIcons/code";
 import tabsVerticalCode from "layouts/sections/navigation/nav-tabs/components/TabsVertical/code";
+import tabsWithIconsCode from "layouts/sections/navigation/nav-tabs/components/TabsWithIcons/code";
 
 function NavTabs() {
   return (

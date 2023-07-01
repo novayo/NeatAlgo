@@ -3,9 +3,9 @@ import { useState } from "react";
 
 // @mui material components
 import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Modal from "@mui/material/Modal";
-import Divider from "@mui/material/Divider";
 import Slide from "@mui/material/Slide";
 
 // @mui icons
