@@ -135,7 +135,7 @@ function Courses({ type, id, title, description, url, backgroundImage }) {
             {/* Left Box */}
             <Grid item xs={12} md={3}>
               <MKBox
-                height="80vh"
+                height="60vh"
                 color="white"
                 bgColor="white"
                 variant="gradient"
@@ -156,7 +156,7 @@ function Courses({ type, id, title, description, url, backgroundImage }) {
             {/* Right Box */}
             <Grid item xs={12} md={9}>
               <MKBox
-                minHeight="80vh"
+                minHeight="10vh"
                 color="info"
                 bgColor="white"
                 variant="gradient"
