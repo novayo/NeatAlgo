@@ -40,7 +40,6 @@ export default function ProgressBar({ progress }) {
           }}
         />
         <MKBox
-          border={1}
           sx={{
             width: "6rem",
             position: "absolute",
