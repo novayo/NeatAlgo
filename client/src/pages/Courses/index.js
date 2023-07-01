@@ -22,7 +22,7 @@ import ProgressBar from "pages/Courses/Common/ProgressBar";
 import VideoPlayer from "pages/Courses/VideoPlayer";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
-import { LOG_DEBUG } from "helper";
+import { LOG_DEBUG, GET, POST } from "helper";
 
 function Courses({ type, id, title, description, url, backgroundImage }) {
   const [finished, setFinished] = useState(false);
@@ -30,13 +30,18 @@ function Courses({ type, id, title, description, url, backgroundImage }) {
   const [data, setData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/members")
-      .then((res) => res.json())
-      .then((data) => setData(data));
+    // 需要自己寫一個function來await
+    (async () => {
+      const data = await GET("/members");
+      setData(data);
+    })();
+    POST("/test/post", { name: ["123", "345"] });
   }, []);
 
   useEffect(() => {
-    LOG_DEBUG(`backend data: ${data.members}`);
+    if (data && data.data) {
+      LOG_DEBUG(`backend data: ${data.data}`);
+    }
   }, [data]);
 
   // TODO: checkbox的狀態要每秒檢查更新到db，不能一按就直接更新，會被玩壞

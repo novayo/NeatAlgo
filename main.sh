@@ -78,7 +78,11 @@ function check_server_alive() {
 function start_client() {
   # 啟動frontend
   cd client
-  $SUDO nohup sh -c "PORT=$CLIENT_PORT npm start" >$LOGS/client.txt 2>&1 &
+  if [ "$1" -eq "1" ]; then
+    $SUDO sh -c "PORT=$CLIENT_PORT npm start"
+  else
+    $SUDO nohup sh -c "PORT=$CLIENT_PORT npm start" >$LOGS/client.txt 2>&1 &
+  fi
 
   # Wait for client start
   while [ "$(check_client_alive)" -eq "0" ]; do sleep 1; done
@@ -103,7 +107,12 @@ function stop_client() {
 
 function start_server() {
   cd server/src
-  $SUDO nohup sh -c "$PYTHON_LIB main.py -p $SERVER_PORT $MISSED_PYTHON_PACKAGE" >"$LOGS/server.txt" 2>&1 &
+
+  if [ "$1" -eq "1" ]; then
+    $SUDO sh -c "$PYTHON_LIB main.py -p $SERVER_PORT $MISSED_PYTHON_PACKAGE"
+  else
+    $SUDO nohup sh -c "$PYTHON_LIB main.py -p $SERVER_PORT $MISSED_PYTHON_PACKAGE" >"$LOGS/server.txt" 2>&1 &
+  fi
 
   # Wait for server start
   while [ "$(check_server_alive)" -eq "0" ]; do sleep 1; done
@@ -162,6 +171,8 @@ optional arguments:
   -i, --install        Install python and react libraries
   -remove-env          Remove env files to client and server.
   -s                   Start client and server.
+  -sc                  Start client only.
+  -ss                  Start server only.
   -sync-env            Sync env files to client and server.
 HEREDOC
 }
@@ -194,6 +205,16 @@ while [[ $# -gt 0 ]]; do
       start_server
       shift
       ;;
+    -sc)
+      syncEnvFile
+      start_client 1
+      shift
+      ;;
+    -ss)
+      syncEnvFile
+      start_server 1
+      shift
+      ;;
     -sync-env)
       syncEnvFile
       shift
@@ -204,5 +225,3 @@ while [[ $# -gt 0 ]]; do
 			;;
 	esac
 done
-
-# 啟動backend
