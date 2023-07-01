@@ -22,15 +22,26 @@ import ProgressBar from "pages/Courses/Common/ProgressBar";
 import VideoPlayer from "pages/Courses/VideoPlayer";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
-// import SquareTwoToneIcon from "@mui/icons-material/SquareTwoTone";
-// import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
-// import CheckBoxOutlineBlankSharpIcon from "@mui/icons-material/CheckBoxOutlineBlankSharp";
+import { LOG_DEBUG } from "helper";
 
 function Courses({ type, id, title, description, url, backgroundImage }) {
   const [finished, setFinished] = useState(false);
 
+  const [data, setData] = useState([{}]);
+
   useEffect(() => {
-    console.log(finished);
+    fetch("/members")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
+  useEffect(() => {
+    LOG_DEBUG(`backend data: ${data.members}`);
+  }, [data]);
+
+  // TODO: checkbox的狀態要每秒檢查更新到db，不能一按就直接更新，會被玩壞
+  useEffect(() => {
+    LOG_DEBUG(`checkbox: ${finished}`);
   }, [finished]);
 
   const handleChecked = () => {

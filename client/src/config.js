@@ -1,4 +1,7 @@
 import coursePythonBackground from "assets/images/office-dark.jpg";
+import { getEnv } from "helper";
+
+const env = getEnv();
 
 const mainConfig = {
   app_name: "白話算法",
@@ -19,41 +22,7 @@ const courseConfig = {
     description: "新手需知道的刷題所有 python 基本知識。",
     image: "https://hackmd.io/_uploads/Bks1FerEh.png",
     backgroundImage: coursePythonBackground,
-    courses: [
-      // course_info_dict
-      {
-        id: 1,
-        title: "python入門 1",
-        description: "Default",
-        url: "/course/python/python1",
-        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
-        locked: false,
-      },
-      {
-        id: 2,
-        title: "python入門 2",
-        description: "Default",
-        url: "/course/python/python2",
-        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
-        locked: true,
-      },
-      {
-        id: 3,
-        title: "python入門 3",
-        description: "Default",
-        url: "/course/python/python3",
-        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
-        locked: true,
-      },
-      {
-        id: 4,
-        title: "python入門 4",
-        description: "Default",
-        url: "/course/python/python4",
-        videoUrl: "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
-        locked: true,
-      },
-    ],
+    courses: env["course_settings"]["python"],
   },
   algo_beginner: {
     name: "AL&DS: beginner",

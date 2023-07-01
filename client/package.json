@@ -1,7 +1,7 @@
 {
   "name": "NeatAlgoClient",
   "version": "1.0.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:7999",
   "private": true,
   "dependencies": {
     "@emotion/cache": "11.10.7",

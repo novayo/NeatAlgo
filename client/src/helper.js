@@ -1,5 +1,12 @@
 const now = new Date();
 
+function getEnv() {
+  const course_settings = require("env/courses.json");
+  return {
+    course_settings: course_settings,
+  };
+}
+
 function getDateString(ts) {
   const date = new Date(ts);
   const diff = Math.floor((now.getTime() - date.getTime()) / 1000);
@@ -36,4 +43,8 @@ function raise(message) {
   throw new Error(`[NeatAlgo] ${message}`);
 }
 
-export { getDateString, getFixedLengthString, raise };
+function LOG_DEBUG(message) {
+  console.log(`[DEBUG] ${message}`);
+}
+
+export { getDateString, getFixedLengthString, raise, getEnv, LOG_DEBUG };
