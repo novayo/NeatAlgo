@@ -45,6 +45,7 @@ function NeatTimeLineItem({ finished, isEnd, selected, locked, title, url }) {
             href={!locked ? url : pricingConfig.url}
             sx={({ palette: { info } }) => ({
               display: "flex",
+              filter: locked ? "blur(3px)" : null,
               fontWeight: selected ? 900 : "normal",
               "&:hover": {
                 color: info.main,

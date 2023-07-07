@@ -22,8 +22,8 @@ export default function ProgressBar({ progress }) {
           value={100}
           thickness={2}
           sx={{
-            mt: "2vh",
-            ml: "1vh",
+            mt: "5%",
+            ml: "5%",
             color: "rgb(173, 173, 201)",
           }}
         />
@@ -33,33 +33,32 @@ export default function ProgressBar({ progress }) {
           value={progress}
           thickness={2}
           sx={{
-            mt: "2vh",
-            ml: "1vh",
+            mt: "5%",
+            ml: "5%",
             color: "rgb(69, 64, 64)",
             position: "absolute",
           }}
         />
         <MKBox
           sx={{
-            width: "6rem",
             position: "absolute",
             left: 0,
             right: 0,
-            top: 0,
-            bottom: 0,
-            mx: "auto",
-            mt: "7.8vh",
-            mb: "5.5vh",
+            ml: "auto",
+            mr: "auto",
+            textAlign: "center",
           }}
         >
           <MKTypography
             color="dark"
-            fontSize="2rem"
+            fontSize="150%"
             fontWeight="bold"
             sx={{
               justifyContent: "center",
               alignItems: "center",
               display: "flex",
+              mt: "8%",
+              ml: "2%",
             }}
           >
             {`${Math.round(progress)}%`}

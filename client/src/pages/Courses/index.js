@@ -173,7 +173,7 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
             {/* Left Box */}
             <Grid item xs={12} md={3}>
               <MKBox
-                height="60vh"
+                height="75vh"
                 color="white"
                 bgColor="white"
                 variant="gradient"
