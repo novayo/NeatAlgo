@@ -3,7 +3,6 @@ import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
@@ -11,35 +10,42 @@ import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 import { courseConfig, pricingConfig } from "config";
 import { ENV, GET } from "helper";
-import NeatTimeLine from "pages/Courses/Common/NeatTimeLine";
-import ProgressBar from "pages/Courses/Common/ProgressBar";
 import VideoPlayer from "pages/Courses/VideoPlayer";
 import NeatFooter from "pages/Footers";
 import NeatNavbar from "pages/Navbars";
 import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
 import { contactUsConfig } from "config";
+import breakpoints from "assets/theme/base/breakpoints";
+import Drawer from "@mui/material/Drawer";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import LeftBox from "pages/Courses/LeftBox";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Divider from "@mui/material/Divider";
 
 function Courses({ type, id, locked, title, description, url, backgroundImage }) {
   const [courseLength, setCourseLength] = useState(0);
   const [progress, setProgressNumber] = useState(0);
   const [finished, setFinished] = useState(false);
   const [pre_finish_time, setPreFinishTime] = useState(Date.now());
-  const navigate = useNavigate(); // Built-in navigate method
 
   // user info
   const [vip, setVIP] = useState(null);
   const [finish_course, setFinishCourse] = useState([]);
 
+  // RWD
+  const [is_mobile, setIsMobile] = useState(false);
+  const [openHamburger, setHamburgerOpen] = useState(false);
+
   useEffect(() => {
     const course_len = ENV()["course_settings"][type].length;
     setCourseLength(course_len);
 
+    // Query user_info.
     (async () => {
-      // Query user_info.
       // TODO: if not login, should not query
       // TODO: add jwt
       let user_info = await GET(`/course/user`, { username: "Eric" });
@@ -57,6 +63,28 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
       // Update checkbox
       setFinished(finish_course[id - 1]);
     })();
+
+    // Handle Moble view
+    // A function that sets the display state for the DefaultNavbarMobile.
+    function displayMobileNavbar() {
+      if (window.innerWidth < breakpoints.values.lg) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+
+    /** 
+     The event listener that calling the displayMobileNavbar function when 
+     resizing the window.
+    */
+    window.addEventListener("resize", displayMobileNavbar);
+
+    // Call the displayMobileNavbar function to set the state with the initial value.
+    displayMobileNavbar();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", displayMobileNavbar);
   }, []);
 
   // Handle user_info change
@@ -87,26 +115,34 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
 
   // Route to feedback page
   const handleFeedbackClicked = () => {
-    navigate(contactUsConfig.url);
-    window.location.reload(true);
+    window.location.replace(contactUsConfig.url);
   };
 
   const handleNavToNext = () => {
     if (id === courseLength) {
-      navigate(ENV()["course_settings"][type][0]["url"]);
+      window.location.replace(ENV()["course_settings"][type][0]["url"]);
     } else {
-      navigate(ENV()["course_settings"][type][id]["url"]);
+      window.location.replace(ENV()["course_settings"][type][id]["url"]);
     }
-    window.location.reload(true);
   };
 
   const handleNavToPrev = () => {
     if (id === 1) {
-      navigate(ENV()["course_settings"][type][courseLength - 1]["url"]);
+      window.location.replace(ENV()["course_settings"][type][courseLength - 1]["url"]);
     } else {
-      navigate(ENV()["course_settings"][type][id - 2]["url"]);
+      window.location.replace(ENV()["course_settings"][type][id - 2]["url"]);
     }
-    window.location.reload(true);
+  };
+
+  // Handle Hamburger icon click
+  const handleHamburgerClicked = () => {
+    if (!is_mobile) {
+      setHamburgerOpen(false);
+      return;
+    }
+    if (openHamburger === false) {
+      setHamburgerOpen(true);
+    }
   };
 
   // Avoid not getting needed variables
@@ -178,6 +214,29 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
           </Grid>
         </Container>
       </MKBox>
+      {/* If is mobile, show whole page hamburger */}
+      {is_mobile ? (
+        <>
+          <Drawer
+            anchor="right"
+            variant="temporary"
+            open={openHamburger}
+            ModalProps={{ onBackdropClick: () => setHamburgerOpen(false) }}
+          >
+            {/* Hamburger closed button */}
+            <ChevronRightIcon fontSize="large" onClick={() => setHamburgerOpen(false)} />
+            <Divider />
+            <LeftBox
+              progress={progress}
+              type={type}
+              id={id}
+              finish_course={finish_course}
+              vip={vip}
+              is_mobile={is_mobile}
+            />
+          </Drawer>
+        </>
+      ) : null}
       {/* 主要內容 */}
       <Card
         sx={{
@@ -200,27 +259,22 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
             justifyContent="center"
             alignItems="center"
           >
-            {/* Left Box */}
-            <Grid item xs={12} md={3}>
-              <MKBox
-                height="75vh"
-                color="white"
-                bgColor="white"
-                variant="gradient"
-                shadow="lg"
-                opacity={1}
-                p={2}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  overflow: "scroll",
-                }}
-              >
-                <ProgressBar progress={progress} />
-                <Divider sx={{ my: 3, bgcolor: "secondary.light" }} />
-                <NeatTimeLine type={type} id={id} finish_course={finish_course} vip={vip} />
+            {/* Left Box. If is mobile, show Menu button instead */}
+            {!is_mobile ? (
+              <LeftBox
+                progress={progress}
+                type={type}
+                id={id}
+                finish_course={finish_course}
+                vip={vip}
+                is_mobile={is_mobile}
+              />
+            ) : (
+              // Menu button
+              <MKBox width="100%" justifyContent="end" display="flex" sx={{ px: 2 }}>
+                <MenuOutlinedIcon fontSize="medium" onClick={handleHamburgerClicked} />
               </MKBox>
-            </Grid>
+            )}
             {/* Right Box */}
             <Grid item xs={12} md={9}>
               <MKBox
@@ -267,7 +321,7 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
                     {/* Feedback icon */}
                     <Grid item xs={1} md={1.5} justifyContent="end" display="flex">
                       <RateReviewIcon
-                        fontSize="large"
+                        fontSize={!is_mobile ? "large" : "medium"}
                         color="action"
                         onClick={handleFeedbackClicked}
                         sx={{
