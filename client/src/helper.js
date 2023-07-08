@@ -16,8 +16,10 @@ function LOG_ERROR(message) {
 //========== Common ==========//
 function ENV() {
   const course_settings = require("env/courses.json");
+  const route_settings = require("env/routes.json");
   return {
     course_settings: course_settings,
+    route_settings: route_settings,
   };
 }
 

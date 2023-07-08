@@ -89,14 +89,16 @@ const courseConfig = {
     name: "AL&DS: beginner",
     description:
       "任何人輕鬆入門的演算法和資料結構。學員將依照合理的學習路徑，一步一步熟悉並解出Easy~Medium題目。",
-    url: "/",
     image: imagePresentationAlgoBeginner,
+    backgroundImage: imageCoursePythonBackground,
+    url: ENV()["course_settings"]["algo_beginner"][0]["url"],
   },
   algo_advanced: {
     name: "AL&DS: advanced",
     description: "主題式學習不同種類的演算法和資料結構，讓你有能力解出9成Medium題目。",
-    url: "/",
     image: imagePresentationAlgoAdvanced,
+    backgroundImage: imageCoursePythonBackground,
+    url: ENV()["course_settings"]["algo_advanced"][0]["url"],
   },
 };
 
@@ -114,15 +116,15 @@ const routesConfig = {
   },
   button_contact_us: {
     name: "聯絡我們",
-    route: "/contact-us",
+    route: ENV()["route_settings"]["page_contact_us"],
   },
   button_login: {
     name: "登入",
-    route: "/sign-in",
+    route: ENV()["route_settings"]["page_sign_in"],
   },
   button_buy: {
     name: "搶先體驗!",
-    route: "/purchase",
+    route: ENV()["route_settings"]["page_purchase"],
     color: "info",
   },
 };
@@ -161,7 +163,7 @@ const informationConfig = {
     button_name: "立即訂閱",
     image_front: imagePresentationInformationRotateCardFront,
     image_back: imagePresentationInformationRotateCardBack,
-    url: "/purchase",
+    url: ENV()["route_settings"]["page_purchase"],
   },
   pros_1: {
     name: "學習路徑",
@@ -234,18 +236,18 @@ const feedbackConfig = {
 
 // TODO: 重構url
 const pricingConfig = {
-  url: "/purchase",
-  pay_url: "/",
+  url: ENV()["route_settings"]["page_purchase"],
+  pay_url: ENV()["route_settings"]["pay_third_party"],
 };
 
 // Footer
 // pdf: src/routes.js
 const copyrightConfig = {
   formal_name: `${mainConfig.app_name} ${mainConfig.app_name_eng}`,
-  terms_url: "/terms",
-  terms_refund_url: "/terms/10",
+  terms_url: ENV()["route_settings"]["page_terms"],
+  terms_refund_url: ENV()["route_settings"]["page_refund_terms"],
   terms_refund_page: 10,
-  privacy_url: "/privacy",
+  privacy_url: ENV()["route_settings"]["page_privacy"],
 };
 
 const contactUsConfig = {
@@ -257,7 +259,7 @@ const contactUsConfig = {
   content_name: "請告訴我們您的問題或回饋，我們樂意協助您。",
   default_text: "請提供您的問題或回饋意見。",
   submit_button: "送出",
-  url: "/contact-us",
+  url: ENV()["route_settings"]["page_contact_us"],
 };
 
 const signInConfig = {
@@ -272,290 +274,292 @@ const signInConfig = {
 };
 
 const aldsConfig = {
-  segment_tree: {
-    name: "Segment Tree",
-    image: imageAlgoSegementTree,
-    url: "/",
-  },
-  binary_indexed_tree: {
-    name: "Binary Indexed Tree",
-    image: imageAlgoBinaryIndexedTree,
-    url: "/",
-  },
-  trie: {
-    name: "Trie",
-    image: imageAlgoTrie,
-    url: "/",
-  },
-  floyd_warshall: {
-    name: "Floyd Warshall",
-    image: imageAlgoFloydWarshall,
-    url: "/",
-  },
-  bellman_ford: {
-    name: "Bellman Ford",
-    image: imageAlgoBellmanFord,
-    url: "/",
-  },
-  dijkstra: {
-    name: "Dijkstra",
-    image: imageAlgoDijkstra,
-    url: "/",
-  },
-  topological_sort: {
-    name: "Topological Sort",
-    image: imageAlgoTopologicalSort,
-    url: "/",
-  },
-  union_find: {
-    name: "Union Find",
-    image: imageAlgoUnionFind,
-    url: "/",
-  },
-  prefix_suffix: {
-    name: "PrefixSum/SuffixSum",
-    image: imageAlgoPrefixSuffixSum,
-    url: "/",
-  },
-  coin_change: {
-    name: "Coin Change",
-    image: imageAlgoCoinChange,
-    url: "/",
-  },
-  priority_queue: {
-    name: "Priority Queue",
-    image: imageAlgoPriorityQueue,
-    url: "/",
-  },
-  kadane: {
-    name: "Kadane",
-    image: imageAlgoKadane,
-    url: "/",
-  },
-  binary_search: {
-    name: "Binary Search",
-    image: imageAlgoBinarySearch,
-    url: "/",
-  },
-  line_sweep: {
-    name: "Line Sweep",
-    image: imageAlgoLineSweep,
-    url: "/",
-  },
-  sliding_window: {
-    name: "Sliding Window",
-    image: imageAlgoSlidingWindow,
-    url: "/",
-  },
-  inplace: {
-    name: "In-Place",
-    image: imageAlgoInplace,
-    url: "/",
-  },
-  backtracking: {
-    name: "Backtracking",
-    image: imageAlgoBacktracking,
-    url: "/",
-  },
-  divide_and_conquer: {
-    name: "Divide-And-Conquer",
-    image: imageAlgoDivideAndConquer,
-    url: "/",
-  },
-  recursion_memoize: {
-    name: "Recursion Memoize",
-    image: imageAlgoRecursionMemoize,
-    url: "/",
-  },
-  min_max_recursion: {
-    name: "Min/Max Recursion",
-    image: imageAlgoMinMaxRecursion,
-    url: "/",
-  },
-  top_down_recursion: {
-    name: "Top-down Recursion",
-    image: imageAlgoTopDownRecursion,
-    url: "/",
-  },
-  bottom_up_recursion: {
-    name: "Bottom-up Recursion",
-    image: imageAlgoBottomUpRecursion,
-    url: "/",
-  },
-  breadth_first_search: {
-    name: "Breadth-First Search",
-    image: imageAlgoBreadthFirstSearch,
-    url: "/",
-  },
-  depth_first_search: {
-    name: "Depth-First Search",
-    image: imageAlgoDepthFirstSearch,
-    url: "/",
-  },
-  binary_search_tree: {
-    name: "Binary Search Tree",
-    image: imageAlgoBinarySearchTree,
-    url: "/",
-  },
-  binary_tree: {
-    name: "Binary Tree",
-    image: imageAlgoBinaryTree,
-    url: "/",
-  },
-  preorder_traversal: {
-    name: "Preorder Traversal",
-    image: imageAlgoPreorderTraversal,
-    url: "/",
-  },
-  inorder_traversal: {
-    name: "Inorder Traversal",
-    image: imageAlgoInorderTraversal,
-    url: "/",
-  },
-  postorder_traversal: {
-    name: "Postorder Traversal",
-    image: imageAlgoPostorderTraversal,
-    url: "/",
-  },
-  stack: {
-    name: "Stack",
-    image: imageAlgoStack,
-    url: "/",
-  },
-  queue: {
-    name: "Queue",
-    image: imageAlgoQueue,
-    url: "/",
-  },
-  linked_list: {
-    name: "Linked List",
-    image: imageAlgoLinkedList,
-    url: "/",
+  // beginner
+  tc_sc: {
+    name: "Time Complexity Space Complexity",
+    image: imageAlgoTimeSpaceComplexity,
+    url: courseConfig.algo_beginner.url,
   },
   hash_table_set: {
     name: "Hash Table & Hash set",
     image: imageAlgoHashTableSet,
-    url: "/",
+    url: courseConfig.algo_beginner.url,
   },
-  heap_tree: {
-    name: "Heap Tree",
-    image: imageAlgoHeapTree,
-    url: "/",
+  linked_list: {
+    name: "Linked List",
+    image: imageAlgoLinkedList,
+    url: courseConfig.algo_beginner.url,
   },
-  knapsack: {
-    name: "Knapsack",
-    image: imageAlgoKnapsack,
-    url: "/",
+  queue: {
+    name: "Queue",
+    image: imageAlgoQueue,
+    url: courseConfig.algo_beginner.url,
   },
-  patient_sort: {
-    name: "Patient Sort",
-    image: imageAlgoPatientSort,
-    url: "/",
+  stack: {
+    name: "Stack",
+    image: imageAlgoStack,
+    url: courseConfig.algo_beginner.url,
   },
-  string_dp: {
-    name: "String dp",
-    image: imageAlgoStringDP,
-    url: "/",
+  binary_tree: {
+    name: "Binary Tree",
+    image: imageAlgoBinaryTree,
+    url: courseConfig.algo_beginner.url,
   },
-  palindrome_dp: {
-    name: "Palindrome DP",
-    image: imageAlgoPalindroneDP,
-    url: "/",
+  binary_search_tree: {
+    name: "Binary Search Tree",
+    image: imageAlgoBinarySearchTree,
+    url: courseConfig.algo_beginner.url,
   },
-  monotonic_stack: {
-    name: "Monotonic Stack",
-    image: imageAlgoMonotonicStack,
-    url: "/",
+  preorder_traversal: {
+    name: "Preorder Traversal",
+    image: imageAlgoPreorderTraversal,
+    url: courseConfig.algo_beginner.url,
   },
-  monotonic_queue: {
-    name: "Monotonic Queue",
-    image: imageAlgoMonotonicQueue,
-    url: "/",
+  inorder_traversal: {
+    name: "Inorder Traversal",
+    image: imageAlgoInorderTraversal,
+    url: courseConfig.algo_beginner.url,
   },
-  quick_select: {
-    name: "Quick Select",
-    image: imageAlgoQuickSelect,
-    url: "/",
+  postorder_traversal: {
+    name: "Postorder Traversal",
+    image: imageAlgoPostorderTraversal,
+    url: courseConfig.algo_beginner.url,
   },
-  ordereddict: {
-    name: "OrderedDict",
-    image: imageAlgoOrderedDict,
-    url: "/",
+  breadth_first_search: {
+    name: "Breadth-First Search",
+    image: imageAlgoBreadthFirstSearch,
+    url: courseConfig.algo_beginner.url,
   },
-  treemap: {
-    name: "Treemap",
-    image: imageAlgoTreemap,
-    url: "/",
+  depth_first_search: {
+    name: "Depth-First Search",
+    image: imageAlgoDepthFirstSearch,
+    url: courseConfig.algo_beginner.url,
   },
-  astar: {
-    name: "A* Search",
-    image: imageAlgoAStarSearch,
-    url: "/",
+  recursion_memoize: {
+    name: "Recursion Memoize",
+    image: imageAlgoRecursionMemoize,
+    url: courseConfig.algo_beginner.url,
   },
-  find_bipartite: {
-    name: "Find Bipartite",
-    image: imageAlgoFindBipartite,
-    url: "/",
+  top_down_recursion: {
+    name: "Top-down Recursion",
+    image: imageAlgoTopDownRecursion,
+    url: courseConfig.algo_beginner.url,
   },
-  bucket_sort: {
-    name: "Bucket Sort",
-    image: imageAlgoBucketSort,
-    url: "/",
+  bottom_up_recursion: {
+    name: "Bottom-up Recursion",
+    image: imageAlgoBottomUpRecursion,
+    url: courseConfig.algo_beginner.url,
   },
-  counting_sort: {
-    name: "Counting Sort",
-    image: imageAlgoCountingSort,
-    url: "/",
+  inplace: {
+    name: "In-Place",
+    image: imageAlgoInplace,
+    url: courseConfig.algo_beginner.url,
   },
-  radix_sort: {
-    name: "Radix Sort",
-    image: imageAlgoRadixSort,
-    url: "/",
+  backtracking: {
+    name: "Backtracking",
+    image: imageAlgoBacktracking,
+    url: courseConfig.algo_beginner.url,
   },
-  selection_sort: {
-    name: "Selection Sort",
-    image: imageAlgoSelectionSort,
-    url: "/",
+  divide_and_conquer: {
+    name: "Divide-And-Conquer",
+    image: imageAlgoDivideAndConquer,
+    url: courseConfig.algo_beginner.url,
   },
-  bubble_sort: {
-    name: "Bubble Sort",
-    image: imageAlgoBubbleSort,
-    url: "/",
+  prefix_suffix: {
+    name: "PrefixSum/SuffixSum",
+    image: imageAlgoPrefixSuffixSum,
+    url: courseConfig.algo_beginner.url,
   },
-  merge_sort: {
-    name: "Merge Sort",
-    image: imageAlgoMergeSort,
-    url: "/",
+  binary_search: {
+    name: "Binary Search",
+    image: imageAlgoBinarySearch,
+    url: courseConfig.algo_beginner.url,
   },
-  quick_sort: {
-    name: "Quick Sort",
-    image: imageAlgoQuickSort,
-    url: "/",
-  },
-  heap_sort: {
-    name: "Heap Sort",
-    image: imageAlgoHeapSort,
-    url: "/",
-  },
-  tc_sc: {
-    name: "Time Complexity Space Complexity",
-    image: imageAlgoTimeSpaceComplexity,
-    url: "/",
-  },
-  majority_vote: {
-    name: "Majority vote",
-    image: imageAlgoMajorityVote,
-    url: "/",
-  },
-  bitmask: {
-    name: "Bitmask",
-    image: imageAlgoBitmask,
-    url: "/",
+  priority_queue: {
+    name: "Priority Queue",
+    image: imageAlgoPriorityQueue,
+    url: courseConfig.algo_beginner.url,
   },
   greedy: {
     name: "Greedy",
     image: imageAlgoGreedy,
-    url: "/",
+    url: courseConfig.algo_beginner.url,
+  },
+  trie: {
+    name: "Trie",
+    image: imageAlgoTrie,
+    url: courseConfig.algo_beginner.url,
+  },
+  sliding_window: {
+    name: "Sliding Window",
+    image: imageAlgoSlidingWindow,
+    url: courseConfig.algo_beginner.url,
+  },
+  selection_sort: {
+    name: "Selection Sort",
+    image: imageAlgoSelectionSort,
+    url: courseConfig.algo_beginner.url,
+  },
+  bubble_sort: {
+    name: "Bubble Sort",
+    image: imageAlgoBubbleSort,
+    url: courseConfig.algo_beginner.url,
+  },
+  merge_sort: {
+    name: "Merge Sort",
+    image: imageAlgoMergeSort,
+    url: courseConfig.algo_beginner.url,
+  },
+  quick_sort: {
+    name: "Quick Sort",
+    image: imageAlgoQuickSort,
+    url: courseConfig.algo_beginner.url,
+  },
+  // advanced
+  min_max_recursion: {
+    name: "Min/Max Recursion",
+    image: imageAlgoMinMaxRecursion,
+    url: courseConfig.algo_advanced.url,
+  },
+  segment_tree: {
+    name: "Segment Tree",
+    image: imageAlgoSegementTree,
+    url: courseConfig.algo_advanced.url,
+  },
+  binary_indexed_tree: {
+    name: "Binary Indexed Tree",
+    image: imageAlgoBinaryIndexedTree,
+    url: courseConfig.algo_advanced.url,
+  },
+  floyd_warshall: {
+    name: "Floyd Warshall",
+    image: imageAlgoFloydWarshall,
+    url: courseConfig.algo_advanced.url,
+  },
+  bellman_ford: {
+    name: "Bellman Ford",
+    image: imageAlgoBellmanFord,
+    url: courseConfig.algo_advanced.url,
+  },
+  dijkstra: {
+    name: "Dijkstra",
+    image: imageAlgoDijkstra,
+    url: courseConfig.algo_advanced.url,
+  },
+  topological_sort: {
+    name: "Topological Sort",
+    image: imageAlgoTopologicalSort,
+    url: courseConfig.algo_advanced.url,
+  },
+  union_find: {
+    name: "Union Find",
+    image: imageAlgoUnionFind,
+    url: courseConfig.algo_advanced.url,
+  },
+  coin_change: {
+    name: "Coin Change",
+    image: imageAlgoCoinChange,
+    url: courseConfig.algo_advanced.url,
+  },
+  kadane: {
+    name: "Kadane",
+    image: imageAlgoKadane,
+    url: courseConfig.algo_advanced.url,
+  },
+  line_sweep: {
+    name: "Line Sweep",
+    image: imageAlgoLineSweep,
+    url: courseConfig.algo_advanced.url,
+  },
+  heap_tree: {
+    name: "Heap Tree",
+    image: imageAlgoHeapTree,
+    url: courseConfig.algo_advanced.url,
+  },
+  knapsack: {
+    name: "Knapsack",
+    image: imageAlgoKnapsack,
+    url: courseConfig.algo_advanced.url,
+  },
+  patient_sort: {
+    name: "Patient Sort",
+    image: imageAlgoPatientSort,
+    url: courseConfig.algo_advanced.url,
+  },
+  string_dp: {
+    name: "String dp",
+    image: imageAlgoStringDP,
+    url: courseConfig.algo_advanced.url,
+  },
+  palindrome_dp: {
+    name: "Palindrome DP",
+    image: imageAlgoPalindroneDP,
+    url: courseConfig.algo_advanced.url,
+  },
+  monotonic_stack: {
+    name: "Monotonic Stack",
+    image: imageAlgoMonotonicStack,
+    url: courseConfig.algo_advanced.url,
+  },
+  monotonic_queue: {
+    name: "Monotonic Queue",
+    image: imageAlgoMonotonicQueue,
+    url: courseConfig.algo_advanced.url,
+  },
+  quick_select: {
+    name: "Quick Select",
+    image: imageAlgoQuickSelect,
+    url: courseConfig.algo_advanced.url,
+  },
+  ordereddict: {
+    name: "OrderedDict",
+    image: imageAlgoOrderedDict,
+    url: courseConfig.algo_advanced.url,
+  },
+  treemap: {
+    name: "Treemap",
+    image: imageAlgoTreemap,
+    url: courseConfig.algo_advanced.url,
+  },
+  astar: {
+    name: "A* Search",
+    image: imageAlgoAStarSearch,
+    url: courseConfig.algo_advanced.url,
+  },
+  find_bipartite: {
+    name: "Find Bipartite",
+    image: imageAlgoFindBipartite,
+    url: courseConfig.algo_advanced.url,
+  },
+  bucket_sort: {
+    name: "Bucket Sort",
+    image: imageAlgoBucketSort,
+    url: courseConfig.algo_advanced.url,
+  },
+  counting_sort: {
+    name: "Counting Sort",
+    image: imageAlgoCountingSort,
+    url: courseConfig.algo_advanced.url,
+  },
+  radix_sort: {
+    name: "Radix Sort",
+    image: imageAlgoRadixSort,
+    url: courseConfig.algo_advanced.url,
+  },
+  heap_sort: {
+    name: "Heap Sort",
+    image: imageAlgoHeapSort,
+    url: courseConfig.algo_advanced.url,
+  },
+  majority_vote: {
+    name: "Majority vote",
+    image: imageAlgoMajorityVote,
+    url: courseConfig.algo_advanced.url,
+  },
+  bitmask: {
+    name: "Bitmask",
+    image: imageAlgoBitmask,
+    url: courseConfig.algo_advanced.url,
   },
 };
 

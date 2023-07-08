@@ -30,7 +30,7 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
   const [finish_course, setFinishCourse] = useState([]);
 
   useEffect(() => {
-    const course_len = ENV()["course_settings"]["python"].length;
+    const course_len = ENV()["course_settings"][type].length;
     setCourseLength(course_len);
 
     (async () => {
@@ -121,22 +121,23 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
                 },
               })}
             >
-              {courseConfig.python.name}
+              {courseConfig[type].name}
             </MKTypography>
             {/* 小標題 */}
             <MKTypography
               variant="body1"
               color="white"
-              textAlign="left"
+              textAlign="center"
               px={{ xs: 6, lg: 8 }}
               mt={1}
             >
-              {courseConfig.python.description}
+              {courseConfig[type].description}
             </MKTypography>
           </Grid>
           <Grid container item xs={6} lg={3} mt={5} justifyContent="center" mx="auto">
             {/* 訂閱按鈕 */}
             <MKButton
+              component="a"
               href={pricingConfig.url}
               variant="outlined"
               color="light"
