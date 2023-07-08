@@ -17,13 +17,18 @@ import VideoPlayer from "pages/Courses/VideoPlayer";
 import NeatFooter from "pages/Footers";
 import NeatNavbar from "pages/Navbars";
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import RateReviewIcon from "@mui/icons-material/RateReview";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
+import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
+import { contactUsConfig } from "config";
 
 function Courses({ type, id, locked, title, description, url, backgroundImage }) {
   const [courseLength, setCourseLength] = useState(0);
   const [progress, setProgressNumber] = useState(0);
   const [finished, setFinished] = useState(false);
   const [pre_finish_time, setPreFinishTime] = useState(Date.now());
+  const navigate = useNavigate(); // Built-in navigate method
 
   // user info
   const [vip, setVIP] = useState(null);
@@ -78,6 +83,30 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
       setFinished((finished) => !finished);
       setPreFinishTime(Date.now());
     }
+  };
+
+  // Route to feedback page
+  const handleFeedbackClicked = () => {
+    navigate(contactUsConfig.url);
+    window.location.reload(true);
+  };
+
+  const handleNavToNext = () => {
+    if (id === courseLength) {
+      navigate(ENV()["course_settings"][type][0]["url"]);
+    } else {
+      navigate(ENV()["course_settings"][type][id]["url"]);
+    }
+    window.location.reload(true);
+  };
+
+  const handleNavToPrev = () => {
+    if (id === 1) {
+      navigate(ENV()["course_settings"][type][courseLength - 1]["url"]);
+    } else {
+      navigate(ENV()["course_settings"][type][id - 2]["url"]);
+    }
+    window.location.reload(true);
   };
 
   // Avoid not getting needed variables
@@ -233,6 +262,22 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
                         </MKTypography>
                       </MKBox>
                     </Grid>
+                    {/* Empty Area */}
+                    <Grid item xs={4}></Grid>
+                    {/* Feedback icon */}
+                    <Grid item xs={1} md={1.5} justifyContent="end" display="flex">
+                      <RateReviewIcon
+                        fontSize="large"
+                        color="action"
+                        onClick={handleFeedbackClicked}
+                        sx={{
+                          "&:hover": {
+                            color: "success.main",
+                            transitionDuration: "800ms",
+                          },
+                        }}
+                      />
+                    </Grid>
                   </Grid>
                   {/* Description */}
                   <Grid item>
@@ -247,6 +292,34 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
                     <MKBox sx={{ px: 2 }}>
                       <VideoPlayer url={url} />
                     </MKBox>
+                  </Grid>
+                  {/* Page Navigater */}
+                  <Grid container item direction="row" justifyContent="center" sx={{ p: 1 }}>
+                    <Grid item xs={1} justifyContent="center" display="flex">
+                      <ArrowCircleLeftOutlinedIcon
+                        fontSize="large"
+                        color="secondary"
+                        onClick={handleNavToPrev}
+                        sx={{
+                          "&:hover": {
+                            color: "primary.main",
+                            transitionDuration: "800ms",
+                          },
+                        }}
+                      />
+                    </Grid>
+                    <Grid item xs={1} justifyContent="center" display="flex">
+                      <ArrowCircleRightOutlinedIcon
+                        fontSize="large"
+                        color="secondary"
+                        onClick={handleNavToNext}
+                        sx={{
+                          "&:hover": {
+                            color: "success.main",
+                          },
+                        }}
+                      />
+                    </Grid>
                   </Grid>
                 </Grid>
               </MKBox>
