@@ -1,13 +1,6 @@
-
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
-// @mui material components
 import Grid from "@mui/material/Grid";
-
 import MKBox from "components/MKBox";
-// import MKTypography from "components/MKTypography";
-
 import SimpleFooter from "components/Footers/SimpleFooter";
 import NeatNavbar from "pages/Navbars";
 

@@ -1,16 +1,10 @@
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
 import MKBox from "components/MKBox";
-
 import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 import RotatingCard from "components/Cards/RotatingCard";
 import RotatingCardBack from "components/Cards/RotatingCard/RotatingCardBack";
 import RotatingCardFront from "components/Cards/RotatingCard/RotatingCardFront";
-import RotatingCardFrontBg from "assets/images/rotating-card-bg-front.jpeg";
-import RotatingCardBackBg from "assets/images/rotating-card-bg-back.jpeg";
-
 import { informationConfig } from "config";
 
 function Information() {
@@ -30,7 +24,7 @@ function Information() {
                     {informationConfig.card.title2}
                   </>
                 }
-                image={RotatingCardFrontBg}
+                image={informationConfig.rotate_card.image_front}
               />
               <RotatingCardBack
                 title={informationConfig.rotate_card.title}
@@ -40,7 +34,7 @@ function Information() {
                   route: informationConfig.rotate_card.url,
                   label: informationConfig.rotate_card.button_name,
                 }}
-                image={RotatingCardBackBg}
+                image={informationConfig.rotate_card.image_back}
               />
             </RotatingCard>
           </Grid>

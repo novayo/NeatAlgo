@@ -226,7 +226,7 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
                       )}
                     </Grid>
                     <Grid item xs={6} md={6}>
-                      <MKBox sx={{}}>
+                      <MKBox sx={{ ml: "0.8vw" }}>
                         <MKTypography variant="h4" textAlign="left">
                           {title}
                         </MKTypography>

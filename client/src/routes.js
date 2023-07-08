@@ -1,8 +1,7 @@
-// @mui material components
 import Icon from "@mui/material/Icon";
 import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
 import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
-import SignInCoverPage from "pages/Authentication/SignIn/Basic";
+import SignInCoverPage from "pages/Authentication/SignIn/Simple";
 import Courses from "pages/Courses";
 import OnePagePDF from "pages/OnePagePDF";
 import NeatPrice from "pages/Pricing";
@@ -19,7 +18,7 @@ const routes = [
       {
         name: courseConfig.python.name,
         description: courseConfig.python.description,
-        href: ENV()["course_settings"]["python"][0]["url"],
+        href: courseConfig.python.url,
       },
       {
         name: courseConfig.algo_beginner.name,

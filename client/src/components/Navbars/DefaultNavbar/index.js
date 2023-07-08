@@ -1,12 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
-
-// react-router components
 import { Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
-
-// @mui material components
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
@@ -14,15 +8,13 @@ import Grow from "@mui/material/Grow";
 import Icon from "@mui/material/Icon";
 import MuiLink from "@mui/material/Link";
 import Popper from "@mui/material/Popper";
-
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-
 import DefaultNavbarDropdown from "components/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarMobile from "components/Navbars/DefaultNavbar/DefaultNavbarMobile";
-
 import breakpoints from "assets/theme/base/breakpoints";
+import { mainConfig } from "config";
 
 function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
@@ -528,7 +520,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "白話算法",
+  brand: mainConfig.app_name,
   transparent: false,
   light: false,
   action: false,

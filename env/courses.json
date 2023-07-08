@@ -39,6 +39,14 @@
       "url": "/course/python/python5",
       "videoUrl": "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
       "locked": false
+    },
+    {
+      "id": 6,
+      "title": "python入門 6",
+      "description": "Default",
+      "url": "/course/python/python6",
+      "videoUrl": "https://drive.google.com/uc?id=1cQqrRhS0l2BOeNosDAinJ9KDt_vcHK59",
+      "locked": false
     }
   ]
 }

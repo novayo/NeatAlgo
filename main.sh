@@ -2,8 +2,8 @@
 
 DEBUG=1
 
-ON_MAC=0
-ON_WIN=1
+ON_MAC=1
+ON_WIN=0
 
 BASEDIR=$PWD
 LOGS="$BASEDIR/logs"
@@ -80,7 +80,7 @@ function check_server_alive() {
 function start_client() {
   # 啟動frontend
   cd client
-  if [ "$1" -eq "1" ]; then
+  if [[ "$1" == "1" ]]; then
     $SUDO sh -c "PORT=$CLIENT_PORT REACT_APP_DEBUG=$DEBUG npm start"
   else
     $SUDO nohup sh -c "PORT=$CLIENT_PORT REACT_APP_DEBUG=$DEBUG npm start" >$LOGS/client.txt 2>&1 &
@@ -110,7 +110,7 @@ function stop_client() {
 function start_server() {
   cd server/src
 
-  if [ "$1" -eq "1" ]; then
+  if [[ "$1" == "1" ]]; then
     $SUDO sh -c "$PYTHON_LIB main.py -p $SERVER_PORT $MISSED_PYTHON_PACKAGE"
   else
     $SUDO nohup sh -c "$PYTHON_LIB main.py -p $SERVER_PORT $MISSED_PYTHON_PACKAGE" >"$LOGS/server.txt" 2>&1 &

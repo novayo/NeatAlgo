@@ -1,21 +1,11 @@
-
 import { useState } from "react";
-
-// react-router-dom components
 import { Link } from "react-router-dom";
-
-// @mui material components
 import Switch from "@mui/material/Switch";
-
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKInput from "components/MKInput";
 import MKTypography from "components/MKTypography";
-
-// Authentication layout components
 import IllustrationLayout from "pages/Authentication/components/IllustrationLayout";
-
-// Image
 import bgImage from "assets/images/illustrations/illustration-reset.jpg";
 
 function Illustration() {

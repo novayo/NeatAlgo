@@ -1,19 +1,11 @@
-
 import { useState } from "react";
-
-// react-router-dom components
 import { Link } from "react-router-dom";
-
-// @mui material components
 import Card from "@mui/material/Card";
 import Switch from "@mui/material/Switch";
-
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKInput from "components/MKInput";
 import MKTypography from "components/MKTypography";
-
-// Authentication layout components
 import Separator from "pages/Authentication/components/Separator";
 import SimpleLayout from "pages/Authentication/components/SimpleLayout";
 import Socials from "pages/Authentication/components/Socials";

@@ -12,4 +12,4 @@ def user_info():
     print(json_data["username"])
     # do the query here
 
-    return success_post({"vip": True, "finish_course": [True, True, False]})
+    return success_post({"vip": False, "finish_course": [True, True, False]})

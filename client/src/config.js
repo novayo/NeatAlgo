@@ -1,9 +1,73 @@
-import coursePythonBackground from "assets/images/office-dark.jpg";
+import imageCoursePythonBackground from "assets/images/office-dark.jpg";
+import imageAlgoAStarSearch from "assets/neatalgo/algo_astar_search.png";
+import imageAlgoBacktracking from "assets/neatalgo/algo_backtracking.png";
+import imageAlgoBellmanFord from "assets/neatalgo/algo_bellman_ford.png";
+import imageAlgoBinaryIndexedTree from "assets/neatalgo/algo_binary_index_tree.png";
+import imageAlgoBinarySearch from "assets/neatalgo/algo_binary_search.png";
+import imageAlgoBinarySearchTree from "assets/neatalgo/algo_binary_search_tree.png";
+import imageAlgoBinaryTree from "assets/neatalgo/algo_binary_tree.png";
+import imageAlgoBitmask from "assets/neatalgo/algo_bitmask.png";
+import imageAlgoBottomUpRecursion from "assets/neatalgo/algo_bottom_up_recursion.png";
+import imageAlgoBreadthFirstSearch from "assets/neatalgo/algo_breadth_first_search.png";
+import imageAlgoBubbleSort from "assets/neatalgo/algo_bubble_sort.png";
+import imageAlgoBucketSort from "assets/neatalgo/algo_bucket_sort.png";
+import imageAlgoCoinChange from "assets/neatalgo/algo_coin_change.png";
+import imageAlgoCountingSort from "assets/neatalgo/algo_counting_sort.png";
+import imageAlgoDepthFirstSearch from "assets/neatalgo/algo_depth_first_search.png";
+import imageAlgoDijkstra from "assets/neatalgo/algo_dijkstra.png";
+import imageAlgoDivideAndConquer from "assets/neatalgo/algo_divide_and_conquer.png";
+import imageAlgoFindBipartite from "assets/neatalgo/algo_find_bipartite.png";
+import imageAlgoFloydWarshall from "assets/neatalgo/algo_floyd_warshall.png";
+import imageAlgoGreedy from "assets/neatalgo/algo_greedy.png";
+import imageAlgoHashTableSet from "assets/neatalgo/algo_hash_table_set.png";
+import imageAlgoHeapSort from "assets/neatalgo/algo_heap_sort.png";
+import imageAlgoHeapTree from "assets/neatalgo/algo_heap_tree.png";
+import imageAlgoInplace from "assets/neatalgo/algo_in_place.png";
+import imageAlgoInorderTraversal from "assets/neatalgo/algo_inorder_traversal.png";
+import imageAlgoKadane from "assets/neatalgo/algo_kadane.png";
+import imageAlgoKnapsack from "assets/neatalgo/algo_knapsack.png";
+import imageAlgoLineSweep from "assets/neatalgo/algo_line_sweep.png";
+import imageAlgoLinkedList from "assets/neatalgo/algo_linked_list.png";
+import imageAlgoMajorityVote from "assets/neatalgo/algo_majority_vote.png";
+import imageAlgoMergeSort from "assets/neatalgo/algo_merge_sort.png";
+import imageAlgoMinMaxRecursion from "assets/neatalgo/algo_min_max_recursion.png";
+import imageAlgoMonotonicQueue from "assets/neatalgo/algo_monotonic_queue.png";
+import imageAlgoMonotonicStack from "assets/neatalgo/algo_monotonic_stack.png";
+import imageAlgoOrderedDict from "assets/neatalgo/algo_ordereddict.png";
+import imageAlgoPalindroneDP from "assets/neatalgo/algo_palindrome_dp.png";
+import imageAlgoPatientSort from "assets/neatalgo/algo_patient_sort.png";
+import imageAlgoPostorderTraversal from "assets/neatalgo/algo_postorder_traversal.png";
+import imageAlgoPrefixSuffixSum from "assets/neatalgo/algo_prefix_suffix_sum.png";
+import imageAlgoPreorderTraversal from "assets/neatalgo/algo_preorder_traversal.png";
+import imageAlgoPriorityQueue from "assets/neatalgo/algo_prioirity_queue.png";
+import imageAlgoQueue from "assets/neatalgo/algo_queue.png";
+import imageAlgoQuickSelect from "assets/neatalgo/algo_quick_select.png";
+import imageAlgoQuickSort from "assets/neatalgo/algo_quick_sort.png";
+import imageAlgoRadixSort from "assets/neatalgo/algo_radix_sort.png";
+import imageAlgoRecursionMemoize from "assets/neatalgo/algo_recursion_memoize.png";
+import imageAlgoSegementTree from "assets/neatalgo/algo_segment_tree.png";
+import imageAlgoSelectionSort from "assets/neatalgo/algo_selection_sort.png";
+import imageAlgoSlidingWindow from "assets/neatalgo/algo_sliding_window.png";
+import imageAlgoStack from "assets/neatalgo/algo_stack.png";
+import imageAlgoStringDP from "assets/neatalgo/algo_string_dp.png";
+import imageAlgoTimeSpaceComplexity from "assets/neatalgo/algo_time_space_complexity.png";
+import imageAlgoTopDownRecursion from "assets/neatalgo/algo_top_down_recursion.png";
+import imageAlgoTopologicalSort from "assets/neatalgo/algo_topological_sort.png";
+import imageAlgoTreemap from "assets/neatalgo/algo_treemap.png";
+import imageAlgoTrie from "assets/neatalgo/algo_trie.png";
+import imageAlgoUnionFind from "assets/neatalgo/algo_union_find.png";
+import imagePresentationAlgoAdvanced from "assets/neatalgo/presentation_algo_advanced.png";
+import imagePresentationAlgoBeginner from "assets/neatalgo/presentation_algo_beginner.png";
+import imagePresentationBackground from "assets/neatalgo/presentation_background.png";
+import imagePresentationInformationRotateCardBack from "assets/neatalgo/presentation_information_rotate_card_back.jpeg";
+import imagePresentationInformationRotateCardFront from "assets/neatalgo/presentation_information_rotate_card_front.jpeg";
+import imagePresentationPythonCourse from "assets/neatalgo/presentation_python_course.png";
+import { ENV } from "helper";
 
 const mainConfig = {
   app_name: "白話算法",
   app_name_eng: "NeatAlgo",
-  main_page_img: "https://hackmd.io/_uploads/BJ7mz3INn.png",
+  main_page_img: imagePresentationBackground,
   subtitle: (
     <>
       用最易懂的方式帶你跨入演算法及資料結構的世界
@@ -17,21 +81,22 @@ const courseConfig = {
   python: {
     name: "Python入門",
     description: "新手需知道的刷題所有 python 基本知識。",
-    image: "https://hackmd.io/_uploads/Bks1FerEh.png",
-    backgroundImage: coursePythonBackground,
+    image: imagePresentationPythonCourse,
+    backgroundImage: imageCoursePythonBackground,
+    url: ENV()["course_settings"]["python"][0]["url"],
   },
   algo_beginner: {
     name: "AL&DS: beginner",
     description:
       "任何人輕鬆入門的演算法和資料結構。學員將依照合理的學習路徑，一步一步熟悉並解出Easy~Medium題目。",
     url: "/",
-    image: "https://hackmd.io/_uploads/Hyp1ClSV2.png",
+    image: imagePresentationAlgoBeginner,
   },
   algo_advanced: {
     name: "AL&DS: advanced",
     description: "主題式學習不同種類的演算法和資料結構，讓你有能力解出9成Medium題目。",
     url: "/",
-    image: "https://hackmd.io/_uploads/S13E0xB42.png",
+    image: imagePresentationAlgoAdvanced,
   },
 };
 
@@ -94,6 +159,8 @@ const informationConfig = {
     title: "線上教學平台",
     description: "易懂教學、完善題型，學習演算法資料結構、LeetCode的最佳選擇。",
     button_name: "立即訂閱",
+    image_front: imagePresentationInformationRotateCardFront,
+    image_back: imagePresentationInformationRotateCardBack,
     url: "/purchase",
   },
   pros_1: {
@@ -184,11 +251,11 @@ const copyrightConfig = {
 const contactUsConfig = {
   title: "聯絡我們",
   subtitle:
-    "有任何問題或疑慮？我們樂意回答你的問題並提供協助。請填寫下方表格，我們會儘快與你聯絡。期待與你的交流！",
+    "有任何問題或疑慮？我們樂意回答你的問題並提供協助。請填寫下方表格，我們會儘快與你聯絡。期待與你的交流！同時，我們非常歡迎您的回饋意見，以幫助我們不斷改進和提升服務品質。",
   username: "名稱",
   email: "電子郵件",
-  content_name: "請告訴我們您的問題或需求，我們樂意協助您。",
-  default_text: "請描述您的問題。",
+  content_name: "請告訴我們您的問題或回饋，我們樂意協助您。",
+  default_text: "請提供您的問題或回饋意見。",
   submit_button: "送出",
   url: "/contact-us",
 };
@@ -204,286 +271,290 @@ const signInConfig = {
   register_button: "註冊",
 };
 
-// TODO: 改Line Sweep圖片
 const aldsConfig = {
   segment_tree: {
     name: "Segment Tree",
-    image: `https://hackmd.io/_uploads/HJT0BiL42.png`,
+    image: imageAlgoSegementTree,
     url: "/",
   },
   binary_indexed_tree: {
     name: "Binary Indexed Tree",
-    image: `https://hackmd.io/_uploads/rJqcLo8Nn.png`,
+    image: imageAlgoBinaryIndexedTree,
     url: "/",
   },
   trie: {
     name: "Trie",
-    image: `https://hackmd.io/_uploads/Hyqh8s8V3.png`,
+    image: imageAlgoTrie,
     url: "/",
   },
   floyd_warshall: {
     name: "Floyd Warshall",
-    image: `https://hackmd.io/_uploads/HyMIPiUNn.png`,
+    image: imageAlgoFloydWarshall,
     url: "/",
   },
   bellman_ford: {
     name: "Bellman Ford",
-    image: `https://hackmd.io/_uploads/By8NwiUE3.png`,
+    image: imageAlgoBellmanFord,
     url: "/",
   },
   dijkstra: {
     name: "Dijkstra",
-    image: `https://hackmd.io/_uploads/H1qMviI4h.png`,
+    image: imageAlgoDijkstra,
     url: "/",
   },
   topological_sort: {
     name: "Topological Sort",
-    image: `https://hackmd.io/_uploads/rk0PwsL4n.png`,
+    image: imageAlgoTopologicalSort,
     url: "/",
   },
   union_find: {
     name: "Union Find",
-    image: `https://hackmd.io/_uploads/rJHKvjUEn.png`,
+    image: imageAlgoUnionFind,
     url: "/",
   },
   prefix_suffix: {
     name: "PrefixSum/SuffixSum",
-    image: `https://hackmd.io/_uploads/r1YlujLV3.png`,
+    image: imageAlgoPrefixSuffixSum,
     url: "/",
   },
   coin_change: {
     name: "Coin Change",
-    image: `https://hackmd.io/_uploads/Hk6M_iL4n.png`,
+    image: imageAlgoCoinChange,
     url: "/",
   },
   priority_queue: {
     name: "Priority Queue",
-    image: `https://hackmd.io/_uploads/HypVOoLEh.png`,
+    image: imageAlgoPriorityQueue,
     url: "/",
   },
   kadane: {
     name: "Kadane",
-    image: `https://hackmd.io/_uploads/BkcvdjL4n.png`,
+    image: imageAlgoKadane,
     url: "/",
   },
   binary_search: {
     name: "Binary Search",
-    image: `https://hackmd.io/_uploads/HkUjuiI43.png`,
+    image: imageAlgoBinarySearch,
     url: "/",
   },
   line_sweep: {
     name: "Line Sweep",
-    image: `https://hackmd.io/_uploads/HyrTujUE3.png`,
+    image: imageAlgoLineSweep,
     url: "/",
   },
   sliding_window: {
     name: "Sliding Window",
-    image: `https://hackmd.io/_uploads/Hyy1Ys843.png`,
+    image: imageAlgoSlidingWindow,
     url: "/",
   },
   inplace: {
     name: "In-Place",
-    image: `https://hackmd.io/_uploads/S1ulFoIE2.png`,
+    image: imageAlgoInplace,
     url: "/",
   },
   backtracking: {
     name: "Backtracking",
-    image: `https://hackmd.io/_uploads/SkgQKiIEn.png`,
+    image: imageAlgoBacktracking,
     url: "/",
   },
   divide_and_conquer: {
     name: "Divide-And-Conquer",
-    image: `https://hackmd.io/_uploads/Hk-LtjU42.png`,
+    image: imageAlgoDivideAndConquer,
     url: "/",
   },
   recursion_memoize: {
     name: "Recursion Memoize",
-    image: `https://hackmd.io/_uploads/HkZ5toU42.png`,
+    image: imageAlgoRecursionMemoize,
     url: "/",
   },
   min_max_recursion: {
     name: "Min/Max Recursion",
-    image: `https://hackmd.io/_uploads/ryl2FiLV2.png`,
+    image: imageAlgoMinMaxRecursion,
     url: "/",
   },
   top_down_recursion: {
     name: "Top-down Recursion",
-    image: `https://hackmd.io/_uploads/BJ9CKjU4n.png`,
+    image: imageAlgoTopDownRecursion,
     url: "/",
   },
   bottom_up_recursion: {
     name: "Bottom-up Recursion",
-    image: `https://hackmd.io/_uploads/SJHlcjL4h.png`,
+    image: imageAlgoBottomUpRecursion,
     url: "/",
   },
   breadth_first_search: {
     name: "Breadth-First Search",
-    image: `https://hackmd.io/_uploads/HyP75o8Vh.png`,
+    image: imageAlgoBreadthFirstSearch,
     url: "/",
   },
   depth_first_search: {
     name: "Depth-First Search",
-    image: `https://hackmd.io/_uploads/SyLwqsL43.png`,
+    image: imageAlgoDepthFirstSearch,
     url: "/",
   },
   binary_search_tree: {
     name: "Binary Search Tree",
-    image: `https://hackmd.io/_uploads/B1Xc5oUNn.png`,
+    image: imageAlgoBinarySearchTree,
     url: "/",
   },
   binary_tree: {
     name: "Binary Tree",
-    image: `https://hackmd.io/_uploads/BkRico842.png`,
+    image: imageAlgoBinaryTree,
     url: "/",
   },
   preorder_traversal: {
     name: "Preorder Traversal",
-    image: `https://hackmd.io/_uploads/BJZzji8E2.png`,
+    image: imageAlgoPreorderTraversal,
     url: "/",
   },
   inorder_traversal: {
     name: "Inorder Traversal",
-    image: `https://hackmd.io/_uploads/S1TmioLE3.png`,
+    image: imageAlgoInorderTraversal,
     url: "/",
   },
   postorder_traversal: {
     name: "Postorder Traversal",
-    image: `https://hackmd.io/_uploads/HkFBsj8Nh.png`,
+    image: imageAlgoPostorderTraversal,
     url: "/",
   },
   stack: {
     name: "Stack",
-    image: `https://hackmd.io/_uploads/H10Doi8V2.png`,
+    image: imageAlgoStack,
     url: "/",
   },
   queue: {
     name: "Queue",
-    image: `https://hackmd.io/_uploads/HyHKssLV2.png`,
+    image: imageAlgoQueue,
     url: "/",
   },
   linked_list: {
     name: "Linked List",
-    image: `https://hackmd.io/_uploads/HkpcjsIN2.png`,
+    image: imageAlgoLinkedList,
     url: "/",
   },
   hash_table_set: {
     name: "Hash Table & Hash set",
-    image: `https://hackmd.io/_uploads/HyIhjsIE3.png`,
+    image: imageAlgoHashTableSet,
     url: "/",
   },
   heap_tree: {
     name: "Heap Tree",
-    image: `https://hackmd.io/_uploads/Hk4bnjIVn.png`,
+    image: imageAlgoHeapTree,
     url: "/",
   },
   knapsack: {
     name: "Knapsack",
-    image: `https://hackmd.io/_uploads/Bkx72iIVn.png`,
+    image: imageAlgoKnapsack,
     url: "/",
   },
   patient_sort: {
     name: "Patient Sort",
-    image: `https://hackmd.io/_uploads/Bk8Sno8Nn.png`,
+    image: imageAlgoPatientSort,
     url: "/",
   },
   string_dp: {
     name: "String dp",
-    image: `https://hackmd.io/_uploads/ryhLno8E3.png`,
+    image: imageAlgoStringDP,
     url: "/",
   },
   palindrome_dp: {
     name: "Palindrome DP",
-    image: `https://hackmd.io/_uploads/BJRu3sL4n.png`,
+    image: imageAlgoPalindroneDP,
     url: "/",
   },
   monotonic_stack: {
     name: "Monotonic Stack",
-    image: `https://hackmd.io/_uploads/rJ4yTjL4h.png`,
+    image: imageAlgoMonotonicStack,
     url: "/",
   },
   monotonic_queue: {
     name: "Monotonic Queue",
-    image: `https://hackmd.io/_uploads/ByqxTjLN3.png`,
+    image: imageAlgoMonotonicQueue,
     url: "/",
   },
   quick_select: {
     name: "Quick Select",
-    image: `https://hackmd.io/_uploads/rJPGTiI42.png`,
+    image: imageAlgoQuickSelect,
     url: "/",
   },
   ordereddict: {
     name: "OrderedDict",
-    image: `https://hackmd.io/_uploads/SJNETsLN3.png`,
+    image: imageAlgoOrderedDict,
     url: "/",
   },
   treemap: {
     name: "Treemap",
-    image: `https://hackmd.io/_uploads/BJRrpiINn.png`,
+    image: imageAlgoTreemap,
     url: "/",
   },
   astar: {
     name: "A* Search",
-    image: `https://hackmd.io/_uploads/By9qaoUE3.png`,
+    image: imageAlgoAStarSearch,
     url: "/",
   },
   find_bipartite: {
     name: "Find Bipartite",
-    image: `https://hackmd.io/_uploads/rysppsU4h.png`,
+    image: imageAlgoFindBipartite,
     url: "/",
   },
   bucket_sort: {
     name: "Bucket Sort",
-    image: `https://hackmd.io/_uploads/ByjJCsI43.png`,
+    image: imageAlgoBucketSort,
     url: "/",
   },
   counting_sort: {
     name: "Counting Sort",
-    image: `https://hackmd.io/_uploads/HkLWRsUNn.png`,
+    image: imageAlgoCountingSort,
     url: "/",
   },
   radix_sort: {
     name: "Radix Sort",
-    image: `https://hackmd.io/_uploads/rk_fCjUN3.png`,
+    image: imageAlgoRadixSort,
     url: "/",
   },
   selection_sort: {
     name: "Selection Sort",
-    image: `https://hackmd.io/_uploads/SJvB0o8Nh.png`,
+    image: imageAlgoSelectionSort,
     url: "/",
   },
   bubble_sort: {
     name: "Bubble Sort",
-    image: `https://hackmd.io/_uploads/HJevCiL43.png`,
+    image: imageAlgoBubbleSort,
     url: "/",
   },
   merge_sort: {
     name: "Merge Sort",
-    image: `https://hackmd.io/_uploads/rJft0sUNn.png`,
+    image: imageAlgoMergeSort,
     url: "/",
   },
   quick_sort: {
     name: "Quick Sort",
-    image: `https://hackmd.io/_uploads/S1wq0iIV2.png`,
+    image: imageAlgoQuickSort,
     url: "/",
   },
   heap_sort: {
     name: "Heap Sort",
-    image: `https://hackmd.io/_uploads/SJCi0sLV3.png`,
+    image: imageAlgoHeapSort,
     url: "/",
   },
-  tx_sc: {
+  tc_sc: {
     name: "Time Complexity Space Complexity",
-    image: `https://hackmd.io/_uploads/r10JJ38En.png`,
+    image: imageAlgoTimeSpaceComplexity,
     url: "/",
   },
-  greedy_candidate: {
-    name: "Greedy Candidate",
-    image: `https://hackmd.io/_uploads/BJyVknLN3.png`,
+  majority_vote: {
+    name: "Majority vote",
+    image: imageAlgoMajorityVote,
     url: "/",
   },
   bitmask: {
     name: "Bitmask",
-    image: `https://hackmd.io/_uploads/ByGuJ3IN3.png`,
+    image: imageAlgoBitmask,
+    url: "/",
+  },
+  greedy: {
+    name: "Greedy",
+    image: imageAlgoGreedy,
     url: "/",
   },
 };

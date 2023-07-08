@@ -1,15 +1,8 @@
-
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
-// @mui material components
 import Grid from "@mui/material/Grid";
-
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
-
 import routes from "routes";
 
 function IllustrationLayout({ header, title, description, illustration, children }) {
