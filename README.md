@@ -1,5 +1,9 @@
 # NeatAlgo
 
+# OAuth2
+* [Google Login Setting](https://pantheon.corp.google.com/apis/credentials/consent/edit?authuser=2&project=neatalgo-392311&supportedpurview=project)
+* [Facebook Login Setting](https://developers.facebook.com/apps/246475734813385/dashboard/)
+
 # Cookie
 * TTL: 30 days
 

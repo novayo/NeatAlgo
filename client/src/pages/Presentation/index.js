@@ -1,11 +1,8 @@
-// @mui material components
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-
 import { mainConfig } from "config";
 import NeatFooter from "pages/Footers";
 import NeatNavbar from "pages/Navbars";

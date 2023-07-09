@@ -1,13 +1,12 @@
 import Icon from "@mui/material/Icon";
 import privacy_pdf from "assets/pdf/PRIVACY_POLICY.pdf";
 import terms_pdf from "assets/pdf/TERMS_OF_USE.pdf";
-import SignInCoverPage from "pages/Authentication/SignIn/Basic";
+import { copyrightConfig, courseConfig, pricingConfig, routesConfig } from "config";
+import { ENV } from "helper";
 import Courses from "pages/Courses";
 import OnePagePDF from "pages/OnePagePDF";
 import NeatPrice from "pages/Pricing";
 import ContactUs from "pages/Support/ContactUs";
-import { ENV } from "helper";
-import { copyrightConfig, courseConfig, pricingConfig, routesConfig } from "config";
 
 const routes = [
   {
@@ -40,8 +39,6 @@ const routes = [
   },
   {
     name: routesConfig.button_login.name,
-    route: routesConfig.button_login.route,
-    component: <SignInCoverPage />,
     isNavbar: true,
   },
   {
