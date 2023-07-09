@@ -18,11 +18,15 @@ from flask import Flask, redirect
 from common.rate_limiting import limiter
 from api.course import app_course
 from api.test import app_test
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.register_blueprint(app_course, url_prefix="/course")
 app.register_blueprint(app_test, url_prefix="/test")
 limiter.init_app(app)
+
+# TODO: 加入自己網站的網址
+CORS(app, resources={r"/.*": {"origins": ["http://127.0.0.1"]}})
 
 @app.errorhandler(404)
 def page_not_found(e):
