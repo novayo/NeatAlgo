@@ -32,3 +32,4 @@ commit.sh
 
 # log file
 logs/
+env/

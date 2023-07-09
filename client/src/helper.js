@@ -1,4 +1,14 @@
+import CryptoJS from "crypto-js";
+import Cookies from "universal-cookie";
+
 const now = new Date();
+const cookies = new Cookies();
+const cookie_expire_hours = process.env.REACT_APP_COOKIE_EXPIRE_HOURS || 1;
+const cookie_settings = {
+  path: "/",
+  secure: process.env.REACT_APP_DEBUG === "0",
+  sameSite: "strict",
+};
 
 //========== Log ==========//
 function raise(message) {
@@ -11,6 +21,32 @@ function LOG_DEBUG(message) {
 
 function LOG_ERROR(message) {
   console.log(`[ERROR] ${message}`);
+}
+
+//========== Cookie =========//
+function setCookie(name, data) {
+  const container = { neat: data };
+  const encrypted = CryptoJS.AES.encrypt(
+    JSON.stringify(container),
+    process.env.REACT_APP_SECRET
+  ).toString();
+  cookies.set(name, encrypted, {
+    ...cookie_settings,
+    expires: new Date(Date.now() + cookie_expire_hours * 60 * 60 * 1000),
+  });
+}
+
+function getCookie(name) {
+  const encrypted = cookies.get(name);
+
+  if (!encrypted) {
+    return undefined;
+  }
+
+  const decrypted = CryptoJS.AES.decrypt(encrypted, process.env.REACT_APP_SECRET).toString(
+    CryptoJS.enc.Utf8
+  );
+  return JSON.parse(decrypted)["neat"];
 }
 
 //========== Common ==========//
@@ -106,4 +142,15 @@ function POST(route, dict_data) {
     });
 }
 
-export { getDateString, getFixedLengthString, raise, ENV, LOG_DEBUG, GET, LOG_ERROR, POST };
+export {
+  getDateString,
+  getFixedLengthString,
+  raise,
+  ENV,
+  LOG_DEBUG,
+  GET,
+  LOG_ERROR,
+  POST,
+  setCookie,
+  getCookie,
+};

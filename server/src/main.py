@@ -14,6 +14,10 @@ sys.path.append(realpath(__file__))
 if (args.missed_python_module):
     sys.path.append(args.missed_python_module)
 
+# load .env file
+from dotenv import load_dotenv
+load_dotenv(dotenv_path="./env/.env")
+
 from flask import Flask, redirect
 from common.rate_limiting import limiter
 from api.course import app_course

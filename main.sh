@@ -10,8 +10,10 @@ LOGS="$BASEDIR/logs"
 CLIENT_PORT=3005
 SERVER_PORT=7999 # Also change in client/package.json ["proxy"]
 ENV_FOLDER="./env"
-ENV_CLIENT_FOLDER="./client/src/env"
-ENV_SERVER_FOLDER="./server/src/env"
+ENV_CLIENT_FOLDER="./client"
+ENV_SERVER_FOLDER="./server"
+ENV_CLIENT_ENV_FOLDER="./client/src/env"
+ENV_SERVER_ENV_FOLDER="./server/src/env"
 
 # Mac
 if [ "$ON_MAC" -eq "1" ]; then
@@ -81,9 +83,9 @@ function start_client() {
   # 啟動frontend
   cd client
   if [[ "$1" == "1" ]]; then
-    $SUDO sh -c "PORT=$CLIENT_PORT REACT_APP_DEBUG=$DEBUG npm start"
+    $SUDO sh -c "PORT=$CLIENT_PORT npm start"
   else
-    $SUDO nohup sh -c "PORT=$CLIENT_PORT REACT_APP_DEBUG=$DEBUG npm start" >$LOGS/client.txt 2>&1 &
+    $SUDO nohup sh -c "PORT=$CLIENT_PORT npm start" >$LOGS/client.txt 2>&1 &
   fi
 
   # Wait for client start
@@ -138,18 +140,22 @@ function stop_server() {
 }
 
 function syncEnvFile() {
-  mkdir -p $ENV_CLIENT_FOLDER
-  mkdir -p $ENV_SERVER_FOLDER
+  mkdir -p $ENV_CLIENT_ENV_FOLDER
+  mkdir -p $ENV_SERVER_ENV_FOLDER
 
-  cp -rf "$ENV_FOLDER/." $ENV_CLIENT_FOLDER
-  cp -rf "$ENV_FOLDER/." $ENV_SERVER_FOLDER
+  cp -rf "$ENV_FOLDER/." $ENV_CLIENT_ENV_FOLDER
+  cp -rf "$ENV_FOLDER/." $ENV_SERVER_ENV_FOLDER
+
+  cp -rf "$ENV_FOLDER/.env" $ENV_CLIENT_FOLDER
 
   echo "Sync env files to client and server".
 }
 
 function removeEnvFile() {
-  rm -rf $ENV_CLIENT_FOLDER
-  rm -rf $ENV_SERVER_FOLDER
+  rm -rf $ENV_CLIENT_ENV_FOLDER
+  rm -rf $ENV_SERVER_ENV_FOLDER
+
+  rm -rf "$ENV_CLIENT_FOLDER/.env"
 
   echo "Remove env files to client and server".
 }
