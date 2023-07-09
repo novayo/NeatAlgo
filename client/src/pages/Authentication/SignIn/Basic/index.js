@@ -1,36 +1,40 @@
-import { useState } from "react";
-
-// react-router-dom components
-import { Link } from "react-router-dom";
-
-// @mui material components
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import GoogleIcon from "@mui/icons-material/Google";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import MuiLink from "@mui/material/Link";
 import Switch from "@mui/material/Switch";
-
-// @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import GoogleIcon from "@mui/icons-material/Google";
-
+import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKInput from "components/MKInput";
 import MKTypography from "components/MKTypography";
-
-// Authentication pages components
-import BasicLayout from "pages/Authentication/components/BasicLayout";
-
-// Images
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
-
 import { signInConfig } from "config";
+import { LOG_DEBUG, removeCookie, setCookie } from "helper";
+import BasicLayout from "pages/Authentication/components/BasicLayout";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleLogin = () => {
+    // TODO: 加入captcha
+    // check email
+    console.log(email);
+    // check pwd
+    console.log(pwd);
+    // Ready to login
+    LOG_DEBUG("Remove cookie due to login");
+    removeCookie();
+
+    setCookie("Email", email);
+    setCookie("CookieId", pwd);
+  };
 
   return (
     <BasicLayout image={bgImage}>
@@ -70,10 +74,24 @@ function SignInBasic() {
         <MKBox pt={4} pb={3} px={3}>
           <MKBox component="form" role="form">
             <MKBox mb={2}>
-              <MKInput type="email" label={signInConfig.email} fullWidth />
+              <MKInput
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                type="email"
+                label={signInConfig.email}
+                fullWidth
+              />
             </MKBox>
             <MKBox mb={2}>
-              <MKInput type="password" label={signInConfig.password} fullWidth />
+              <MKInput
+                onChange={(e) => {
+                  setPwd(e.target.value);
+                }}
+                type="password"
+                label={signInConfig.password}
+                fullWidth
+              />
             </MKBox>
             <MKBox display="flex" alignItems="center" ml={-1}>
               <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -88,7 +106,7 @@ function SignInBasic() {
               </MKTypography>
             </MKBox>
             <MKBox mt={4} mb={1}>
-              <MKButton variant="gradient" color="info" fullWidth>
+              <MKButton onClick={handleLogin} variant="gradient" color="info" fullWidth>
                 {signInConfig.submit_button}
               </MKButton>
             </MKBox>

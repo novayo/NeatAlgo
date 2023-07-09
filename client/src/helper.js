@@ -1,10 +1,10 @@
 import CryptoJS from "crypto-js";
 import Cookies from "universal-cookie";
 
-const now = new Date();
-const cookies = new Cookies();
-const cookie_expire_hours = process.env.REACT_APP_COOKIE_EXPIRE_HOURS || 1;
-const cookie_settings = {
+const COOKIE_NAME = process.env.REACT_APP_COOKIE_NAME;
+const COOKIES = new Cookies();
+const COOKIE_EXPIRE_HOURS = process.env.REACT_APP_COOKIE_EXPIRE_HOURS || 1;
+const COOKIE_SETTINGS = {
   path: "/",
   secure: process.env.REACT_APP_DEBUG === "0",
   sameSite: "strict",
@@ -25,20 +25,20 @@ function LOG_ERROR(message) {
 
 //========== Cookie =========//
 function setCookie(name, data) {
-  const container = { neat: data };
+  let current_cookie = getCookie() || {};
+  current_cookie[name] = data;
   const encrypted = CryptoJS.AES.encrypt(
-    JSON.stringify(container),
+    JSON.stringify(current_cookie),
     process.env.REACT_APP_SECRET
   ).toString();
-  cookies.set(name, encrypted, {
-    ...cookie_settings,
-    expires: new Date(Date.now() + cookie_expire_hours * 60 * 60 * 1000),
+  COOKIES.set(COOKIE_NAME, encrypted, {
+    ...COOKIE_SETTINGS,
+    expires: new Date(Date.now() + COOKIE_EXPIRE_HOURS * 60 * 60 * 1000),
   });
 }
 
 function getCookie(name) {
-  const encrypted = cookies.get(name);
-
+  const encrypted = COOKIES.get(COOKIE_NAME);
   if (!encrypted) {
     return undefined;
   }
@@ -46,7 +46,20 @@ function getCookie(name) {
   const decrypted = CryptoJS.AES.decrypt(encrypted, process.env.REACT_APP_SECRET).toString(
     CryptoJS.enc.Utf8
   );
-  return JSON.parse(decrypted)["neat"];
+  const data = JSON.parse(decrypted);
+  // If no specify, return all
+  if (!name) {
+    return data;
+  }
+  return data[name];
+}
+
+function existCookie() {
+  return getCookie() !== undefined;
+}
+
+function removeCookie() {
+  COOKIES.remove(COOKIE_NAME, { path: "/" });
 }
 
 //========== Common ==========//
@@ -61,7 +74,7 @@ function ENV() {
 
 function getDateString(ts) {
   const date = new Date(ts);
-  const diff = Math.floor((now.getTime() - date.getTime()) / 1000);
+  const diff = Math.floor((Date.now() - date.getTime()) / 1000);
 
   let ret = "";
   if (diff < 60) {
@@ -92,7 +105,21 @@ function getFixedLengthString(total_len, string) {
 }
 
 //========== Apis ==========//
+function _addCookieInfo(data_dict) {
+  if (existCookie()) {
+    const email = getCookie(process.env.REACT_APP_COOKIE_KEY_EMAIL);
+    const cookie_id = getCookie(process.env.REACT_APP_COOKIE_KEY_ID);
+    return {
+      Email: email,
+      CookieID: cookie_id,
+      ...data_dict,
+    };
+  }
+}
+
 async function GET(route, headers = {}) {
+  // Contain cookie info in headers
+  headers = _addCookieInfo(headers);
   let ret = {};
   const requestOptions = {
     method: "GET",
@@ -116,6 +143,8 @@ async function GET(route, headers = {}) {
 }
 
 function POST(route, dict_data) {
+  // Contain cookie info in request
+  dict_data = _addCookieInfo(dict_data);
   const json_data = { data: dict_data };
   const requestOptions = {
     method: "POST",
@@ -143,14 +172,16 @@ function POST(route, dict_data) {
 }
 
 export {
+  ENV,
+  GET,
+  LOG_DEBUG,
+  LOG_ERROR,
+  POST,
+  getCookie,
   getDateString,
   getFixedLengthString,
   raise,
-  ENV,
-  LOG_DEBUG,
-  GET,
-  LOG_ERROR,
-  POST,
+  removeCookie,
   setCookie,
-  getCookie,
+  existCookie,
 };

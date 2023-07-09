@@ -1,30 +1,28 @@
-// @mui material components
+import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
+import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import RateReviewIcon from "@mui/icons-material/RateReview";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
+import breakpoints from "assets/theme/base/breakpoints";
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-import { courseConfig, pricingConfig } from "config";
-import { ENV, GET } from "helper";
+import { contactUsConfig, courseConfig, pricingConfig } from "config";
+import { ENV, GET, existCookie } from "helper";
+import LeftBox from "pages/Courses/LeftBox";
 import VideoPlayer from "pages/Courses/VideoPlayer";
 import NeatFooter from "pages/Footers";
 import NeatNavbar from "pages/Navbars";
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import RateReviewIcon from "@mui/icons-material/RateReview";
-import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
-import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
-import { contactUsConfig } from "config";
-import breakpoints from "assets/theme/base/breakpoints";
-import Drawer from "@mui/material/Drawer";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import LeftBox from "pages/Courses/LeftBox";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Divider from "@mui/material/Divider";
 
 function Courses({ type, id, locked, title, description, url, backgroundImage }) {
   const [courseLength, setCourseLength] = useState(0);
@@ -48,7 +46,9 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
     (async () => {
       // TODO: if not login, should not query
       // TODO: add jwt
-      let user_info = await GET(`/course/user`, { username: "Eric" });
+      let user_info = await GET(`/course/user`);
+
+      console.log(user_info);
 
       // Update vip
       setVIP(user_info["vip"] || false);
@@ -65,7 +65,6 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
     })();
 
     // Handle Moble view
-    // A function that sets the display state for the DefaultNavbarMobile.
     function displayMobileNavbar() {
       if (window.innerWidth < breakpoints.values.lg) {
         setIsMobile(true);
@@ -73,14 +72,7 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
         setIsMobile(false);
       }
     }
-
-    /** 
-     The event listener that calling the displayMobileNavbar function when 
-     resizing the window.
-    */
     window.addEventListener("resize", displayMobileNavbar);
-
-    // Call the displayMobileNavbar function to set the state with the initial value.
     displayMobileNavbar();
 
     // Remove event listener on cleanup
@@ -150,9 +142,12 @@ function Courses({ type, id, locked, title, description, url, backgroundImage })
     return null;
   }
 
-  // Need to be vip if course locked
-  if (locked && vip === false) {
-    return <Navigate to={pricingConfig.url} />;
+  // if course locked
+  if (locked) {
+    // Check login / vip
+    if (!existCookie() || vip === false) {
+      return <Navigate to={ENV()["route_settings"]["page_sign_in"]} />;
+    }
   }
 
   return (

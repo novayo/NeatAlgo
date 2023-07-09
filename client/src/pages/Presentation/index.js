@@ -6,11 +6,9 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
+import { mainConfig } from "config";
 import NeatFooter from "pages/Footers";
 import NeatNavbar from "pages/Navbars";
-
-// Presentation page sections
-import { mainConfig } from "config";
 import Counters from "pages/Presentation/sections/Counters";
 import CoursesIntro from "pages/Presentation/sections/CoursesIntro";
 import Information from "pages/Presentation/sections/Information";
