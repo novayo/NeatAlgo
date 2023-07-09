@@ -4,7 +4,7 @@
 * TTL: 30 days
 
 # Security
-[x] xss
+[ ] xss - check frontend
 [x] cors
 [x] csrf - No need. Doesn't control cookie in server.
 [x] rate limiting - 1 operation / 1 sec
